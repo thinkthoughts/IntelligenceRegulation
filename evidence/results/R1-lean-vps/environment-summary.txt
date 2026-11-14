@@ -1,0 +1,39 @@
+=== Review commit ===
+1bd9ebfce92410e3633a8299e96be9172f63fe9e
+=== Toolchain ===
+leanprover/lean4:v4.34.1
+=== Machine ===
+Linux srv838187 6.8.0-138-generic #138~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Fri Aug  7 13:43:15 UTC  x86_64 x86_64 x86_64 GNU/Linux
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       273Mi        11Gi       0.0Ki       4.3Gi        15Gi
+Swap:          8.0Gi       219Mi       7.8Gi
+=== Build result ===
+✔ [3836/3840] Built ZK60Formal.RunWireTop (8.0s)
+✔ [3837/3840] Built ZK60Formal.RunBndArgs (4.7s)
+✔ [3838/3840] Built ZK60Formal.RunBndTop (12s)
+✔ [3839/3840] Built ZK60Formal (3.9s)
+Build completed successfully (3840 jobs).
+=== Run-level checker ===
+	Command being timed: "lake env leanchecker ZK60Formal.RunStgAlgTopR"
+	User time (seconds): 4.66
+	System time (seconds): 16.70
+	Percent of CPU this job got: 45%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:46.86
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3248856
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 32090
+	Minor (reclaiming a frame) page faults: 108221
+	Voluntary context switches: 69871
+	Involuntary context switches: 1597
+	Swaps: 0
+	File system inputs: 7684112
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

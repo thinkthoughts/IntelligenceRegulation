@@ -1,0 +1,112 @@
+declaration: ZK60.ProtocolClassify.RunShapeP.stgAlg_productionReadyL_epP_exec_real
+mode: lean; keys required: 179; keys classified: 103
+by category: bookkeeping=37, discharged=18, instance-data=20, modelling=2, open=26, ruling=0
+PROBLEM missing classification: inst
+PROBLEM missing classification: place
+PROBLEM missing classification: hv.hdr
+PROBLEM missing classification: hv.pos
+PROBLEM missing classification: hv.le
+PROBLEM missing classification: hv.sq
+PROBLEM missing classification: hv.len
+PROBLEM missing classification: hD.hK
+PROBLEM missing classification: hD.slCut
+PROBLEM missing classification: hD.slDeg
+PROBLEM missing classification: hD.slWin
+PROBLEM missing classification: hD.mK
+PROBLEM missing classification: hD.mCut
+PROBLEM missing classification: hD.mS
+PROBLEM missing classification: hD.opV
+PROBLEM missing classification: hD.opW
+PROBLEM missing classification: hD.r0
+PROBLEM missing classification: hD.r1
+PROBLEM missing classification: hD.h0
+PROBLEM missing classification: hD.h1
+PROBLEM missing classification: hD.lu
+PROBLEM missing classification: hD.heL
+PROBLEM missing classification: site
+PROBLEM missing classification: T
+PROBLEM missing classification: Xx
+PROBLEM missing classification: hIA.hQ
+PROBLEM missing classification: hIA.hN
+PROBLEM missing classification: hIA.hlc
+PROBLEM missing classification: hIA.hlc'
+PROBLEM missing classification: hIA.hpt
+PROBLEM missing classification: hIA.hspec
+PROBLEM missing classification: hIA.htag
+PROBLEM missing classification: hIH.hQ
+PROBLEM missing classification: hIH.hN
+PROBLEM missing classification: hIH.hlc
+PROBLEM missing classification: hIH.hlc'
+PROBLEM missing classification: hIH.hpt
+PROBLEM missing classification: hIH.hspec
+PROBLEM missing classification: hIH.htag
+PROBLEM missing classification: hOA.hQ
+PROBLEM missing classification: hOA.hN
+PROBLEM missing classification: hOA.hlc
+PROBLEM missing classification: hOA.hlc'
+PROBLEM missing classification: hOA.hpt
+PROBLEM missing classification: hOA.hspec
+PROBLEM missing classification: hOA.htag
+PROBLEM missing classification: hOH.hQ
+PROBLEM missing classification: hOH.hN
+PROBLEM missing classification: hOH.hlc
+PROBLEM missing classification: hOH.hlc'
+PROBLEM missing classification: hOH.hpt
+PROBLEM missing classification: hOH.hspec
+PROBLEM missing classification: hOH.htag
+PROBLEM missing classification: hBA.hQ
+PROBLEM missing classification: hBA.hN
+PROBLEM missing classification: hBA.hlc
+PROBLEM missing classification: hBA.hlc'
+PROBLEM missing classification: hBA.hpt
+PROBLEM missing classification: hBA.hspec
+PROBLEM missing classification: hBA.htag
+PROBLEM missing classification: hBH.hQ
+PROBLEM missing classification: hBH.hN
+PROBLEM missing classification: hBH.hlc
+PROBLEM missing classification: hBH.hlc'
+PROBLEM missing classification: hBH.hpt
+PROBLEM missing classification: hBH.hspec
+PROBLEM missing classification: hBH.htag
+PROBLEM missing classification: hW.left
+PROBLEM missing classification: hW.right
+PROBLEM missing classification: hNin.left
+PROBLEM missing classification: hNin.right
+PROBLEM missing classification: hNout.left
+PROBLEM missing classification: hNout.right
+PROBLEM missing classification: hb0.hsls
+PROBLEM missing classification: hb0.hr0
+PROBLEM missing classification: hb0.hr1
+PROBLEM missing classification: hb0.hh0
+PROBLEM missing classification: hb0.hh1
+PROBLEM missing classification: hb0.hlu
+PROBLEM missing classification: hbL.hsls
+PROBLEM missing classification: hbL.hr0
+PROBLEM missing classification: hbL.hr1
+PROBLEM missing classification: hbL.hh0
+PROBLEM missing classification: hbL.hh1
+PROBLEM missing classification: hbL.hlu
+PROBLEM missing classification: mk
+PROBLEM missing classification: hE.left
+PROBLEM missing classification: hE.right
+PROBLEM missing classification: hwin.left
+PROBLEM missing classification: hwin.right
+PROBLEM missing classification: hread.left
+PROBLEM missing classification: hread.right
+PROBLEM extra classification (absent from Lean's list): hwin
+PROBLEM extra classification (absent from Lean's list): hW
+PROBLEM extra classification (absent from Lean's list): hD
+PROBLEM extra classification (absent from Lean's list): hE
+PROBLEM extra classification (absent from Lean's list): hread
+PROBLEM extra classification (absent from Lean's list): hIA
+PROBLEM extra classification (absent from Lean's list): hIH
+PROBLEM extra classification (absent from Lean's list): hOA
+PROBLEM extra classification (absent from Lean's list): hOH
+PROBLEM extra classification (absent from Lean's list): hBA
+PROBLEM extra classification (absent from Lean's list): hBH
+PROBLEM extra classification (absent from Lean's list): hNin
+PROBLEM extra classification (absent from Lean's list): hNout
+PROBLEM extra classification (absent from Lean's list): hv
+PROBLEM extra classification (absent from Lean's list): hb0
+PROBLEM extra classification (absent from Lean's list): hbL
+RESULT 108 difference(s)
