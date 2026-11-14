@@ -1,0 +1,11 @@
+PASS  the committed evidence passes all eight checks
+PASS  a changed Lean inventory is caught
+PASS  a changed VPS log is caught
+PASS  an inventory that disagrees with the VPS axiom log is caught
+PASS  a Lean key missing from the map is caught
+PASS  an unclassified key is caught
+PASS  a stray classification row is caught
+PASS  an unknown category is caught
+PASS  a hypothesis wrongly marked discharged is caught
+PASS  a VR-005 row with no trace is caught
+tests passed: 10, failed: 0

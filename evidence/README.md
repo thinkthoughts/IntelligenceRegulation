@@ -7,21 +7,23 @@ the project is production-secure, that its proofs are complete, or about researc
 
 ## Latest report
 
-**[RPI-RLT-VR-005 — VPS verification and production premise audit](reports/RPI-RLT-VR-005.md)**, 2026-11-14.
+**[RPI-RLT-VR-006 — Lean premise inventory reconciliation](reports/RPI-RLT-VR-006.md)**, 2026-11-14.
 
-In one paragraph: the fork owner reports that the whole Lean library builds on a 15 GiB machine and that the
-newest top theorem depends on the three standard axioms only; those logs are still to be placed in this folder,
-so the figures are marked "reported". The top theorem, `stgAlg_productionReadyL_epP_exec_real`, is a conditional
-theorem about a parametric verifier. This review lists 103 hypotheses and obligations in its statement and
-classifies them: 26 open cryptographic or protocol obligations, 18 already proved elsewhere in the repository on
-parallel lines of work, 37 bookkeeping, 20 public instance data, 2 modelling. A checked proof term is established;
-a production guarantee for the running application remains open, as the repository's own rule D63 and gap audits
-say.
+In one paragraph: the second machine's logs are now in this folder and their hashes verify: the whole Lean library
+builds (3,840 jobs), the top theorem `stgAlg_productionReadyL_epP_exec_real` depends on the three standard axioms
+only, and Lean's kernel replay accepts its module. Lean's own list of that theorem's premises (196 binders, 88 of
+them propositions) has been reconciled with the earlier source-based classification: all 108 differences are
+explained, and the normalized inventory has 173 keys, each traced to Lean's list. 31 keys are open cryptographic
+or protocol obligations; 19 are proved elsewhere in the repository under other hypotheses; the rest are
+bookkeeping, public instance data and modelling. The theorem is a checked implication about a parametric
+verifier; a production guarantee for the running application remains open, as the repository's rule D63 and gap
+audits say.
 
 ## Report history
 
 | Report | Date | What it is | Evidence basis |
 |---|---|---|---|
+| [RPI-RLT-VR-006](reports/RPI-RLT-VR-006.md) | 2026-11-14 | VPS logs read and hash-checked; Lean-generated premise inventory reconciled, normalized and checked; corrections to VR-005 | logs and Lean output in `results/`, checks re-run |
 | [RPI-RLT-VR-005](reports/RPI-RLT-VR-005.md) | 2026-11-14 | VPS results as reported, premise inventory and classification of the top theorem, tooling with tests | source read, tools re-run; VPS logs awaited |
 | [RPI-RLT-VR-004](reports/RPI-RLT-VR-004.md) | 2026-11-14 | reproduction of R1 (Lean) and R2 (Rust), roadmap checkpoint | commands re-run, logs in `results/` |
 | [RPI-RLT-VR-003](reports/RPI-RLT-VR-003.md) | 2026-11-13 | full technical review: architecture, FlashProve comparison, formal-verification inventory, roadmap R1 to R9 | source read at pinned commits, a few checks re-run |
@@ -44,7 +46,7 @@ Full table: [PINS.md](PINS.md).
 | Lean, Mathlib | 4.34.1, `v4.34.1` (as declared in `formal/`) |
 | Rust | rustc and cargo 1.97.0, `--locked` |
 | Reproduction machine (VR-004, VR-005 tooling) | 2 cores, 8 GB (about 6 GiB usable per job), Ubuntu 24.04, x86-64, CPU only |
-| Second machine (VPS, fork owner) | Ubuntu Linux, 15 GiB RAM, 8 GiB swap, Lean 4.34.1; reported, logs awaited |
+| Second machine (VPS, fork owner) | Ubuntu, Linux 6.8, x86-64, 4 cores, 15,992 MB RAM, 8 GB swap, Lean 4.34.1; logs in `results/R1-lean-vps/` |
 
 ## Reproduced versus reported
 
@@ -53,10 +55,10 @@ Full table: [PINS.md](PINS.md).
 | Fork `main` equals Victor's `main` at `eee3eb57` | reproduced | VR-003 §5.1 |
 | The 15 Lean files credited to FlashProve match FlashProve at its pinned commit | reproduced | VR-003 §5.1 |
 | Zero `sorry`, `axiom`, `native_decide` in 497 Lean files | reproduced (text scan) | VR-003 §5.1 |
-| Lean library builds | reproduced for 358 of 496 modules on the 6 GiB machine; complete build (3,840 jobs) reported from the VPS, logs awaited | VR-004 §2.1, VR-005 §2 |
-| Axioms limited to `propext`, `Classical.choice`, `Quot.sound` | reproduced for 13 named component and block theorems; reported from the VPS for the central theorem, log awaited | VR-004 §2.2, VR-005 §2 |
-| Second kernel check | reproduced with `leanchecker` on 358 modules; reported for `ZK60Formal.RunStgAlgTopR`; a separate kernel implementation (nanoda) still to do | VR-004 §2.3, VR-005 §2 |
-| Run-level `ProductionReadyL` theorem holds from named hypotheses | proof term reported checked; 103 hypotheses and obligations listed from source and classified, 26 of them open; Lean-generated list awaited | VR-005 §3, §4 |
+| Lean library builds | reproduced for 358 of 496 modules on the 6 GiB machine; complete build (3,840 jobs) logged on the second machine | VR-004 §2.1, VR-006 §2 |
+| Axioms limited to `propext`, `Classical.choice`, `Quot.sound` | reproduced for 13 named component and block theorems; logged on the second machine for the central theorem and three other top theorems | VR-004 §2.2, VR-006 §2 |
+| Second kernel check | reproduced with `leanchecker` on 358 modules; logged for `ZK60Formal.RunStgAlgTopR` (3.10 GiB peak); the whole-library form's memory failure is reported, its log is empty; a separate kernel implementation (nanoda) still to do | VR-004 §2.3, VR-006 §2 |
+| Run-level `ProductionReadyL` theorem holds from named hypotheses | proof term checked on the second machine; Lean lists 196 binders, 88 propositional; 173 normalized keys classified, 31 of them open | VR-006 §3, §4 |
 | End-to-end production guarantee for the running app | open, by the repository's own account (rule D63, gap audits of 2026-11-10) | VR-003 §4 |
 | `zkp-core` tests pass | reproduced | VR-004 §3.1 |
 | Hashline library tests pass | reproduced: 978 passed, 90 ignored by the author, 5 failed for environment or fixture reasons (4 pass once adjusted) | VR-004 §3.1, §3.2 |
@@ -67,7 +69,7 @@ Full table: [PINS.md](PINS.md).
 
 ## Open questions for Victor
 
-Full text: VR-003 §8 (questions 1 to 12), VR-004 §6 (13 to 15) and VR-005 §7 (16 to 18). In short:
+Full text: VR-003 §8 (questions 1 to 12), VR-004 §6 (13 to 15), VR-005 §7 (16 to 18) and VR-006 §9 (20 to 22). In short:
 
 1. Where is the public statement of purpose, and is `docs/VISION.md` current?
 2. When did the repository first become public?
@@ -86,28 +88,31 @@ Full text: VR-003 §8 (questions 1 to 12), VR-004 §6 (13 to 15) and VR-005 §7 
 15. How much memory does `RunExtractClassify` need alone?
 16. Which theorem is the one to cite as the top theorem today, and is a merged one planned?
 17. Is D79 closed by the Lean repair?
-18. Are the categories in `results/R5-premises/classification.tsv` right?
+18. Are the categories right? (now `results/R6-reconciliation/classification-normalized.tsv`)
+20. Are five fields of `hD` open and the other ten settled side conditions?
+21. Are the hypotheses added by the L52, L55 and L56 top theorems all fit, geometry and choice conditions?
+22. Does `site` carry a burden of its own?
 
 ## Status
 
 | Item | State on 2026-11-14 |
 |---|---|
-| Review | VR-003, VR-004 and VR-005 published |
-| R1 (Lean) | complete build reported from a second machine; logs to be committed; per-module replay of run-level modules and nanoda remain |
+| Review | VR-003 to VR-006 published |
+| R1 (Lean) | complete build, central axioms and the run-level module's kernel replay logged on a second machine; per-module replay of the other run-level modules and nanoda remain |
 | R2 (Rust) | done for the two core libraries |
-| R5 (premise inventory) | tooling and tests done; classification from source text done; Lean-generated list awaited |
-| Held | R3, R4, R6 to R9, and anything touching Hashline, until the fork owner has read VR-005 |
+| R5 (premise inventory) | Lean-generated, normalized, traced and checked; categories await Victor's view |
+| Held | R3, R4, R6 to R9, and anything touching Hashline, until the fork owner has read VR-006 |
 | Contact with Victor | none; no upstream issue or pull request |
 | Changes to Victor's files | one notice at the top of `README.md` on this branch; everything else is under `evidence/` |
 
 ## Proposed next steps
 
-1. Commit the VPS logs and the Lean-generated premise inventory (`results/R1-lean-vps/README.md` has the commands).
-2. Revise the classification until the checker agrees with Lean's list.
-3. Replay the remaining run-level modules with `leanchecker`, one module at a time; attempt nanoda.
+1. Per-module `leanchecker` over the remaining modules on the second machine (`scripts/r1-leanchecker-per-module.sh`); one nanoda attempt.
+2. Classify the hypotheses that the parallel top theorems add, so the four can be compared key for key.
+3. A short author-facing summary: what was reproduced, the 31 open keys, the corrections, the questions.
 4. Then choose among R3 (statement-fidelity pack), R4 (arithmetic certificates) and a reproduction kit.
 
-Details: VR-005 §6 and §8; the full R1 to R9 table is in VR-004 §5.
+Details: VR-006 §8 and §10; the full R1 to R9 table is in VR-004 §5.
 
 ## Where to find this review
 
@@ -131,6 +136,7 @@ discuss a proposed step.
 | `scripts/` | the exact commands run, and two Lean files that only query the library |
 | `results/R1-lean/`, `results/R2-rust/` | logs and result tables of VR-004 |
 | `results/R1-lean-vps/` | the second machine's results: reported figures and the steps for placing its logs |
-| `results/R5-premises/` | premise inventories, the classification and the tool test log |
+| `results/R5-premises/` | premise inventories (Lean-generated and source-based), the VR-005 classification, the tool test log |
+| `results/R6-reconciliation/` | the key map, the normalized classification, the discharge audit, check and test logs |
 | `PINS.md` | source and environment pins |
 | `RESPONSE-GUIDE.md` | status and how to respond |

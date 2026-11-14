@@ -1,0 +1,459 @@
+{
+ "schema": "r6-parallel-lines/1",
+ "theorems": {
+  "audited": {
+   "file": "formal/ZK60Formal/RunStgAlgTopR.lean",
+   "name": "stgAlg_productionReadyL_epP_exec_real",
+   "lane": "L57",
+   "binders": 179
+  },
+  "eb": {
+   "file": "formal/ZK60Formal/RunEpBTopT.lean",
+   "name": "eb_productionReadyL_epP_codeT",
+   "lane": "L52",
+   "binders": 145
+  },
+  "cb": {
+   "file": "formal/ZK60Formal/RunCloseBTopF.lean",
+   "name": "cb_productionReadyL_epP_codeF",
+   "lane": "L55",
+   "binders": 163
+  },
+  "bnd": {
+   "file": "formal/ZK60Formal/RunBndTop.lean",
+   "name": "bnd_productionReadyL_epP_args",
+   "lane": "L56",
+   "binders": 146
+  }
+ },
+ "lines": {
+  "eb": {
+   "absent_here": [
+    "F",
+    "Cl",
+    "T",
+    "hTenc",
+    "hTaA",
+    "hTaB",
+    "Ux",
+    "Xx",
+    "hUc",
+    "hXc",
+    "pr",
+    "hp1",
+    "hp2",
+    "hF",
+    "hw0",
+    "hβLR",
+    "hTe",
+    "hTQ",
+    "hβJ",
+    "hopX",
+    "P0in",
+    "P0out",
+    "csIOI",
+    "csIOO",
+    "hIOI",
+    "hIOO",
+    "hNin",
+    "hNout",
+    "ΦI",
+    "ΦO",
+    "dgI",
+    "dgO",
+    "eI",
+    "eO",
+    "ΛI",
+    "ΛO",
+    "hb0",
+    "hbL",
+    "hPin",
+    "hPout",
+    "hTrI",
+    "hTrO",
+    "hDI_stg",
+    "hDO_stg",
+    "hLI_stg",
+    "hLO_stg",
+    "hdinS",
+    "hdoutS",
+    "hwin",
+    "hBal"
+   ],
+   "added_here": [
+    "hw",
+    "hRn",
+    "hopX1",
+    "hgX0",
+    "hnX0",
+    "hXep",
+    "hfitX",
+    "hRr",
+    "hsl_stg",
+    "hR0_stg",
+    "hR1_stg",
+    "hH0_stg",
+    "hH1_stg",
+    "hLU_stg",
+    "hdin",
+    "hdout"
+   ]
+  },
+  "cb": {
+   "absent_here": [
+    "Cl",
+    "T",
+    "hTenc",
+    "hTaA",
+    "hTaB",
+    "Ux",
+    "Xx",
+    "hUc",
+    "hXc",
+    "pr",
+    "hp1",
+    "hp2",
+    "hF",
+    "hw0",
+    "hβLR",
+    "hTe",
+    "hTQ",
+    "hβJ",
+    "Win",
+    "Wout",
+    "hW",
+    "hopX",
+    "P0in",
+    "P0out",
+    "csIOI",
+    "csIOO",
+    "hIOI",
+    "hIOO",
+    "hNin",
+    "hNout",
+    "ΦI",
+    "ΦO",
+    "dgI",
+    "dgO",
+    "eI",
+    "eO",
+    "ΛI",
+    "ΛO",
+    "hb0",
+    "hbL",
+    "hPin",
+    "hPout",
+    "hTrI",
+    "hTrO",
+    "hDI_stg",
+    "hDO_stg",
+    "hLI_stg",
+    "hLO_stg",
+    "hdinS",
+    "hdoutS",
+    "hwin",
+    "hBal"
+   ],
+   "added_here": [
+    "hw",
+    "hRn",
+    "Vi",
+    "hinc",
+    "houtc",
+    "hchk",
+    "hLb1",
+    "pXk",
+    "hXk",
+    "hwXk",
+    "hmXk",
+    "hfitXk",
+    "hgXk",
+    "hnXk",
+    "hwX0",
+    "hmX0",
+    "hgX1",
+    "hnX1",
+    "hOX",
+    "hwXo",
+    "hfitXo",
+    "hgXo",
+    "hnXo",
+    "hgX0",
+    "hnX0",
+    "hXep",
+    "hfitX",
+    "hRr",
+    "hsl_stg",
+    "hR0_stg",
+    "hR1_stg",
+    "hH0_stg",
+    "hH1_stg",
+    "hLU_stg",
+    "hdin",
+    "hdout"
+   ]
+  },
+  "bnd": {
+   "absent_here": [
+    "F",
+    "Cl",
+    "T",
+    "hTenc",
+    "hTaA",
+    "hTaB",
+    "Ux",
+    "Xx",
+    "hUc",
+    "hXc",
+    "pr",
+    "hp1",
+    "hp2",
+    "hF",
+    "hw0",
+    "hβLR",
+    "hTe",
+    "hTQ",
+    "hβJ",
+    "hLb",
+    "hopX",
+    "hsl_blk",
+    "P0in",
+    "P0out",
+    "csIOI",
+    "csIOO",
+    "hIOI",
+    "hIOO",
+    "hNin",
+    "hNout",
+    "ΦI",
+    "ΦO",
+    "dgI",
+    "dgO",
+    "eI",
+    "eO",
+    "ΛI",
+    "ΛO",
+    "hb0",
+    "hbL",
+    "hPin",
+    "hPout",
+    "hTrI",
+    "hTrO",
+    "hDI_stg",
+    "hDO_stg",
+    "hLI_stg",
+    "hLO_stg",
+    "hdinS",
+    "hdoutS",
+    "hwin",
+    "hBal"
+   ],
+   "added_here": [
+    "hw",
+    "hRn",
+    "hopX1",
+    "hgX0",
+    "hnX0",
+    "hXep",
+    "hfitX",
+    "hRr",
+    "hPk",
+    "hgXB",
+    "hsl_args",
+    "hsl_stg",
+    "hR0_stg",
+    "hR1_stg",
+    "hH0_stg",
+    "hH1_stg",
+    "hLU_stg",
+    "hdin",
+    "hdout"
+   ]
+  }
+ },
+ "open_binders_presence": {
+  "O": [
+   "audited",
+   "eb",
+   "cb",
+   "bnd"
+  ],
+  "hD": [
+   "audited",
+   "eb",
+   "cb",
+   "bnd"
+  ],
+  "hDI_stg": [
+   "audited"
+  ],
+  "hDO_stg": [
+   "audited"
+  ],
+  "hE": [
+   "audited",
+   "eb",
+   "cb",
+   "bnd"
+  ],
+  "hH0_blk": [
+   "audited",
+   "eb",
+   "cb",
+   "bnd"
+  ],
+  "hH1_blk": [
+   "audited",
+   "eb",
+   "cb",
+   "bnd"
+  ],
+  "hLI_stg": [
+   "audited"
+  ],
+  "hLO_stg": [
+   "audited"
+  ],
+  "hLU_blk": [
+   "audited",
+   "eb",
+   "cb",
+   "bnd"
+  ],
+  "hR0_blk": [
+   "audited",
+   "eb",
+   "cb",
+   "bnd"
+  ],
+  "hR1_blk": [
+   "audited",
+   "eb",
+   "cb",
+   "bnd"
+  ],
+  "hTrI": [
+   "audited"
+  ],
+  "hTrO": [
+   "audited"
+  ],
+  "hblk": [
+   "audited",
+   "eb",
+   "cb",
+   "bnd"
+  ],
+  "hcan": [
+   "audited",
+   "eb",
+   "cb",
+   "bnd"
+  ],
+  "hdinS": [
+   "audited"
+  ],
+  "hdoutS": [
+   "audited"
+  ],
+  "hdzero": [
+   "audited",
+   "eb",
+   "cb",
+   "bnd"
+  ],
+  "hops": [
+   "audited",
+   "eb",
+   "cb",
+   "bnd"
+  ],
+  "hread": [
+   "audited",
+   "eb",
+   "cb",
+   "bnd"
+  ],
+  "hsl_blk": [
+   "audited",
+   "eb",
+   "cb"
+  ],
+  "hzk": [
+   "audited",
+   "eb",
+   "cb",
+   "bnd"
+  ],
+  "mk": [
+   "audited",
+   "eb",
+   "cb",
+   "bnd"
+  ]
+ },
+ "discharged_binders_presence": {
+  "O": [
+   "audited",
+   "eb",
+   "cb",
+   "bnd"
+  ],
+  "T": [
+   "audited"
+  ],
+  "hBal": [
+   "audited"
+  ],
+  "hF": [
+   "audited"
+  ],
+  "hTQ": [
+   "audited"
+  ],
+  "hTaA": [
+   "audited"
+  ],
+  "hTaB": [
+   "audited"
+  ],
+  "hTe": [
+   "audited"
+  ],
+  "hTenc": [
+   "audited"
+  ],
+  "hUc": [
+   "audited"
+  ],
+  "hW": [
+   "audited",
+   "eb",
+   "bnd"
+  ],
+  "hXc": [
+   "audited"
+  ],
+  "hopX": [
+   "audited"
+  ],
+  "hp1": [
+   "audited"
+  ],
+  "hp2": [
+   "audited"
+  ],
+  "hw0": [
+   "audited"
+  ],
+  "hwin": [
+   "audited"
+  ],
+  "hβJ": [
+   "audited"
+  ],
+  "hβLR": [
+   "audited"
+  ]
+ }
+}

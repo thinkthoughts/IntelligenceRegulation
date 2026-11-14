@@ -3,7 +3,11 @@
 > **Independent external review.** Part of the review described in [../../README.md](../../README.md). Victor
 > Rielly has had no part in it.
 
-**Status on 2026-11-14: this folder holds no logs yet.** The figures below were reported by the fork owner, who
+**Update, 2026-11-14 (commit `41f67ade`): the logs are here.** The fork owner committed them with hashes; report
+VR-006 §2 reads them. The whole-library replay left an empty log (`04-leanchecker.log`, 0 bytes), so its memory
+failure stays a reported result. The text below is the earlier note, kept as written.
+
+**Status on 2026-11-14, before that commit: this folder holds no logs yet.** The figures below were reported by the fork owner, who
 ran the commands on a separate Linux VPS. The author of reports VR-003 to VR-005 has seen the figures only, and
 has inspected none of the VPS logs. Each figure stays labelled "reported" until its log is in this folder.
 

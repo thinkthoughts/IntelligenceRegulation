@@ -1,0 +1,10 @@
+PASS 1 preserved: sha256 9d277a9f292cf406…
+PASS 2 vps-hashes: 6 files
+PASS 3 lean-vs-log: 196 binders, 88 propositional, axioms ['Classical.choice', 'Quot.sound', 'propext']
+PASS 4 lean-vs-text: 179 named binders in the same order
+PASS 5 map-complete: 179 keys in the map, 179 required
+PASS 6 classified: 173 normalized keys
+PASS 7 traced: 103 VR-005 rows
+PASS 8 discharges
+normalized keys by category: bookkeeping=63, discharged=19, instance-data=58, modelling=2, open=31, ruling=0
+RESULT all checks pass

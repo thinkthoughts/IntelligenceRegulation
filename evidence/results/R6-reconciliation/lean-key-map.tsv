@@ -1,0 +1,180 @@
+lean_key	binder_index	binder_kind	lean_kind	type_head	normalized_key	relation	vr005_row	discrepancy_class
+inst	5	instance	prop	Nonempty	inst	same	none	new: instance parameter
+hpos	15	explicit	prop	Function.Injective	hpos	same	hpos	matched
+place	16	explicit	data-with-proofs	Fin	place	same	none	new: library type invariant
+msg_place	18	explicit	prop	Eq	msg_place	same	msg_place	matched
+h64	43	explicit	prop	LE.le	h64	same	h64	matched
+hr	44	explicit	prop	LE.le	hr	same	hr	matched
+hon	45	explicit	data-with-proofs	ZK60.ProtocolClassify.HonestIn	hon	same	hon	matched
+hbij	47	explicit	prop	Function.Bijective	hbij	same	hbij	matched
+hs	50	explicit	prop	Eq	hs	same	hs	matched
+hL	51	explicit	prop	LE.le	hL	same	hL	matched
+hL64	52	explicit	prop	LT.lt	hL64	same	hL64	matched
+Rn	53	explicit	data-with-proofs	ZK60.ProtocolClassify.RtRun	Rn	same	Rn	matched
+hv.hdr	54	explicit	bundle-field	ZK60.ProtocolClassify.RtProf.Valid	hv.hdr	same	hv	nested proof field of a bundle VR-005 classified as one row
+hv.pos	54	explicit	bundle-field	ZK60.ProtocolClassify.RtProf.Valid	hv.pos	same	hv	nested proof field of a bundle VR-005 classified as one row
+hv.le	54	explicit	bundle-field	ZK60.ProtocolClassify.RtProf.Valid	hv.le	same	hv	nested proof field of a bundle VR-005 classified as one row
+hv.sq	54	explicit	bundle-field	ZK60.ProtocolClassify.RtProf.Valid	hv.sq	same	hv	nested proof field of a bundle VR-005 classified as one row
+hv.len	54	explicit	bundle-field	ZK60.ProtocolClassify.RtProf.Valid	hv.len	same	hv	nested proof field of a bundle VR-005 classified as one row
+hD.hK	56	explicit	bundle-field	ZK60.ProtocolClassify.RtKData.Valid	hD.hK	same	hD	nested proof field of a bundle VR-005 classified as one row
+hD.slCut	56	explicit	bundle-field	ZK60.ProtocolClassify.RtKData.Valid	hD.slCut	same	hD	nested proof field of a bundle VR-005 classified as one row
+hD.slDeg	56	explicit	bundle-field	ZK60.ProtocolClassify.RtKData.Valid	hD.slDeg	same	hD	nested proof field of a bundle VR-005 classified as one row
+hD.slWin	56	explicit	bundle-field	ZK60.ProtocolClassify.RtKData.Valid	hD.slWin	same	hD	nested proof field of a bundle VR-005 classified as one row
+hD.mK	56	explicit	bundle-field	ZK60.ProtocolClassify.RtKData.Valid	hD.mK	same	hD	nested proof field of a bundle VR-005 classified as one row
+hD.mCut	56	explicit	bundle-field	ZK60.ProtocolClassify.RtKData.Valid	hD.mCut	same	hD	nested proof field of a bundle VR-005 classified as one row
+hD.mS	56	explicit	bundle-field	ZK60.ProtocolClassify.RtKData.Valid	hD.mS	same	hD	nested proof field of a bundle VR-005 classified as one row
+hD.opV	56	explicit	bundle-field	ZK60.ProtocolClassify.RtKData.Valid	hD.opV	same	hD	nested proof field of a bundle VR-005 classified as one row
+hD.opW	56	explicit	bundle-field	ZK60.ProtocolClassify.RtKData.Valid	hD.opW	same	hD	nested proof field of a bundle VR-005 classified as one row
+hD.r0	56	explicit	bundle-field	ZK60.ProtocolClassify.RtKData.Valid	hD.r0	same	hD	nested proof field of a bundle VR-005 classified as one row
+hD.r1	56	explicit	bundle-field	ZK60.ProtocolClassify.RtKData.Valid	hD.r1	same	hD	nested proof field of a bundle VR-005 classified as one row
+hD.h0	56	explicit	bundle-field	ZK60.ProtocolClassify.RtKData.Valid	hD.h0	same	hD	nested proof field of a bundle VR-005 classified as one row
+hD.h1	56	explicit	bundle-field	ZK60.ProtocolClassify.RtKData.Valid	hD.h1	same	hD	nested proof field of a bundle VR-005 classified as one row
+hD.lu	56	explicit	bundle-field	ZK60.ProtocolClassify.RtKData.Valid	hD.lu	same	hD	nested proof field of a bundle VR-005 classified as one row
+hD.heL	56	explicit	bundle-field	ZK60.ProtocolClassify.RtKData.Valid	hD.heL	same	hD	nested proof field of a bundle VR-005 classified as one row
+site	59	explicit	data-with-proofs	ZK60.ProtocolClassify.Site	site	same	none	new: data binder with proof fields
+O.width	64	explicit	bundle-field	ZK60.ProtocolClassify.RunShapeP.ClassifyOpenP	O.width	same	O.width	matched
+O.shapes	64	explicit	bundle-field	ZK60.ProtocolClassify.RunShapeP.ClassifyOpenP	O.shapes	same	O.shapes	matched
+O.weights	64	explicit	bundle-field	ZK60.ProtocolClassify.RunShapeP.ClassifyOpenP	O.weights	same	O.weights	matched
+O.inPub	64	explicit	bundle-field	ZK60.ProtocolClassify.RunShapeP.ClassifyOpenP	O.inPub	same	O.inPub	matched
+O.outPub	64	explicit	bundle-field	ZK60.ProtocolClassify.RunShapeP.ClassifyOpenP	O.outPub	same	O.outPub	matched
+O.blocks	64	explicit	bundle-field	ZK60.ProtocolClassify.RunShapeP.ClassifyOpenP	O.blocks	same	O.blocks	matched
+O.commit	64	explicit	bundle-field	ZK60.ProtocolClassify.RunShapeP.ClassifyOpenP	O.commit	same	O.commit	matched
+O.policy	64	explicit	bundle-field	ZK60.ProtocolClassify.RunShapeP.ClassifyOpenP	O.policy	same	O.policy	matched
+O.parts	64	explicit	bundle-field	ZK60.ProtocolClassify.RunShapeP.ClassifyOpenP	O.parts	same	O.parts	matched
+O.refuse	64	explicit	bundle-field	ZK60.ProtocolClassify.RunShapeP.ClassifyOpenP	O.refuse	same	O.refuse	matched
+O.counts	64	explicit	bundle-field	ZK60.ProtocolClassify.RunShapeP.ClassifyOpenP	O.counts	same	O.counts	matched
+O.zk	64	explicit	bundle-field	ZK60.ProtocolClassify.RunShapeP.ClassifyOpenP	O.zk	same	O.zk	matched
+T	73	explicit	data-with-proofs	ZK60.ProtocolClassify.XTest	T	same	none	new: data binder with proof fields
+hTenc	74	explicit	prop	Eq	hTenc	same	hTenc	matched
+hTaA	75	explicit	prop	LE.le	hTaA	same	hTaA	matched
+hTaB	76	explicit	prop	LE.le	hTaB	same	hTaB	matched
+Xx	78	explicit	data-with-proofs	Finset	Xx	same	none	new: library type invariant
+hUc	79	explicit	prop	ZK60.ProtocolClassify.CutReads	hUc	same	hUc	matched
+hXc	80	explicit	prop	ZK60.ProtocolClassify.CutReads	hXc	same	hXc	matched
+hp1	82	explicit	prop	LE.le	hp1	same	hp1	matched
+hp2	83	explicit	prop	LE.le	hp2	same	hp2	matched
+hF	84	explicit	prop	Eq	hF	same	hF	matched
+hw0	85	explicit	prop	LE.le	hw0	same	hw0	matched
+hβLR	86	explicit	prop	Eq	hβLR	same	hβLR	matched
+hTe	87	explicit	prop	Eq	hTe	same	hTe	matched
+hTQ	88	explicit	prop	Eq	hTQ	same	hTQ	matched
+hβJ	89	explicit	prop	Eq	hβJ	same	hβJ	matched
+hU	91	explicit	prop	Eq	hU	same	hU	matched
+Iin	95	explicit	data-with-proofs	ZK60.ProtocolClassify.RtInc	Iin	same	Iin	matched
+Oout	96	explicit	data-with-proofs	ZK60.ProtocolClassify.RtOutc	Oout	same	Oout	matched
+bp	97	explicit	data-with-proofs	ZK60.ProtocolClassify.RtBlk	bp	same	bp	matched
+hσ	101	explicit	prop	Eq	hσ	same	hσ	matched
+hLb	102	explicit	prop	LE.le	hLb	same	hLb	matched
+hgeo	103	explicit	prop	Eq	hgeo	same	hgeo	matched
+hIA.hQ	104	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hIA.hQ	same	hIA	nested proof field of a bundle VR-005 classified as one row
+hIA.hN	104	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hIA.hN	same	hIA	nested proof field of a bundle VR-005 classified as one row
+hIA.hlc	104	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hIA.hlc	same	hIA	nested proof field of a bundle VR-005 classified as one row
+hIA.hlc'	104	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hIA.hlc'	same	hIA	nested proof field of a bundle VR-005 classified as one row
+hIA.hpt	104	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hIA.hpt	same	hIA	nested proof field of a bundle VR-005 classified as one row
+hIA.hspec	104	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hIA.hspec	same	hIA	nested proof field of a bundle VR-005 classified as one row
+hIA.htag	104	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hIA.htag	same	hIA	nested proof field of a bundle VR-005 classified as one row
+hIH.hQ	105	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hIH.hQ	same	hIH	nested proof field of a bundle VR-005 classified as one row
+hIH.hN	105	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hIH.hN	same	hIH	nested proof field of a bundle VR-005 classified as one row
+hIH.hlc	105	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hIH.hlc	same	hIH	nested proof field of a bundle VR-005 classified as one row
+hIH.hlc'	105	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hIH.hlc'	same	hIH	nested proof field of a bundle VR-005 classified as one row
+hIH.hpt	105	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hIH.hpt	same	hIH	nested proof field of a bundle VR-005 classified as one row
+hIH.hspec	105	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hIH.hspec	same	hIH	nested proof field of a bundle VR-005 classified as one row
+hIH.htag	105	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hIH.htag	same	hIH	nested proof field of a bundle VR-005 classified as one row
+hOA.hQ	106	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hOA.hQ	same	hOA	nested proof field of a bundle VR-005 classified as one row
+hOA.hN	106	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hOA.hN	same	hOA	nested proof field of a bundle VR-005 classified as one row
+hOA.hlc	106	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hOA.hlc	same	hOA	nested proof field of a bundle VR-005 classified as one row
+hOA.hlc'	106	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hOA.hlc'	same	hOA	nested proof field of a bundle VR-005 classified as one row
+hOA.hpt	106	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hOA.hpt	same	hOA	nested proof field of a bundle VR-005 classified as one row
+hOA.hspec	106	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hOA.hspec	same	hOA	nested proof field of a bundle VR-005 classified as one row
+hOA.htag	106	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hOA.htag	same	hOA	nested proof field of a bundle VR-005 classified as one row
+hOH.hQ	107	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hOH.hQ	same	hOH	nested proof field of a bundle VR-005 classified as one row
+hOH.hN	107	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hOH.hN	same	hOH	nested proof field of a bundle VR-005 classified as one row
+hOH.hlc	107	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hOH.hlc	same	hOH	nested proof field of a bundle VR-005 classified as one row
+hOH.hlc'	107	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hOH.hlc'	same	hOH	nested proof field of a bundle VR-005 classified as one row
+hOH.hpt	107	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hOH.hpt	same	hOH	nested proof field of a bundle VR-005 classified as one row
+hOH.hspec	107	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hOH.hspec	same	hOH	nested proof field of a bundle VR-005 classified as one row
+hOH.htag	107	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsAt	hOH.htag	same	hOH	nested proof field of a bundle VR-005 classified as one row
+hBA.hQ	108	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsR13	hBA.hQ	same	hBA	nested proof field of a bundle VR-005 classified as one row
+hBA.hN	108	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsR13	hBA.hN	same	hBA	nested proof field of a bundle VR-005 classified as one row
+hBA.hlc	108	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsR13	hBA.hlc	same	hBA	nested proof field of a bundle VR-005 classified as one row
+hBA.hlc'	108	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsR13	hBA.hlc'	same	hBA	nested proof field of a bundle VR-005 classified as one row
+hBA.hpt	108	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsR13	hBA.hpt	same	hBA	nested proof field of a bundle VR-005 classified as one row
+hBA.hspec	108	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsR13	hBA.hspec	same	hBA	nested proof field of a bundle VR-005 classified as one row
+hBA.htag	108	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsR13	hBA.htag	same	hBA	nested proof field of a bundle VR-005 classified as one row
+hBH.hQ	109	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsR13	hBH.hQ	same	hBH	nested proof field of a bundle VR-005 classified as one row
+hBH.hN	109	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsR13	hBH.hN	same	hBH	nested proof field of a bundle VR-005 classified as one row
+hBH.hlc	109	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsR13	hBH.hlc	same	hBH	nested proof field of a bundle VR-005 classified as one row
+hBH.hlc'	109	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsR13	hBH.hlc'	same	hBH	nested proof field of a bundle VR-005 classified as one row
+hBH.hpt	109	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsR13	hBH.hpt	same	hBH	nested proof field of a bundle VR-005 classified as one row
+hBH.hspec	109	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsR13	hBH.hspec	same	hBH	nested proof field of a bundle VR-005 classified as one row
+hBH.htag	109	explicit	bundle-field	ZK60.ProtocolClassify.RkPcsR13	hBH.htag	same	hBH	nested proof field of a bundle VR-005 classified as one row
+htI	110	explicit	prop	Eq	htI	same	htI	matched
+htO	111	explicit	prop	Eq	htO	same	htO	matched
+htB	112	explicit	prop	Eq	htB	same	htB	matched
+hfIA	113	explicit	prop	LE.le	hfIA	same	hfIA	matched
+hfIH	114	explicit	prop	LE.le	hfIH	same	hfIH	matched
+hfOA	115	explicit	prop	LE.le	hfOA	same	hfOA	matched
+hfOH	116	explicit	prop	LE.le	hfOH	same	hfOH	matched
+hfBA	117	explicit	prop	LE.le	hfBA	same	hfBA	matched
+hfBH	118	explicit	prop	LE.le	hfBH	same	hfBH	matched
+hfIM	119	explicit	prop	LE.le	hfIM	same	hfIM	matched
+hfOM	120	explicit	prop	LE.le	hfOM	same	hfOM	matched
+hfBM	121	explicit	prop	LE.le	hfBM	same	hfBM	matched
+hlscIn	129	explicit	prop	Eq	hlscIn	same	hlscIn	matched
+hlscOut	130	explicit	prop	Eq	hlscOut	same	hlscOut	matched
+hmIn	131	explicit	prop	Eq	hmIn	same	hmIn	matched
+hkIn	132	explicit	prop	Eq	hkIn	same	hkIn	matched
+hkOut	133	explicit	prop	Eq	hkOut	same	hkOut	matched
+hDe	136	explicit	prop	Eq	hDe	same	hDe	matched
+hW.left	137	explicit	bundle-field	And	hW	conjunct-of	hW	conjunction split by the tool
+hW.right	137	explicit	bundle-field	And	hW	conjunct-of	hW	conjunction split by the tool
+hopX	138	explicit	prop	Nonempty	hopX	same	hopX	matched
+hL81	139	explicit	prop	LE.le	hL81	same	hL81	matched
+hslB	141	explicit	prop	Eq	hslB	same	hslB	matched
+hsl_blk	151	explicit	prop	ZK60.ProtocolClassify.RaTermAt	hsl_blk	same	hsl_blk	matched
+hIOI	156	explicit	prop	Eq	hIOI	same	hIOI	matched
+hIOO	157	explicit	prop	Eq	hIOO	same	hIOO	matched
+hNin.left	158	explicit	bundle-field	And	hNin	conjunct-of	hNin	conjunction split by the tool
+hNin.right	158	explicit	bundle-field	And	hNin	conjunct-of	hNin	conjunction split by the tool
+hNout.left	159	explicit	bundle-field	And	hNout	conjunct-of	hNout	conjunction split by the tool
+hNout.right	159	explicit	bundle-field	And	hNout	conjunct-of	hNout	conjunction split by the tool
+hb0.hsls	168	explicit	bundle-field	ZK60.ProtocolClassify.StgLists	hb0.hsls	same	hb0	nested proof field of a bundle VR-005 classified as one row
+hb0.hr0	168	explicit	bundle-field	ZK60.ProtocolClassify.StgLists	hb0.hr0	same	hb0	nested proof field of a bundle VR-005 classified as one row
+hb0.hr1	168	explicit	bundle-field	ZK60.ProtocolClassify.StgLists	hb0.hr1	same	hb0	nested proof field of a bundle VR-005 classified as one row
+hb0.hh0	168	explicit	bundle-field	ZK60.ProtocolClassify.StgLists	hb0.hh0	same	hb0	nested proof field of a bundle VR-005 classified as one row
+hb0.hh1	168	explicit	bundle-field	ZK60.ProtocolClassify.StgLists	hb0.hh1	same	hb0	nested proof field of a bundle VR-005 classified as one row
+hb0.hlu	168	explicit	bundle-field	ZK60.ProtocolClassify.StgLists	hb0.hlu	same	hb0	nested proof field of a bundle VR-005 classified as one row
+hbL.hsls	169	explicit	bundle-field	ZK60.ProtocolClassify.StgLists	hbL.hsls	same	hbL	nested proof field of a bundle VR-005 classified as one row
+hbL.hr0	169	explicit	bundle-field	ZK60.ProtocolClassify.StgLists	hbL.hr0	same	hbL	nested proof field of a bundle VR-005 classified as one row
+hbL.hr1	169	explicit	bundle-field	ZK60.ProtocolClassify.StgLists	hbL.hr1	same	hbL	nested proof field of a bundle VR-005 classified as one row
+hbL.hh0	169	explicit	bundle-field	ZK60.ProtocolClassify.StgLists	hbL.hh0	same	hbL	nested proof field of a bundle VR-005 classified as one row
+hbL.hh1	169	explicit	bundle-field	ZK60.ProtocolClassify.StgLists	hbL.hh1	same	hbL	nested proof field of a bundle VR-005 classified as one row
+hbL.hlu	169	explicit	bundle-field	ZK60.ProtocolClassify.StgLists	hbL.hlu	same	hbL	nested proof field of a bundle VR-005 classified as one row
+hPin	170	explicit	prop	ZK60.ProtocolClassify.StgSame	hPin	same	hPin	matched
+hPout	171	explicit	prop	ZK60.ProtocolClassify.StgSame	hPout	same	hPout	matched
+hTrI	172	explicit	prop	ZK60.ProtocolClassify.StgTrueAt	hTrI	same	hTrI	matched
+hTrO	173	explicit	prop	ZK60.ProtocolClassify.StgTrueAt	hTrO	same	hTrO	matched
+hR0_blk	174	explicit	prop	ZK60.ProtocolClassify.RaDefAt	hR0_blk	same	hR0_blk	matched
+hDI_stg	175	explicit	prop	ZK60.ProtocolClassify.StgDefAtV	hDI_stg	same	hDI_stg	matched
+hDO_stg	176	explicit	prop	ZK60.ProtocolClassify.StgDefAtV	hDO_stg	same	hDO_stg	matched
+hR1_blk	177	explicit	prop	ZK60.ProtocolClassify.RaDefAt	hR1_blk	same	hR1_blk	matched
+hH0_blk	178	explicit	prop	ZK60.ProtocolClassify.RaDefAt	hH0_blk	same	hH0_blk	matched
+hH1_blk	179	explicit	prop	ZK60.ProtocolClassify.RaDefAt	hH1_blk	same	hH1_blk	matched
+hLU_blk	180	explicit	prop	ZK60.ProtocolClassify.RaLkAt	hLU_blk	same	hLU_blk	matched
+hLI_stg	181	explicit	prop	ZK60.ProtocolClassify.StgLkAtV	hLI_stg	same	hLI_stg	matched
+hLO_stg	182	explicit	prop	ZK60.ProtocolClassify.StgLkAtV	hLO_stg	same	hLO_stg	matched
+hdinS	183	explicit	prop	ZK60.ProtocolClassify.StgDoomAtV	hdinS	same	hdinS	matched
+hblk	184	explicit	prop	Nonempty	hblk	same	hblk	matched
+hdoutS	185	explicit	prop	ZK60.ProtocolClassify.StgDoomAtV	hdoutS	same	hdoutS	matched
+mk	186	explicit	data-with-proofs	ZK60.Exec.PlaneCommit.SaltMk	mk	same	none	new: data binder with proof fields
+hE.left	188	explicit	bundle-field	And	hE	conjunct-of	hE	conjunction split by the tool
+hE.right	188	explicit	bundle-field	And	hE	conjunct-of	hE	conjunction split by the tool
+hops	189	explicit	prop	ZK60.Sound.MerkleEnc.Opens	hops	same	hops	matched
+hcan	190	explicit	prop	ZK60.Exec.Fp.Canon	hcan	same	hcan	matched
+hwin.left	191	explicit	bundle-field	And	hwin	conjunct-of	hwin	conjunction split by the tool
+hwin.right	191	explicit	bundle-field	And	hwin	conjunct-of	hwin	conjunction split by the tool
+hread.left	192	explicit	bundle-field	And	hread	conjunct-of	hread	conjunction split by the tool
+hread.right	192	explicit	bundle-field	And	hread	conjunct-of	hread	conjunction split by the tool
+hBal	193	explicit	prop	ZK60.Exec.subSt	hBal	same	hBal	matched
+hdzero	194	explicit	prop	Exists	hdzero	same	hdzero	matched
+hzk	195	explicit	prop	LE.le	hzk	same	hzk	matched

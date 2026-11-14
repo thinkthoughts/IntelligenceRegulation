@@ -1,0 +1,26 @@
+{
+ "schema": "r6-rules/1",
+ "comment": "Independent external review (VR-006). Reviewer's normalization rules and the classification of keys that VR-005 lacked. Each rule is a reading of Victor Rielly's Lean source and lane documents and is open to correction.",
+ "conjunction_heads": ["And"],
+ "library_invariant_heads": ["Fin", "Finset"],
+ "field_overrides": {
+  "hD.hK":  ["instance-data", "field size", "RunTrKinds.lean:496", "Fintype.card K = gP^2; true of the quadratic extension of Goldilocks"],
+  "hD.r0":  ["open", "PARTLY PROVED", "RunTrKinds.lean:509; L57 doc line 162; stgDefSqV_rbr", "define schedule r0: round-by-round soundness follows from the degree (PROVED); the stage define polynomials' degrees are ARGUED"],
+  "hD.r1":  ["open", "PARTLY PROVED", "RunTrKinds.lean:510; L57 doc line 162; stgDefSqV_rbr", "as hD.r0"],
+  "hD.h0":  ["open", "PARTLY PROVED", "RunTrKinds.lean:511; L57 doc line 162; stgDefSqV_rbr", "as hD.r0"],
+  "hD.h1":  ["open", "PARTLY PROVED", "RunTrKinds.lean:512; L57 doc line 162; stgDefSqV_rbr", "as hD.r0"],
+  "hD.lu":  ["open", "PARTLY PROVED", "RunTrKinds.lean:513; L57 §5.3; stgShield_count", "LogUp schedule: the count condition is PROVED at the app's profile; IN-C's LogUp round-by-round bound is LEFT (finding L53-2)"],
+  "hD.heL": ["bookkeeping", "PROVED at the app's profile", "RunTrKinds.lean:514; stgShield_count_room", "D.eL ≤ 2^26"]
+ },
+ "parent_field_default": {
+  "hD": ["bookkeeping", "side condition of the kinds data", "RunTrKinds.lean:495-508; L57 doc line 81 (stgSlotV_cut, stgDefSqV_cut, stgLkSqV_cut)", "cut readers, slot degrees and windows, mask and opening counts; VR-005 classified the parent hD as open because of the fields now listed separately"]
+ },
+ "new_keys": {
+  "inst":  ["instance-data", "instance parameter", "Lean inventory index 5: Nonempty Coins", "a proposition-valued type-class argument; true of any inhabited coin type"],
+  "place": ["bookkeeping", "library type invariant", "Lean inventory index 16: Fin dR → Fin Rr", "the tool listed Fin's own bound proof (isLt); it is carried by the value and asks nothing"],
+  "Xx":    ["bookkeeping", "library type invariant", "Lean inventory index 78: … → Finset (Fin (2^11))", "the tool listed Finset's own nodup proof; it asks nothing. On the L52 line Xx is fixed (ebXxW)"],
+  "site":  ["bookkeeping", "data with two proof fields", "ProtocolClassifyComplete.lean:94 (Site: hk, hfresh)", "refusal sites of the honest run; each site carries its own bounds k and δ, so the fields can always be met; the burden is in O.refuse and O.counts"],
+  "T":     ["discharged", "PROVED on the L52 line, conditionally", "ProtocolClassifyUEp.lean:138 (XTest: hd h2 hA hAN hca hLR hJ hab); eb_productionReadyL_epP_codeT fixes T := ebT", "the endpoint test's code facts; VR-005 classified T's separate hypotheses (hTenc … hβJ) and omitted the proof fields inside T itself"],
+  "mk":    ["open", "NOT STARTED", "BindingUDecode.lean:102 (SaltMk: msg_mk pad_mk salt_mk path_mk); L55 doc §5.2", "opening data an extractor can build; part of the input endpoint's extractor group (ops, Xx, Ux, mk). VR-003 §4.3 named mk; VR-005 omitted it"]
+ }
+}
