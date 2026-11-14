@@ -1,0 +1,25 @@
+=== private_block::review_tests::a_toy_receipt_made_before_f12_is_refused
+thread 'private_block::review_tests::a_toy_receipt_made_before_f12_is_refused' (4602) panicked at src/private_block/review_tests.rs:738:5:
+no pre-lane toy receipt was found: this check did not run
+stack backtrace:
+   0: __rustc::rust_begin_unwind
+=== private_block::run::fork::tests::a20_the_receipt_write_is_the_same_files_bytes_list_and_refusals_at_every_writer_count
+thread 'private_block::run::fork::tests::a20_the_receipt_write_is_the_same_files_bytes_list_and_refusals_at_every_writer_count' (14939) panicked at src/private_block/run_fork_tests.rs:4926:52:
+a directory not writable: [(200, "74739b7242c81aa5ec2a1601fd04a5f81bed0302970e6a51f3a7dc9e92ea8520"), (300000, "c0e7b2a09fc1964ef528980306df9e0159d2f8afdb8b77230e090dc8319c5e96"), (301000, "b479aff8e84a98d751fd70adc6f325ce58e3f030da546e5530a712b93e85aeda"), (302000, "f0e898d6100abd611d36e090b79afb91c11a29a433f6c710bc8f0c27c7f8dfe3"), (303000, "5995efdd1308be7a94fd1cad8a96713918a334e784c3108f3ab9c8762e702e46"), (304000, "99240f88d4865a96e5d3e4d5f17f3ebbd347143cea4b3a7f487afd898661a599"), (50000, "82211d9dc48873a85829f86862961a781f751a299caa239a749a67bd29ab2031")]
+stack backtrace:
+   0: __rustc::rust_begin_unwind
+=== private_block::run::fork::tests::a22::a22_the_server_proves_the_r13_export_as_stack_prove_does_and_carries_on_after_every_refusal
+thread 'private_block::run::fork::tests::a22::a22_the_server_proves_the_r13_export_as_stack_prove_does_and_carries_on_after_every_refusal' (19832) panicked at src/private_block/run_fork_tests.rs:6417:13:
+assertion `left == right` failed: request 4: None
+  left: "proved"
+ right: "refused"
+=== private_block::run::fork::tests::a23::a23_the_server_with_shared_blocks_proves_the_r13_export_as_stack_prove_does
+thread 'private_block::run::fork::tests::a23::a23_the_server_with_shared_blocks_proves_the_r13_export_as_stack_prove_does' (20849) panicked at src/private_block/run_fork_tests.rs:6417:13:
+assertion `left == right` failed: request 4: None
+  left: "proved"
+ right: "refused"
+=== private_block::trained_block::accuracy::profile_tests::accuracy_v2_dense_witness_matches_all_nineteen_independent_integer_traces
+thread 'private_block::trained_block::accuracy::profile_tests::accuracy_v2_dense_witness_matches_all_nineteen_independent_integer_traces' (26483) panicked at src/private_block/trained_accuracy.rs:515:96:
+called `Result::unwrap()` on an `Err` value: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+stack backtrace:
+   0: __rustc::rust_begin_unwind

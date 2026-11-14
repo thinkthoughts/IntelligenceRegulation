@@ -1,0 +1,41 @@
+$ <test binary built by: cargo test --locked --release --lib> f12 --test-threads=1 --nocapture   (cwd: ops/zkp-mvp/gpu-metal/hashline)
+2026-11-14T05:17:34Z
+
+running 8 tests
+test private_block::f12_version_tests::f12_a_receipt_under_the_new_version_does_not_verify_under_the_old_one ... F12 receipt: new receipt under the old string -> private block shape: ruling CS-8 — "development rung (T24 / d96 / f192, 6 heads of 16 over 2 KV heads)" is not a shape Shape::new builds: Shape::new refuses its own parameters (private block shape: ruling CS-9 — "hashline-zk-mr1/private-block-rung-t24-dev/1" is a pre-F12 profile version, retired by ruling D65(1): its receipts combined M's functionals from theta^0, which certifies the first functional only up to the blinding polynomial's sum (finding F12), so no proof is made or checked under it; the current version is "hashline-zk-mr1/private-block-rung-t24-dev/2")
+F12 receipt: new receipt under the pre-F12 M -> M: mask: the product polynomial's sum != the combined functional
+ok
+test private_block::f12_version_tests::f12_a_receipt_under_the_old_version_does_not_verify_under_the_new_one ... F12 receipt: proving under the old string -> private block shape: ruling CS-8 — "development rung (T24 / d96 / f192, 6 heads of 16 over 2 KV heads)" is not a shape Shape::new builds: Shape::new refuses its own parameters (private block shape: ruling CS-9 — "hashline-zk-mr1/private-block-rung-t24-dev/1" is a pre-F12 profile version, retired by ruling D65(1): its receipts combined M's functionals from theta^0, which certifies the first functional only up to the blinding polynomial's sum (finding F12), so no proof is made or checked under it; the current version is "hashline-zk-mr1/private-block-rung-t24-dev/2")
+F12 receipt: pre-F12 M receipt under the new verifier -> M: mask: the product polynomial's sum != the combined functional
+ok
+test private_block::f12_version_tests::f12_every_pre_f12_block_and_run_string_is_refused_and_its_successor_admitted ... F12 versions: 30 block and 19 run pre-F12 strings refused by name; every successor admitted
+ok
+test private_block::review_tests::a_toy_receipt_made_before_f12_is_refused ... PRE-LANE /../results/zk60_rowfold_20260919/integration/native-block-0: absent, skipped
+PRE-LANE /../results/zk60_rowfold_20260919/integration/native-block-1: absent, skipped
+PRE-LANE /../results/zk60_private_block_evidence/owner_run1: absent, skipped
+PRE-LANE /../results/zk60_attention_integration_20260919/block_public: absent, skipped
+
+thread 'private_block::review_tests::a_toy_receipt_made_before_f12_is_refused' (2218) panicked at src/private_block/review_tests.rs:738:5:
+no pre-lane toy receipt was found: this check did not run
+stack backtrace:
+   0: __rustc::rust_begin_unwind
+   1: core::panicking::panic_fmt
+   2: <hashline::private_block::review_tests::a_toy_receipt_made_before_f12_is_refused::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+FAILED
+test zk::f12_tests::f12_an_opening_under_one_version_does_not_verify_under_the_other ... F12 versions: theta^1 opening under the pre-F12 verifier -> mask: the product polynomial's sum != the combined functional
+F12 versions: pre-F12 opening under the theta^1 verifier -> mask: the product polynomial's sum != the combined functional
+ok
+test zk::f12_tests::f12_control_an_honest_commitment_rejects_a_shifted_first_functional ... ok
+test zk::f12_tests::f12_the_first_functional_is_certified_only_up_to_the_blinding_sum ... F12 (fixed): functional 0 claimed as true + delta (delta = 5) with a commitment whose b sums to delta over G_512: mask_verify -> Err("mask: the product polynomial's sum != the combined functional")
+ok
+test zk::f12_tests::f12_the_pre_f12_start_accepts_the_forgery ... ok
+
+failures:
+
+failures:
+    private_block::review_tests::a_toy_receipt_made_before_f12_is_refused
+
+test result: FAILED. 7 passed; 1 failed; 0 ignored; 0 measured; 1065 filtered out; finished in 1.86s
+
+exit code 101

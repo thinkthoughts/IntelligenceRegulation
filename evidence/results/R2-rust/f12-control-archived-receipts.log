@@ -1,0 +1,27 @@
+# Second run of the one F12 test that needs archived receipts.
+# The test reads ops/zkp-mvp/gpu-metal/results/<dir>/block_receipt.bin; those four files are absent from the public tree
+# (each is over 1 MiB), while byte-identical copies are tracked under results/<dir>/ (hashes below, equal to the
+# SNAPSHOT_20261017_EXCLUDED_LARGE_FILES.json entries). For this run only, the tracked copies were placed at the
+# path the test reads, in a scratch checkout; no source file was changed, and the copies were removed afterwards.
+2026-11-14T05:18:10Z
+block_expected.bin identical in both places: zk60_rowfold_20260919/integration/native-block-0
+d97f1a36f749d926d5c48dea473e0fbc5ae7249bf63b3184945d38d2b2a398d5  results/zk60_rowfold_20260919/integration/native-block-0/block_receipt.bin
+block_expected.bin identical in both places: zk60_rowfold_20260919/integration/native-block-1
+d786b24b2f7270e2cc778850c65eeb7382f9a40d5f7e060103b64223fa35f2d7  results/zk60_rowfold_20260919/integration/native-block-1/block_receipt.bin
+block_expected.bin identical in both places: zk60_private_block_evidence/owner_run1
+190064a8faa314213817f0ebae444a3067ef7a49dbd0f339fa09d83055d3f857  results/zk60_private_block_evidence/owner_run1/block_receipt.bin
+block_expected.bin identical in both places: zk60_attention_integration_20260919/block_public
+77186742500cbd6eea41d28868919fbad92b58e4ca83d2a9630dcdd2ed19fdf7  results/zk60_attention_integration_20260919/block_public/block_receipt.bin
+$ <test binary> a_toy_receipt_made_before_f12_is_refused --test-threads=1 --nocapture
+
+running 1 test
+test private_block::review_tests::a_toy_receipt_made_before_f12_is_refused ... PRE-LANE /../results/zk60_rowfold_20260919/integration/native-block-0: 2816472 B, verify = Err("private block wire: expected statement mismatch")
+PRE-LANE /../results/zk60_rowfold_20260919/integration/native-block-1: 2816472 B, verify = Err("private block wire: expected statement mismatch")
+PRE-LANE /../results/zk60_private_block_evidence/owner_run1: 2816472 B, verify = Err("private block wire: expected statement mismatch")
+PRE-LANE /../results/zk60_attention_integration_20260919/block_public: 2816472 B, verify = Err("private block wire: expected statement mismatch")
+PRE-LANE: 4 archived pre-F12 toy receipts are refused under the /2 toy's verifier
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 1072 filtered out; finished in 0.02s
+
+exit code 0

@@ -1,0 +1,68 @@
+$ lake env lean ../evidence/scripts/r1_axioms_available.lean   (cwd: formal/)
+2026-11-14T06:04:20Z
+@ZK60.ProductionReadyL : {Q D Coins : Type} →
+  [Fintype Q] →
+    [DecidableEq Q] →
+      [Fintype D] →
+        [Nonempty D] →
+          [Fintype Coins] →
+            [Nonempty Coins] →
+              [Inhabited Coins] →
+                (M : ZK60.IntModel) →
+                  ZK60.Arith M →
+                    ZK60.Protocol Q D Coins M →
+                      {L : Type} → (M.Input → L) → ENNReal → (ℕ → ENNReal) → (ℕ → ENNReal) → (ℕ → ℕ → ENNReal) → Prop
+@ZK60.KnowledgeSound : {Q D Coins : Type} →
+  [Fintype Q] →
+    [DecidableEq Q] →
+      [Fintype D] → [Nonempty D] → (M : ZK60.IntModel) → ZK60.Protocol Q D Coins M → (ℕ → ENNReal) → Prop
+@ZK60.ZeroKnowledgeL : {Q D Coins : Type} →
+  [Fintype Q] →
+    [DecidableEq Q] →
+      [Fintype D] →
+        [Nonempty D] →
+          [Fintype Coins] →
+            [Nonempty Coins] →
+              [Inhabited Coins] →
+                (M : ZK60.IntModel) → ZK60.Protocol Q D Coins M → {L : Type} → (M.Input → L) → (ℕ → ℕ → ENNReal) → Prop
+PREMISES ZK60.Exec.Block.Join.R13H.block_knowledge_r13_shield: 48 binders = 23 data + 4 instance + 21 propositional hypotheses
+conclusion head: @LE.le
+hypotheses: [hLy, hU, hK2, hs, hL, hL64, hL20, hP, hdef, hlc, hep, hk3, hk19, hk20, hls, hh, hq, hcsE, hA, hEnd, hLay]
+'ZK60.Exec.Block.Join.R13H.block_knowledge_r13_shield' depends on axioms: [propext, Classical.choice, Quot.sound]
+PREMISES ZK60.Exec.Block.Join.R13H.block_knowledge_r13_rung: 49 binders = 23 data + 4 instance + 22 propositional hypotheses
+conclusion head: @LE.le
+hypotheses: [hU,
+ hK2,
+ hs,
+ hL,
+ hL64,
+ hL20,
+ hP,
+ hdef,
+ hlc,
+ hep,
+ hk3,
+ hk19,
+ hk20,
+ hls,
+ hh,
+ hq,
+ hcsE,
+ hA,
+ hEnd,
+ hS,
+ hLay,
+ hnG]
+'ZK60.Exec.Block.Join.R13H.block_knowledge_r13_rung' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZK60.D76.leaky_not_productionReadyL' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZK60.RunShape.Shield.shield_circuitIff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZK60.Assembly.semanticHiding_of_zeroKnowledge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZK60.trivialArith_circuitIff' does not depend on any axioms
+'ZK60.Sound.mproduct_sound_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZK60.Sound.mproduct_offset_accepts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZK60.Sound.opening_sound_extracted' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZK60.Sound.MerkleEnc.merkle_binding' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZK60.Sound.sumcheck_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZK60.Sound.logup_block_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZK60.Sound.rs_proximity_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit code 0

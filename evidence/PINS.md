@@ -29,8 +29,8 @@ from (an Apple M3 Ultra with 256 GB, and an earlier WSL laptop).
 | Item | Value |
 |---|---|
 | CPU | Intel Xeon @ 2.10 GHz, 2 cores, x86-64 |
-| Memory | 8,024 MB, no swap |
-| OS | Ubuntu 24.04.5 LTS, Linux 6.18 |
+| Memory | 8,024 MB, no swap; jobs are limited to about 6 GiB by the sandbox's control group (see `results/R1-lean/02-lake-build-pass2.log`) |
+| OS | Ubuntu 24.04.5 LTS, Linux 6.18; commands ran as root, which matters for three Rust tests (VR-004 §3.2) |
 | GPU | none |
 | Lean | 4.34.1 (commit `5045d0056413266e57c625dcd7c365b10e377c52`), Lake 5.0.0, installed with elan |
 | Kernel replay tool | `leanchecker`, the one shipped in the Lean 4.34.1 toolchain |

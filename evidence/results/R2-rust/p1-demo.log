@@ -1,0 +1,5 @@
+$ python3 scripts/zk60_p1_demo.py --output /tmp/p1-demo-out   (cwd: repository root; CARGO_TARGET_DIR=/tmp/ir-target-rel)
+2026-11-14T13:54:50Z
+{"status": "passed", "steps": 9, "rejection_controls": 6, "manifest": "/tmp/p1-demo-out/manifest.json"}
+exit code 0
+2026-11-14T13:56:02Z

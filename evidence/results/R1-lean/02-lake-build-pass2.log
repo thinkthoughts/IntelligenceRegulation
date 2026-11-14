@@ -1,0 +1,17 @@
+$ lake build   (cwd: formal/; second pass, after adding a 7 GB swap file to the 8 GB machine)
+2026-11-14T07:36:46Z
+               total        used        free      shared  buff/cache   available
+Mem:            8024         497        6088          16        1742        7526
+Swap:           7167           0        7167
+✖ [3730/3840] Building ZK60Formal.RunExtractClassify (238s)
+trace: .> LEAN_PATH=/home/claude/thinkthoughts/intelligenceregulation/formal/.lake/packages/Cli/.lake/build/lib/lean:/home/claude/thinkthoughts/intelligenceregulation/formal/.lake/packages/batteries/.lake/build/lib/lean:/home/claude/thinkthoughts/intelligenceregulation/formal/.lake/packages/Qq/.lake/build/lib/lean:/home/claude/thinkthoughts/intelligenceregulation/formal/.lake/packages/aesop/.lake/build/lib/lean:/home/claude/thinkthoughts/intelligenceregulation/formal/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/claude/thinkthoughts/intelligenceregulation/formal/.lake/packages/importGraph/.lake/build/lib/lean:/home/claude/thinkthoughts/intelligenceregulation/formal/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/claude/thinkthoughts/intelligenceregulation/formal/.lake/packages/plausible/.lake/build/lib/lean:/home/claude/thinkthoughts/intelligenceregulation/formal/.lake/packages/mathlib/.lake/build/lib/lean:/home/claude/thinkthoughts/intelligenceregulation/formal/.lake/build/lib/lean /root/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean /home/claude/thinkthoughts/intelligenceregulation/formal/ZK60Formal/RunExtractClassify.lean -o /home/claude/thinkthoughts/intelligenceregulation/formal/.lake/build/lib/lean/ZK60Formal/RunExtractClassify.olean -i /home/claude/thinkthoughts/intelligenceregulation/formal/.lake/build/lib/lean/ZK60Formal/RunExtractClassify.ilean -c /home/claude/thinkthoughts/intelligenceregulation/formal/.lake/build/ir/ZK60Formal/RunExtractClassify.c --setup /home/claude/thinkthoughts/intelligenceregulation/formal/.lake/build/ir/ZK60Formal/RunExtractClassify.setup.json --json
+error: Lean exited with code 137
+Some required targets logged failures:
+- ZK60Formal.RunExtractClassify
+error: build failed
+exit code 1
+2026-11-14T07:43:10Z
+
+# Reviewer note: kernel log line for this failure (dmesg), copied by hand:
+# Memory cgroup out of memory: Killed process 680 (lean) total-vm:17075216kB, anon-rss:6081216kB, file-rss:2368kB
+# The swap file had no effect on the limit, which is set on the job's control group.

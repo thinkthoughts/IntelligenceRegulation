@@ -1,0 +1,5 @@
+$ lake env lean ../evidence/scripts/r1_axioms_premises.lean   (cwd: formal/)
+2026-11-14T07:43:10Z
+/home/claude/intelligenceregulation/evidence/scripts/r1_axioms_premises.lean:13:0: error: object file '/home/claude/thinkthoughts/intelligenceregulation/formal/.lake/build/lib/lean/ZK60Formal.olean' of module ZK60Formal does not exist
+exit code 1
+2026-11-14T07:43:13Z

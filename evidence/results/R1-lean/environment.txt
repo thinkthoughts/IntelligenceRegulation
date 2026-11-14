@@ -1,0 +1,9 @@
+date_utc: 2026-11-14
+Linux 6.18.44-fc-v470 x86_64
+model name	: Intel(R) Xeon(R) Processor @ 2.10GHz
+cores: 2
+Mem:            8024        3902        2970          16        1466        4122
+memory limit of the job's control group: about 6 GiB (the kernel log shows lean killed at anon-rss 6,081,216 kB)
+Lean (version 4.34.1, x86_64-unknown-linux-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)
+source: thinkthoughts/IntelligenceRegulation @ eee3eb5717dea88d0fc48dc00f6aef389d52af3a
