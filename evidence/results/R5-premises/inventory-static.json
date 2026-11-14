@@ -1,0 +1,1184 @@
+{
+ "schema": "r5-static-binders/1",
+ "file": "formal/ZK60Formal/RunStgAlgTopR.lean",
+ "theorem": "stgAlg_productionReadyL_epP_exec_real",
+ "conclusion": "ProductionReadyL (classifyModelP Rp) (classifyArithP Rp) (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768) (classifyLeakP Rp) εcTarget εsTarget εsTarget εzkTarget",
+ "binders": [
+  {
+   "name": "S",
+   "bracket": "{}",
+   "origin": "section variable (candidate)",
+   "type": "BlockShape"
+  },
+  {
+   "name": "Hdr",
+   "bracket": "{}",
+   "origin": "section variable (candidate)",
+   "type": "Type"
+  },
+  {
+   "name": "Salt",
+   "bracket": "{}",
+   "origin": "section variable (candidate)",
+   "type": "Type"
+  },
+  {
+   "name": "Coins",
+   "bracket": "{}",
+   "origin": "section variable (candidate)",
+   "type": "Type"
+  },
+  {
+   "name": "(instance)",
+   "bracket": "[]",
+   "origin": "section variable (candidate)",
+   "type": "Fintype Coins"
+  },
+  {
+   "name": "(instance)",
+   "bracket": "[]",
+   "origin": "section variable (candidate)",
+   "type": "Nonempty Coins"
+  },
+  {
+   "name": "(instance)",
+   "bracket": "[]",
+   "origin": "section variable (candidate)",
+   "type": "Inhabited Coins"
+  },
+  {
+   "name": "K",
+   "bracket": "{}",
+   "origin": "section variable (candidate)",
+   "type": "Type"
+  },
+  {
+   "name": "(instance)",
+   "bracket": "[]",
+   "origin": "section variable (candidate)",
+   "type": "Field K"
+  },
+  {
+   "name": "(instance)",
+   "bracket": "[]",
+   "origin": "section variable (candidate)",
+   "type": "Fintype K"
+  },
+  {
+   "name": "(instance)",
+   "bracket": "[]",
+   "origin": "section variable (candidate)",
+   "type": "DecidableEq K"
+  },
+  {
+   "name": "(instance)",
+   "bracket": "[]",
+   "origin": "section variable (candidate)",
+   "type": "Algebra GF K"
+  },
+  {
+   "name": "Rr",
+   "bracket": "()",
+   "origin": "section variable (candidate)",
+   "type": "ℕ"
+  },
+  {
+   "name": "dR",
+   "bracket": "()",
+   "origin": "section variable (candidate)",
+   "type": "ℕ"
+  },
+  {
+   "name": "pos",
+   "bracket": "{}",
+   "origin": "section variable (candidate)",
+   "type": "S.Tok → Fin dR × Fin (2 ^ 8)"
+  },
+  {
+   "name": "hpos",
+   "bracket": "()",
+   "origin": "section variable (candidate)",
+   "type": "Function.Injective pos"
+  },
+  {
+   "name": "place",
+   "bracket": "()",
+   "origin": "section variable (candidate)",
+   "type": "Fin dR → Fin Rr"
+  },
+  {
+   "name": "msg",
+   "bracket": "()",
+   "origin": "section variable (candidate)",
+   "type": "(S.Tok → ℕ) → Salt → Fin Rr → Fin (2 ^ 8) → GF"
+  },
+  {
+   "name": "msg_place",
+   "bracket": "()",
+   "origin": "section variable (candidate)",
+   "type": "∀ v r k, msg v r (place k) = posPlane pos v k"
+  },
+  {
+   "name": "pad",
+   "bracket": "()",
+   "origin": "section variable (candidate)",
+   "type": "Salt → Fin Rr → Fin 256 → GF"
+  },
+  {
+   "name": "salt",
+   "bracket": "()",
+   "origin": "section variable (candidate)",
+   "type": "Salt → Fin (2 ^ 11) → Dig"
+  },
+  {
+   "name": "path",
+   "bracket": "()",
+   "origin": "section variable (candidate)",
+   "type": "Salt → Fin (2 ^ 11) → List Dig"
+  },
+  {
+   "name": "tagc",
+   "bracket": "()",
+   "origin": "section variable (candidate)",
+   "type": "MTag"
+  },
+  {
+   "name": "Rp",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ClassifyRunPublicP S"
+  },
+  {
+   "name": "Lq",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ℕ"
+  },
+  {
+   "name": "Lb",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ℕ"
+  },
+  {
+   "name": "preA",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "Hdr → Except String Unit"
+  },
+  {
+   "name": "preB",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "Hdr → Except String Unit"
+  },
+  {
+   "name": "start",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "(HIn → Dig) → ClsStmt Hdr → Tr"
+  },
+  {
+   "name": "inc",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "Hdr → IncV"
+  },
+  {
+   "name": "incG",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "Hdr → StageGeom"
+  },
+  {
+   "name": "Pk",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ℕ → Exec.Block.BlockParams"
+  },
+  {
+   "name": "sgeom",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ClsStmt Hdr → ℕ → Exec.Block.SegGeom"
+  },
+  {
+   "name": "check",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ClsStmt Hdr → ℕ → Except String Unit"
+  },
+  {
+   "name": "paths",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ClsStmt Hdr → Exec.Block.Segment → Except String Unit"
+  },
+  {
+   "name": "digest",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ClsStmt Hdr → ℕ → Dig"
+  },
+  {
+   "name": "bRows",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ℕ → ℕ"
+  },
+  {
+   "name": "bLogN",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ℕ → ℕ"
+  },
+  {
+   "name": "bndCheck",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ClsStmt Hdr → ℕ → List Exec.Block.ZClaim → Tr → Except String Unit"
+  },
+  {
+   "name": "bndOpen",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "(HIn → Dig) → ClsStmt Hdr → ℕ → Dig → List Exec.Block.ZClaim → Exec.Block.OpeningZk → Tr → Except String Tr"
+  },
+  {
+   "name": "outc",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "Hdr → ℕ → OutcV"
+  },
+  {
+   "name": "outcG",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "Hdr → StageGeom"
+  },
+  {
+   "name": "P",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "RunP Hdr (S.Tok → ℕ) Coins"
+  },
+  {
+   "name": "h64",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "64 ≤ Lq"
+  },
+  {
+   "name": "hr",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "8 * (CinR).R ≤ Lq"
+  },
+  {
+   "name": "hon",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "HonestIn Coins (CinR)"
+  },
+  {
+   "name": "U",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "K"
+  },
+  {
+   "name": "hbij",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "Function.Bijective (ZK60.Hiding.fp2 (F := GF) U)"
+  },
+  {
+   "name": "key",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "Option Dig"
+  },
+  {
+   "name": "domain",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "List UInt8"
+  },
+  {
+   "name": "hs",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "decodeLink (startMsg domain) = none"
+  },
+  {
+   "name": "hL",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "(startMsg domain).length ≤ Lq"
+  },
+  {
+   "name": "hL64",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "Lq < 2 ^ 64"
+  },
+  {
+   "name": "Rn",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "RtRun (classifyRunV Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG) key domain Lq"
+  },
+  {
+   "name": "hv",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "(RtRun.pf Rn).Valid"
+  },
+  {
+   "name": "D",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "RtKData K Lq"
+  },
+  {
+   "name": "hD",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "D.Valid (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) (RtRun.pf Rn)"
+  },
+  {
+   "name": "ι",
+   "bracket": "{}",
+   "origin": "theorem statement",
+   "type": "Type"
+  },
+  {
+   "name": "(instance)",
+   "bracket": "[]",
+   "origin": "theorem statement",
+   "type": "Fintype ι"
+  },
+  {
+   "name": "site",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "(S.Tok → ℕ) → ι → Site (QB Lq) Coins K"
+  },
+  {
+   "name": "kOf",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ι → ℕ"
+  },
+  {
+   "name": "δOf",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ι → ℝ≥0∞"
+  },
+  {
+   "name": "E",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "List (QB Lq × Dig) → ClsStmt Hdr → ClsReceipt → RunExt S Salt"
+  },
+  {
+   "name": "εzk",
+   "bracket": "{}",
+   "origin": "theorem statement",
+   "type": "ℕ → ℕ → ℝ≥0∞"
+  },
+  {
+   "name": "O",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ClassifyOpenP Rp Lq (classifyRunV Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG) P (CinR) h64 hr hon U site kOf δOf εzk"
+  },
+  {
+   "name": "F",
+   "bracket": "{}",
+   "origin": "theorem statement",
+   "type": "Type"
+  },
+  {
+   "name": "Cl",
+   "bracket": "{}",
+   "origin": "theorem statement",
+   "type": "Type"
+  },
+  {
+   "name": "(instance)",
+   "bracket": "[]",
+   "origin": "theorem statement",
+   "type": "Field F"
+  },
+  {
+   "name": "(instance)",
+   "bracket": "[]",
+   "origin": "theorem statement",
+   "type": "Fintype F"
+  },
+  {
+   "name": "(instance)",
+   "bracket": "[]",
+   "origin": "theorem statement",
+   "type": "DecidableEq F"
+  },
+  {
+   "name": "(instance)",
+   "bracket": "[]",
+   "origin": "theorem statement",
+   "type": "Algebra GF F"
+  },
+  {
+   "name": "(instance)",
+   "bracket": "[]",
+   "origin": "theorem statement",
+   "type": "Fintype Cl"
+  },
+  {
+   "name": "(instance)",
+   "bracket": "[]",
+   "origin": "theorem statement",
+   "type": "DecidableEq Cl"
+  },
+  {
+   "name": "T",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "XTest F (Fin Rr) (Fin (2 ^ 8 + 256)) Cl 11"
+  },
+  {
+   "name": "hTenc",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "T.enc = encLin (Q := 256) (fun j => algebraMap GF F (epPts j)) (rowFormK8 F)"
+  },
+  {
+   "name": "hTaA",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "(RtRun.pf Rn).hdrLen ≤ T.aA"
+  },
+  {
+   "name": "hTaB",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "(RtRun.pf Rn).hdrLen ≤ T.aB"
+  },
+  {
+   "name": "Ux",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "List (QB Lq × Dig) → List (TItem × Dig) → Fin Rr → Fin (2 ^ 11) → F"
+  },
+  {
+   "name": "Xx",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "List (QB Lq × Dig) → List (TItem × Dig) → Finset (Fin (2 ^ 11))"
+  },
+  {
+   "name": "hUc",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "CutReads (Exec.Block.absOfC (rtRC2 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv).C) Ux"
+  },
+  {
+   "name": "hXc",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "CutReads (Exec.Block.absOfC (rtRC2 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv).C) Xx"
+  },
+  {
+   "name": "pr",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ℕ"
+  },
+  {
+   "name": "hp1",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "pr ≤ 2 ^ 64"
+  },
+  {
+   "name": "hp2",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "2 ^ 64 - 2 ^ 32 ≤ pr"
+  },
+  {
+   "name": "hF",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "Fintype.card F = pr ^ 2"
+  },
+  {
+   "name": "hw0",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "T.w0 ≤ 2 ^ 61"
+  },
+  {
+   "name": "hβLR",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "T.βLR = (1 + (pr : ℝ≥0∞) / ((2 ^ 128 : ℕ) : ℝ≥0∞)) ^ (2 * T.w0)"
+  },
+  {
+   "name": "hTe",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "T.e = 768"
+  },
+  {
+   "name": "hTQ",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "T.nQ = 256"
+  },
+  {
+   "name": "hβJ",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "T.βJ = 1"
+  },
+  {
+   "name": "tag",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "MTag"
+  },
+  {
+   "name": "hU",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "U ^ 2 = algebraMap GF K 7"
+  },
+  {
+   "name": "cx0",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "IncCtx"
+  },
+  {
+   "name": "pin",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "RtPart"
+  },
+  {
+   "name": "pout",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "RtPart"
+  },
+  {
+   "name": "Iin",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "RtInc Lq inc incG pin"
+  },
+  {
+   "name": "Oout",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "RtOutc Lq outc outcG pout"
+  },
+  {
+   "name": "bp",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ k, RtBlk Lq (Pk k)"
+  },
+  {
+   "name": "wXk",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ℕ → ℕ"
+  },
+  {
+   "name": "gXk",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ℕ → ℕ"
+  },
+  {
+   "name": "mXk",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ℕ → ℕ"
+  },
+  {
+   "name": "hσ",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "RtRun.σs Rn = rtParts (classifyRunV Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG) (rtIncSeg inc incG cx0 pin) (fun k => rtBlockSeg Pk sgeom check paths digest bRows bLogN bndCheck bndOpen k (rtBlockPart (Pk k) (bp k).S ((bp k).nA + (bp k).pA.rows) (bp k).pA.m ((bp k).nH + (bp k).pH.rows) (bp k).pH.m (wXk k) (gXk k) (mXk k))) (rtOutcSeg outc outcG pout)"
+  },
+  {
+   "name": "hLb",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "Lb ≤ 26"
+  },
+  {
+   "name": "hgeo",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ k s, (sgeom s k).g = (Pk k).geom"
+  },
+  {
+   "name": "hIA",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "RkPcsAt U tag ogStage Iin.pA"
+  },
+  {
+   "name": "hIH",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "RkPcsAt U tag ogStage Iin.pH"
+  },
+  {
+   "name": "hOA",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "RkPcsAt U tag ogStage Oout.pA"
+  },
+  {
+   "name": "hOH",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "RkPcsAt U tag ogStage Oout.pH"
+  },
+  {
+   "name": "hBA",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ k, RkPcsR13 U tag (bp k).pA"
+  },
+  {
+   "name": "hBH",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ k, RkPcsR13 U tag (bp k).pH"
+  },
+  {
+   "name": "htI",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "Iin.tag = tag"
+  },
+  {
+   "name": "htO",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "Oout.tag = tag"
+  },
+  {
+   "name": "htB",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ k, (bp k).tag = tag"
+  },
+  {
+   "name": "hfIA",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "8 * Iin.pA.rows ≤ Lq"
+  },
+  {
+   "name": "hfIH",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "8 * Iin.pH.rows ≤ Lq"
+  },
+  {
+   "name": "hfOA",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "8 * Oout.pA.rows ≤ Lq"
+  },
+  {
+   "name": "hfOH",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "8 * Oout.pH.rows ≤ Lq"
+  },
+  {
+   "name": "hfBA",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ k, 8 * (bp k).pA.rows ≤ Lq"
+  },
+  {
+   "name": "hfBH",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ k, 8 * (bp k).pH.rows ≤ Lq"
+  },
+  {
+   "name": "hfIM",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "8 * (2 * pin.S + 4) ≤ Lq"
+  },
+  {
+   "name": "hfOM",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "8 * (2 * pout.S + 4) ≤ Lq"
+  },
+  {
+   "name": "hfBM",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ k, 8 * (2 * (bp k).S + 4) ≤ Lq"
+  },
+  {
+   "name": "Win",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "List (TItem × Dig) → IncV"
+  },
+  {
+   "name": "Wout",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "List (TItem × Dig) → OutcV"
+  },
+  {
+   "name": "lscIn",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "Exec.Block.ZClaim"
+  },
+  {
+   "name": "lscOut",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "Exec.Block.ZClaim"
+  },
+  {
+   "name": "mIn",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ℕ"
+  },
+  {
+   "name": "kIn",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ℕ"
+  },
+  {
+   "name": "kOut",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ℕ"
+  },
+  {
+   "name": "hlscIn",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ hd, (inc hd).lay.logupSumClaim = lscIn"
+  },
+  {
+   "name": "hlscOut",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ hd v, (outc hd v).lay.logupSumClaim = lscOut"
+  },
+  {
+   "name": "hmIn",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ hd, incHeadDraws (inc hd).pub = mIn"
+  },
+  {
+   "name": "hkIn",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ hd, (inc hd).lay.nFunctionals = kIn"
+  },
+  {
+   "name": "hkOut",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ hd v, (outc hd v).lay.nFunctionals = kOut"
+  },
+  {
+   "name": "base",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ℕ → RkPart K Lq"
+  },
+  {
+   "name": "eL",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ℕ"
+  },
+  {
+   "name": "hDe",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "D = rkData U tag Lq h64 key domain hs hL (RtRun.pf Rn) (rxPs base Lb (rxDinG ogStage (RtRun.pf Rn) pin.S kIn Iin.pA.rows Iin.pH.rows Iin.nA Iin.nH mIn) (fun k => rxDblk (RtRun.pf Rn) k (bp k).S (Pk k).nFunctionals (bp k).pA.rows (bp k).pH.rows (bp k).nA (bp k).nH) (rxDoutG ogStage (RtRun.pf Rn) Lb pout.S kOut Oout.pA.rows Oout.pH.rows Oout.nA Oout.nH)) (rxAcc Win Wout Pk (RtRun.pf Rn) Lb) (rxLsc lscIn lscOut Pk Lb) eL"
+  },
+  {
+   "name": "hW",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → Win ((rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)).take ((RtRun.pf Rn).off 0 + pin.pre)) = inc (A.run G).1.hdr ∧ Wout ((rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)).take ((RtRun.pf Rn).off (Lb + 1) + pout.pre)) = outc (A.run G).1.hdr (A.run G).1.verdict"
+  },
+  {
+   "name": "hopX",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → ¬ EvXR tag Lq h64 (chainEncB key domain hs Lq hL) 256 256 256 16 16 12 26 (rxCoreOf sgeom) (rxVx tag Lq h64 incG outcG sgeom Lb) (rxRoots incG outcG sgeom Lb) A G → ∀ i, i < (RtRun.pf Rn).parts.length → Nonempty (RhOpW U tag Lq h64 key domain hs hL (rtW (RtRun.pf Rn).sqs) ((rxPs base Lb (rxDinG ogStage (RtRun.pf Rn) pin.S kIn Iin.pA.rows Iin.pH.rows Iin.nA Iin.nH mIn) (fun k => rxDblk (RtRun.pf Rn) k (bp k).S (Pk k).nFunctionals (bp k).pA.rows (bp k).pH.rows (bp k).nA (bp k).nH) (rxDoutG ogStage (RtRun.pf Rn) Lb pout.S kOut Oout.pA.rows Oout.pH.rows Oout.nA Oout.nH)) i).gX ((rxPs base Lb (rxDinG ogStage (RtRun.pf Rn) pin.S kIn Iin.pA.rows Iin.pH.rows Iin.nA Iin.nH mIn) (fun k => rxDblk (RtRun.pf Rn) k (bp k).S (Pk k).nFunctionals (bp k).pA.rows (bp k).pH.rows (bp k).nA (bp k).nH) (rxDoutG ogStage (RtRun.pf Rn) Lb pout.S kOut Oout.pA.rows Oout.pH.rows Oout.nA Oout.nH)) i).nX (fun hdr => rkPend (rxAcc Win Wout Pk (RtRun.pf Rn) Lb) i hdr ++ ((rxAcc Win Wout Pk (RtRun.pf Rn) Lb) i hdr).claims.inp) ((RtRun.pf Rn).off i + ((RtRun.pf Rn).part i).oX) ((RtRun.pf Rn).off i + ((RtRun.pf Rn).part i).oBX) ((RtRun.pf Rn).off i + ((RtRun.pf Rn).part i).oX + (((rxPs base Lb (rxDinG ogStage (RtRun.pf Rn) pin.S kIn Iin.pA.rows Iin.pH.rows Iin.nA Iin.nH mIn) (fun k => rxDblk (RtRun.pf Rn) k (bp k).S (Pk k).nFunctionals (bp k).pA.rows (bp k).pH.rows (bp k).nA (bp k).nH) (rxDoutG ogStage (RtRun.pf Rn) Lb pout.S kOut Oout.pA.rows Oout.pH.rows Oout.nA Oout.nH)) i).nX + ((rxPs base Lb (rxDinG ogStage (RtRun.pf Rn) pin.S kIn Iin.pA.rows Iin.pH.rows Iin.nA Iin.nH mIn) (fun k => rxDblk (RtRun.pf Rn) k (bp k).S (Pk k).nFunctionals (bp k).pA.rows (bp k).pH.rows (bp k).nA (bp k).nH) (rxDoutG ogStage (RtRun.pf Rn) Lb pout.S kOut Oout.pA.rows Oout.pH.rows Oout.nA Oout.nH)) i).gX.rows)) (A.runLog G).2 G (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)))"
+  },
+  {
+   "name": "hL81",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "81 ≤ Lq"
+  },
+  {
+   "name": "Fsl",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "(k : ℕ) → Exec.Block.Cuts3 Lq → Exec.Block.RootsO → (j : ℕ) → Exec.Block.Seen → (Fin ((Exec.Block.slotShape (Pk k) j).1 + (Exec.Block.slotShape (Pk k) j).2.1) → K) → K"
+  },
+  {
+   "name": "hslB",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ k, k < Lb → D.sls (k + 1) = Exec.Block.blockSchedX (Pk k) ((RtRun.pf Rn).off (k + 1) + 5) (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) (Fsl k)"
+  },
+  {
+   "name": "ιL",
+   "bracket": "{}",
+   "origin": "theorem statement",
+   "type": "ℕ → Type"
+  },
+  {
+   "name": "πL",
+   "bracket": "{}",
+   "origin": "theorem statement",
+   "type": "ℕ → Type"
+  },
+  {
+   "name": "κL",
+   "bracket": "{}",
+   "origin": "theorem statement",
+   "type": "ℕ → Type"
+  },
+  {
+   "name": "(instance)",
+   "bracket": "[]",
+   "origin": "theorem statement",
+   "type": "∀ k, Fintype (ιL k)"
+  },
+  {
+   "name": "(instance)",
+   "bracket": "[]",
+   "origin": "theorem statement",
+   "type": "∀ k, Fintype (πL k)"
+  },
+  {
+   "name": "(instance)",
+   "bracket": "[]",
+   "origin": "theorem statement",
+   "type": "∀ k, Fintype (κL k)"
+  },
+  {
+   "name": "AlkL",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "(k : ℕ) → List (QB Lq × Dig) → ιL k ⊕ (πL k ⊕ πL k) → Tup K"
+  },
+  {
+   "name": "TL",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "(k : ℕ) → κL k → Tup K"
+  },
+  {
+   "name": "mlkL",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "(k : ℕ) → List (QB Lq × Dig) → κL k → K"
+  },
+  {
+   "name": "hsl_blk",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → ¬ EvXR tag Lq h64 (chainEncB key domain hs Lq hL) 256 256 256 16 16 12 26 (rxCoreOf sgeom) (rxVx tag Lq h64 incG outcG sgeom Lb) (rxRoots incG outcG sgeom Lb) A G → ¬ (rtKB key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKM key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKA key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ∀ k, k < Lb → RaTermAt U key domain (Pk k) ((RtRun.pf Rn).off (k + 1) + 5) (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) (Fsl k) G (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G))"
+  },
+  {
+   "name": "P0in",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "Exec.Block.BlockParams"
+  },
+  {
+   "name": "P0out",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "Exec.Block.BlockParams"
+  },
+  {
+   "name": "csIOI",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "StgVw Lq → Exec.Block.Cm → Exec.Block.ZClaim → K"
+  },
+  {
+   "name": "csIOO",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "StgVw Lq → Exec.Block.Cm → Exec.Block.ZClaim → K"
+  },
+  {
+   "name": "hIOI",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ v (cm : Exec.Block.Cm) (z : Exec.Block.ZClaim) (a : Fp2), csIOI v cm { z with value := a } = csIOI v cm z"
+  },
+  {
+   "name": "hIOO",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ v (cm : Exec.Block.Cm) (z : Exec.Block.ZClaim) (a : Fp2), csIOO v cm { z with value := a } = csIOO v cm z"
+  },
+  {
+   "name": "hNin",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ k, k < P0in.geom.slots.length → 0 < stgN P0in k ∧ stgN P0in k * (Exec.Block.slotShape P0in k).2.2 + 2 ≤ 512"
+  },
+  {
+   "name": "hNout",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ k, k < P0out.geom.slots.length → 0 < stgN P0out k ∧ stgN P0out k * (Exec.Block.slotShape P0out k).2.2 + 2 ≤ 512"
+  },
+  {
+   "name": "ΦI",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "StgVw Lq → (k : ℕ) → List Fp2 × List (List Fp2) → (Fin (P0in.draws k) → K) → K"
+  },
+  {
+   "name": "ΦO",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "StgVw Lq → (k : ℕ) → List Fp2 × List (List Fp2) → (Fin (P0out.draws k) → K) → K"
+  },
+  {
+   "name": "dgI",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ℕ → ℕ"
+  },
+  {
+   "name": "dgO",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ℕ → ℕ"
+  },
+  {
+   "name": "eI",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ℕ"
+  },
+  {
+   "name": "eO",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "ℕ"
+  },
+  {
+   "name": "ΛI",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "StgVw Lq → List (List UInt8 × K) → Prop"
+  },
+  {
+   "name": "ΛO",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "StgVw Lq → List (List UInt8 × K) → Prop"
+  },
+  {
+   "name": "hb0",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "StgLists (base 0) (stgSchedV P0in mIn ((RtRun.pf Rn).off 0 + 5) ZK60.ProtocolClassify.stgHostIn (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) (ZK60.ProtocolClassify.stgFstI U hbij tag h64 P0in Win ((RtRun.pf Rn).off 0 + pin.pre) ((RtRun.pf Rn).off 0 + 5) mIn ogStage.lc ogStage.h ogStage.Q ogStage.e Iin.pA.rows Iin.pH.rows pin.S csIOI)) (stgDefsV P0in mIn ((RtRun.pf Rn).off 0 + 5) (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) ΦI dgI) (stgLkSqV mIn ((RtRun.pf Rn).off 0 + 5) eI (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) ΛI)"
+  },
+  {
+   "name": "hbL",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "StgLists (base (Lb + 1)) (stgSchedV P0out 2 ((RtRun.pf Rn).off (Lb + 1) + 2) (ZK60.ProtocolClassify.stgHostOut P0out) (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) (ZK60.ProtocolClassify.stgFstO U hbij tag h64 P0out Wout ((RtRun.pf Rn).off (Lb + 1) + pout.pre) ((RtRun.pf Rn).off (Lb + 1) + 2) ogStage.lc ogStage.h ogStage.Q ogStage.e Oout.pA.rows Oout.pH.rows pout.S csIOO)) (stgDefsV P0out 2 ((RtRun.pf Rn).off (Lb + 1) + 2) (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) ΦO dgO) (stgLkSqV 2 ((RtRun.pf Rn).off (Lb + 1) + 2) eO (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) ΛO)"
+  },
+  {
+   "name": "hPin",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ hd cx, StgSame P0in ((inc hd).bp cx)"
+  },
+  {
+   "name": "hPout",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ hd v, StgSame P0out (outc hd v).bp"
+  },
+  {
+   "name": "hTrI",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → ¬ EvXR tag Lq h64 (chainEncB key domain hs Lq hL) 256 256 256 16 16 12 26 (rxCoreOf sgeom) (rxVx tag Lq h64 incG outcG sgeom Lb) (rxRoots incG outcG sgeom Lb) A G → ¬ (rtKB key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKM key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKA key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ZK60.ProtocolClassify.StgTrueAt U key domain (fun ch => (inc (A.run G).1.hdr).bp (ZK60.Exec.StageV.incCtx (inc (A.run G).1.hdr).pub ch)) mIn ((RtRun.pf Rn).off 0 + 5) (fun _ => (Fp2.zero, Fp2.zero, Fp2.zero)) (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) (fun v ch => (Win (v.2.take ((RtRun.pf Rn).off 0 + pin.pre))).bp (ZK60.Exec.StageV.incCtx (Win (v.2.take ((RtRun.pf Rn).off 0 + pin.pre))).pub ch)) (ZK60.ProtocolClassify.stgCsv U tag h64 ogStage.lc ogStage.h ogStage.Q ogStage.e Iin.pA.rows Iin.pH.rows ((RtRun.pf Rn).off 0 + 5) ((RtRun.pf Rn).off 0 + 5 + 4 + mIn) csIOI) (ZK60.ProtocolClassify.stgMsv U tag h64 pin.S ((RtRun.pf Rn).off 0 + 5 + 3)) G (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G))"
+  },
+  {
+   "name": "hTrO",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → ¬ EvXR tag Lq h64 (chainEncB key domain hs Lq hL) 256 256 256 16 16 12 26 (rxCoreOf sgeom) (rxVx tag Lq h64 incG outcG sgeom Lb) (rxRoots incG outcG sgeom Lb) A G → ¬ (rtKB key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKM key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKA key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ZK60.ProtocolClassify.StgTrueAt U key domain (fun _ => (outc (A.run G).1.hdr (A.run G).1.verdict).bp) 2 ((RtRun.pf Rn).off (Lb + 1) + 2) OutcV.bga (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) (fun v _ => (Wout (v.2.take ((RtRun.pf Rn).off (Lb + 1) + pout.pre))).bp) (ZK60.ProtocolClassify.stgCsv U tag h64 ogStage.lc ogStage.h ogStage.Q ogStage.e Oout.pA.rows Oout.pH.rows ((RtRun.pf Rn).off (Lb + 1) + 2) ((RtRun.pf Rn).off (Lb + 1) + 2 + 4 + 2) csIOO) (ZK60.ProtocolClassify.stgMsv U tag h64 pout.S ((RtRun.pf Rn).off (Lb + 1) + 2 + 3)) G (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G))"
+  },
+  {
+   "name": "hR0_blk",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → ¬ EvXR tag Lq h64 (chainEncB key domain hs Lq hL) 256 256 256 16 16 12 26 (rxCoreOf sgeom) (rxVx tag Lq h64 incG outcG sgeom Lb) (rxRoots incG outcG sgeom Lb) A G → ¬ (rtKB key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKM key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKA key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKsl key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ∀ k, k < Lb → ∀ sx ∈ D.r0 (k + 1), RaDefAt U key domain (Pk k) ((RtRun.pf Rn).off (k + 1) + 5) (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) G (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) sx"
+  },
+  {
+   "name": "hDI_stg",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → ¬ EvXR tag Lq h64 (chainEncB key domain hs Lq hL) 256 256 256 16 16 12 26 (rxCoreOf sgeom) (rxVx tag Lq h64 incG outcG sgeom Lb) (rxRoots incG outcG sgeom Lb) A G → ¬ (rtKB key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKM key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKA key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKsl key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → StgDefAtV U key domain P0in (fun ch => (inc (A.run G).1.hdr).bp (ZK60.Exec.StageV.incCtx (inc (A.run G).1.hdr).pub ch)) mIn ((RtRun.pf Rn).off 0 + 5) (fun _ => (Fp2.zero, Fp2.zero, Fp2.zero)) (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) ΦI G (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G))"
+  },
+  {
+   "name": "hDO_stg",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → ¬ EvXR tag Lq h64 (chainEncB key domain hs Lq hL) 256 256 256 16 16 12 26 (rxCoreOf sgeom) (rxVx tag Lq h64 incG outcG sgeom Lb) (rxRoots incG outcG sgeom Lb) A G → ¬ (rtKB key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKM key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKA key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKsl key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → StgDefAtV U key domain P0out (fun _ => (outc (A.run G).1.hdr (A.run G).1.verdict).bp) 2 ((RtRun.pf Rn).off (Lb + 1) + 2) OutcV.bga (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) ΦO G (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G))"
+  },
+  {
+   "name": "hR1_blk",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → ¬ EvXR tag Lq h64 (chainEncB key domain hs Lq hL) 256 256 256 16 16 12 26 (rxCoreOf sgeom) (rxVx tag Lq h64 incG outcG sgeom Lb) (rxRoots incG outcG sgeom Lb) A G → ¬ (rtKB key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKM key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKA key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKsl key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKR0 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ∀ k, k < Lb → ∀ sx ∈ D.r1 (k + 1), RaDefAt U key domain (Pk k) ((RtRun.pf Rn).off (k + 1) + 5) (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) G (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) sx"
+  },
+  {
+   "name": "hH0_blk",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → ¬ EvXR tag Lq h64 (chainEncB key domain hs Lq hL) 256 256 256 16 16 12 26 (rxCoreOf sgeom) (rxVx tag Lq h64 incG outcG sgeom Lb) (rxRoots incG outcG sgeom Lb) A G → ¬ (rtKB key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKM key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKA key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKsl key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKR0 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKR1 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ∀ k, k < Lb → ∀ sx ∈ D.h0 (k + 1), RaDefAt U key domain (Pk k) ((RtRun.pf Rn).off (k + 1) + 5) (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) G (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) sx"
+  },
+  {
+   "name": "hH1_blk",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → ¬ EvXR tag Lq h64 (chainEncB key domain hs Lq hL) 256 256 256 16 16 12 26 (rxCoreOf sgeom) (rxVx tag Lq h64 incG outcG sgeom Lb) (rxRoots incG outcG sgeom Lb) A G → ¬ (rtKB key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKM key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKA key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKsl key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKR0 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKR1 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKH0 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ∀ k, k < Lb → ∀ sx ∈ D.h1 (k + 1), RaDefAt U key domain (Pk k) ((RtRun.pf Rn).off (k + 1) + 5) (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) G (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) sx"
+  },
+  {
+   "name": "hLU_blk",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → ¬ EvXR tag Lq h64 (chainEncB key domain hs Lq hL) 256 256 256 16 16 12 26 (rxCoreOf sgeom) (rxVx tag Lq h64 incG outcG sgeom Lb) (rxRoots incG outcG sgeom Lb) A G → ¬ (rtKB key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKM key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKA key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKsl key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKR0 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKR1 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKH0 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKH1 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ∀ k, k < Lb → ∀ sx ∈ D.lu (k + 1), RaLkAt U key domain (Pk k) ((RtRun.pf Rn).off (k + 1) + 5) (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) (AlkL k) (TL k) (mlkL k) G (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) sx"
+  },
+  {
+   "name": "hLI_stg",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → ¬ EvXR tag Lq h64 (chainEncB key domain hs Lq hL) 256 256 256 16 16 12 26 (rxCoreOf sgeom) (rxVx tag Lq h64 incG outcG sgeom Lb) (rxRoots incG outcG sgeom Lb) A G → ¬ (rtKB key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKM key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKA key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKsl key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKR0 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKR1 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKH0 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKH1 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → StgLkAtV U key domain (fun ch => (inc (A.run G).1.hdr).bp (ZK60.Exec.StageV.incCtx (inc (A.run G).1.hdr).pub ch)) mIn ((RtRun.pf Rn).off 0 + 5) (fun _ => (Fp2.zero, Fp2.zero, Fp2.zero)) (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) ΛI G (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G))"
+  },
+  {
+   "name": "hLO_stg",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → ¬ EvXR tag Lq h64 (chainEncB key domain hs Lq hL) 256 256 256 16 16 12 26 (rxCoreOf sgeom) (rxVx tag Lq h64 incG outcG sgeom Lb) (rxRoots incG outcG sgeom Lb) A G → ¬ (rtKB key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKM key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKA key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKsl key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKR0 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKR1 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKH0 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → ¬ (rtKH1 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD).Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) → StgLkAtV U key domain (fun _ => (outc (A.run G).1.hdr (A.run G).1.verdict).bp) 2 ((RtRun.pf Rn).off (Lb + 1) + 2) OutcV.bga (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) ΛO G (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G))"
+  },
+  {
+   "name": "hdinS",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → ¬ EvXR tag Lq h64 (chainEncB key domain hs Lq hL) 256 256 256 16 16 12 26 (rxCoreOf sgeom) (rxVx tag Lq h64 incG outcG sgeom Lb) (rxRoots incG outcG sgeom Lb) A G → ¬ InOkP Rp (E (A.runLog G).2 (A.runLog G).1.1 (A.runLog G).1.2) → ZK60.ProtocolClassify.StgDoomAtV U key domain P0in (fun ch => (inc (A.run G).1.hdr).bp (ZK60.Exec.StageV.incCtx (inc (A.run G).1.hdr).pub ch)) mIn ((RtRun.pf Rn).off 0 + 5) (fun _ => (Fp2.zero, Fp2.zero, Fp2.zero)) ZK60.ProtocolClassify.stgHostIn (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) (ZK60.ProtocolClassify.stgFstI U hbij tag h64 P0in Win ((RtRun.pf Rn).off 0 + pin.pre) ((RtRun.pf Rn).off 0 + 5) mIn ogStage.lc ogStage.h ogStage.Q ogStage.e Iin.pA.rows Iin.pH.rows pin.S csIOI) ΦI dgI eI ΛI G (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G))"
+  },
+  {
+   "name": "hblk",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig) (k : ℕ) (hk : k < Rp.blks.length), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → ¬ EvXR tag Lq h64 (chainEncB key domain hs Lq hL) 256 256 256 16 16 12 26 (rxCoreOf sgeom) (rxVx tag Lq h64 incG outcG sgeom Lb) (rxRoots incG outcG sgeom Lb) A G → Nonempty (ZK60.ProtocolClassify.RdBlkR13 U D k (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)) (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) (ZK60.Exec.Block.card_K_gt K) Rp.blks[k].pub ((E (A.runLog G).2 (A.runLog G).1.1 (A.runLog G).1.2).planes k) ((E (A.runLog G).2 (A.runLog G).1.1 (A.runLog G).1.2).planes (k + 1)))"
+  },
+  {
+   "name": "hdoutS",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → ¬ EvXR tag Lq h64 (chainEncB key domain hs Lq hL) 256 256 256 16 16 12 26 (rxCoreOf sgeom) (rxVx tag Lq h64 incG outcG sgeom Lb) (rxRoots incG outcG sgeom Lb) A G → ¬ OutOkP Rp ((classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).ypub (A.runLog G).1.1) (E (A.runLog G).2 (A.runLog G).1.1 (A.runLog G).1.2) → ZK60.ProtocolClassify.StgDoomAtV U key domain P0out (fun _ => (outc (A.run G).1.hdr (A.run G).1.verdict).bp) 2 ((RtRun.pf Rn).off (Lb + 1) + 2) OutcV.bga (ZK60.ProtocolClassify.stgHostOut P0out) (Exec.Block.absOfC (chainEncB key domain hs Lq hL)) (ZK60.ProtocolClassify.stgFstO U hbij tag h64 P0out Wout ((RtRun.pf Rn).off (Lb + 1) + pout.pre) ((RtRun.pf Rn).off (Lb + 1) + 2) ogStage.lc ogStage.h ogStage.Q ogStage.e Oout.pA.rows Oout.pH.rows pout.S csIOO) ΦO dgO eO ΛO G (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G))"
+  },
+  {
+   "name": "mk",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "(CinR).SaltMk"
+  },
+  {
+   "name": "ops",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "List (QB Lq × Dig) → ClsStmt Hdr → Fin (2 ^ 11) → Option (MerkleOpening Dig Dig (ColR Rr))"
+  },
+  {
+   "name": "hE",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ lg s pf, (E lg s pf).epW = (fun t => ((CinR).decodeIn (ops lg s) 768).1 ((CinR).place (pos t).1) (pos t).2) ∧ (E lg s pf).r = mk.bld ((CinR).decodeIn (ops lg s) 768).1 ((CinR).decodeIn (ops lg s) 768).2 ((CinR).exSalt (ops lg s)) ((CinR).exPath (ops lg s))"
+  },
+  {
+   "name": "hops",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig) j o, ops (A.runLog G).2 (A.runLog G).1.1 j = some o → (merkleEncB (CinR).tag Lq (CinR).R h64 hr).Opens G (CinR).depth ((CinR).root (A.runLog G).1.1) j.val o"
+  },
+  {
+   "name": "hcan",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ lg s j o, ops lg s j = some o → ∀ a ∈ o.col.1, a.Canon"
+  },
+  {
+   "name": "hwin",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → ¬ EvXR tag Lq h64 (chainEncB key domain hs Lq hL) 256 256 256 16 16 12 26 (rxCoreOf sgeom) (rxVx tag Lq h64 incG outcG sgeom Lb) (rxRoots incG outcG sgeom Lb) A G → tRem (rtRC2 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv).W ((rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)).take T.aA) = some 0 ∧ T.aB ≤ (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)).length ∧ tRem (rtRC2 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv).W ((rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)).take T.aB) = some 0"
+  },
+  {
+   "name": "hread",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → ¬ EvXR tag Lq h64 (chainEncB key domain hs Lq hL) 256 256 256 16 16 12 26 (rxCoreOf sgeom) (rxVx tag Lq h64 incG outcG sgeom Lb) (rxRoots incG outcG sgeom Lb) A G → Xx (A.runLog G).2 ((rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)).take T.aA) = exX (ops (A.runLog G).2 (A.runLog G).1.1) ∧ Ux (A.runLog G).2 ((rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G)).take T.aA) = fun i j => algebraMap GF F (exU (ops (A.runLog G).2 (A.runLog G).1.1) i j)"
+  },
+  {
+   "name": "hBal",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → ¬ EvXR tag Lq h64 (chainEncB key domain hs Lq hL) 256 256 256 16 16 12 26 (rxCoreOf sgeom) (rxVx tag Lq h64 incG outcG sgeom Lb) (rxRoots incG outcG sgeom Lb) A G → subSt (rtRC2 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv).W (T.cB (rtRC2 key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv).W Ux Xx (A.runLog G).2) (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G))"
+  },
+  {
+   "name": "hdzero",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ (A : OC (QB Lq) Dig (ClsStmt Hdr × ClsReceipt)) (G : QB Lq → Dig), (classifyProtocolUExecP Rp Lq Lb preA preB start inc incG (d12aBlockProf Pk sgeom check paths digest bRows bLogN bndCheck bndOpen) outc outcG P (CinR) h64 hr hon.base 768).verify G () (A.runLog G).1.1 (A.runLog G).1.2 = true → ¬ EvXR tag Lq h64 (chainEncB key domain hs Lq hL) 256 256 256 16 16 12 26 (rxCoreOf sgeom) (rxVx tag Lq h64 incG outcG sgeom Lb) (rxRoots incG outcG sgeom Lb) A G → ¬ (∀ k i, (¬ ∃ t, pos t = (k, i)) → ((CinR).decodeIn (ops (A.runLog G).2 (A.runLog G).1.1) 768).1 ((CinR).place k) i = 0) → ∃ K' ∈ rtKo key domain hs Lq hL (RtRun.pf Rn) (RtRun.rd Rn) hL64 hv U hbij D hD, K'.Dm (Rp.blks.length + 2) (A.runLog G).2 (rtTr key domain Lq (RtRun.pf Rn) (RtRun.rd Rn) G (A.run G))"
+  },
+  {
+   "name": "hzk",
+   "bracket": "()",
+   "origin": "theorem statement",
+   "type": "∀ q R', q ≤ 2 ^ 64 → R' ≤ 2 ^ 64 → εzk q R' ≤ εzkTarget q R'"
+  }
+ ]
+}

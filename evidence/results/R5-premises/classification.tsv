@@ -1,0 +1,104 @@
+key	category	status	evidence	note
+hTenc	discharged	PROVED on the L52 line	eb_productionReadyL_epP_codeT (RunEpBTopT.lean); L52 doc §3 lists these among 20 binders gone	the input endpoint's test T and its parameters are fixed there (T := ebT, pr := gP); 8 bookkeeping premises are added on that line (hw, hRn, hopX1, hgX0, hnX0, hXep, hfitX, hRr)
+hTaA	discharged	PROVED on the L52 line	eb_productionReadyL_epP_codeT (RunEpBTopT.lean); L52 doc §3 lists these among 20 binders gone	the input endpoint's test T and its parameters are fixed there (T := ebT, pr := gP); 8 bookkeeping premises are added on that line (hw, hRn, hopX1, hgX0, hnX0, hXep, hfitX, hRr)
+hTaB	discharged	PROVED on the L52 line	eb_productionReadyL_epP_codeT (RunEpBTopT.lean); L52 doc §3 lists these among 20 binders gone	the input endpoint's test T and its parameters are fixed there (T := ebT, pr := gP); 8 bookkeeping premises are added on that line (hw, hRn, hopX1, hgX0, hnX0, hXep, hfitX, hRr)
+hUc	discharged	PROVED on the L52 line	eb_productionReadyL_epP_codeT (RunEpBTopT.lean); L52 doc §3 lists these among 20 binders gone	the input endpoint's test T and its parameters are fixed there (T := ebT, pr := gP); 8 bookkeeping premises are added on that line (hw, hRn, hopX1, hgX0, hnX0, hXep, hfitX, hRr)
+hXc	discharged	PROVED on the L52 line	eb_productionReadyL_epP_codeT (RunEpBTopT.lean); L52 doc §3 lists these among 20 binders gone	the input endpoint's test T and its parameters are fixed there (T := ebT, pr := gP); 8 bookkeeping premises are added on that line (hw, hRn, hopX1, hgX0, hnX0, hXep, hfitX, hRr)
+hp1	discharged	PROVED on the L52 line	eb_productionReadyL_epP_codeT (RunEpBTopT.lean); L52 doc §3 lists these among 20 binders gone	the input endpoint's test T and its parameters are fixed there (T := ebT, pr := gP); 8 bookkeeping premises are added on that line (hw, hRn, hopX1, hgX0, hnX0, hXep, hfitX, hRr)
+hp2	discharged	PROVED on the L52 line	eb_productionReadyL_epP_codeT (RunEpBTopT.lean); L52 doc §3 lists these among 20 binders gone	the input endpoint's test T and its parameters are fixed there (T := ebT, pr := gP); 8 bookkeeping premises are added on that line (hw, hRn, hopX1, hgX0, hnX0, hXep, hfitX, hRr)
+hF	discharged	PROVED on the L52 line	eb_productionReadyL_epP_codeT (RunEpBTopT.lean); L52 doc §3 lists these among 20 binders gone	the input endpoint's test T and its parameters are fixed there (T := ebT, pr := gP); 8 bookkeeping premises are added on that line (hw, hRn, hopX1, hgX0, hnX0, hXep, hfitX, hRr)
+hw0	discharged	PROVED on the L52 line	eb_productionReadyL_epP_codeT (RunEpBTopT.lean); L52 doc §3 lists these among 20 binders gone	the input endpoint's test T and its parameters are fixed there (T := ebT, pr := gP); 8 bookkeeping premises are added on that line (hw, hRn, hopX1, hgX0, hnX0, hXep, hfitX, hRr)
+hβLR	discharged	PROVED on the L52 line	eb_productionReadyL_epP_codeT (RunEpBTopT.lean); L52 doc §3 lists these among 20 binders gone	the input endpoint's test T and its parameters are fixed there (T := ebT, pr := gP); 8 bookkeeping premises are added on that line (hw, hRn, hopX1, hgX0, hnX0, hXep, hfitX, hRr)
+hTe	discharged	PROVED on the L52 line	eb_productionReadyL_epP_codeT (RunEpBTopT.lean); L52 doc §3 lists these among 20 binders gone	the input endpoint's test T and its parameters are fixed there (T := ebT, pr := gP); 8 bookkeeping premises are added on that line (hw, hRn, hopX1, hgX0, hnX0, hXep, hfitX, hRr)
+hTQ	discharged	PROVED on the L52 line	eb_productionReadyL_epP_codeT (RunEpBTopT.lean); L52 doc §3 lists these among 20 binders gone	the input endpoint's test T and its parameters are fixed there (T := ebT, pr := gP); 8 bookkeeping premises are added on that line (hw, hRn, hopX1, hgX0, hnX0, hXep, hfitX, hRr)
+hβJ	discharged	PROVED on the L52 line	eb_productionReadyL_epP_codeT (RunEpBTopT.lean); L52 doc §3 lists these among 20 binders gone	the input endpoint's test T and its parameters are fixed there (T := ebT, pr := gP); 8 bookkeeping premises are added on that line (hw, hRn, hopX1, hgX0, hnX0, hXep, hfitX, hRr)
+hwin	discharged	PROVED on the L51/L52 line	ep_hwin_top (RunEndptWin.lean); eb_productionReadyL_epP_code	
+hBal	discharged	PROVED on the L52 line	eb_xB_alive (RunEpBTest.lean); L52 doc header	L52 notes it must read the same extractor as hread once that exists
+hopX	discharged	PROVED in parts on two lines	part 0: eb_hopX0 (RunEpBInc.lean), og_hopX0 (RunOpenGeoStageX.lean); parts 1 to 27: lane L55, cb_productionReadyL_epP_codeF (RunCloseBTopF.lean)	needs L55's choice of base and bndOpen := cbBndOpen tag 38
+hW	discharged	PROVED on the L55 line	cb_productionReadyL_epP_codeF (RunCloseBTopF.lean); L55 doc §1	needs the model's statement check to carry the code's verdict refusal (hchk, finding L55-1)
+hD	open	PARTLY PROVED	L57 doc §4 last paragraph; L53 §5.1	kinds data valid: cut readers and define round-by-round proved; open parts are the stage define degrees and IN-C's LogUp round-by-round bound (L53-2, L57 §5.3)
+hsl_blk	open	ARGUED, LEFT	L50 doc §4	block slots' terminal identity at the run; the link 'no doomed opening or M ⇒ claims true' is left; L54/L56 re-form it on a parallel line (hsl_args)
+hR0_blk	open	ARGUED, LEFT	L50 doc §4; L56 doc §4.1	block define draws vanish at every reading; boundary-slot draws widened on the L56 line
+hR1_blk	open	ARGUED, LEFT	L50 doc §4; L56 doc §4.1	block define draws vanish at every reading; boundary-slot draws widened on the L56 line
+hH0_blk	open	ARGUED, LEFT	L50 doc §4; L56 doc §4.1	block define draws vanish at every reading; boundary-slot draws widened on the L56 line
+hH1_blk	open	ARGUED, LEFT	L50 doc §4; L56 doc §4.1	block define draws vanish at every reading; boundary-slot draws widened on the L56 line
+hLU_blk	open	ARGUED, LEFT	L50 doc §4	the block part's LogUp run with helpers
+hTrI	open	ARGUED, LEFT	L57 doc §4	StgTrueAt: stage claims and M functionals true of the extracted data
+hTrO	open	ARGUED, LEFT	L57 doc §4	StgTrueAt: stage claims and M functionals true of the extracted data
+hDI_stg	open	LEFT	L57 doc §4; L53 §5.1	stage define polynomials vanish at the drawn challenges
+hDO_stg	open	LEFT	L57 doc §4; L53 §5.1	stage define polynomials vanish at the drawn challenges
+hLI_stg	open	LEFT	L57 doc §4; finding L53-2	LogUp state at the head's challenges; IN-C's state has a written model and an open proof (L57 §5.3)
+hLO_stg	open	LEFT	L57 doc §4; finding L53-2	LogUp state at the head's challenges; IN-C's state has a written model and an open proof (L57 §5.3)
+hdinS	open	LEFT	L53 doc §5.3; L57 doc §4	the stages' doom covers: soundness of IN-C and OUT-C on the run's transcript; hdoutS also needs the verdict refusal of finding L55-1
+hdoutS	open	LEFT	L53 doc §5.3; L57 doc §4	the stages' doom covers: soundness of IN-C and OUT-C on the run's transcript; hdoutS also needs the verdict refusal of finding L55-1
+hblk	open	LEFT at run level; block level PROVED	block_knowledge_r13_shield (BlockR13StmtDone.lean) at block level; MVP_STATUS (waits on L46-3, L56-3)	the per-block soundness wired into the run; this is the cover for the 26 blocks
+hE	open	NOT STARTED	L55 doc §5.2; L52 §5.3	the input endpoint's extractor group (ops, Xx, Ux, mk); lane L58 named as owner
+hread	open	NOT STARTED	L55 doc §5.2; L52 §5.3	the input endpoint's extractor group (ops, Xx, Ux, mk); lane L58 named as owner
+hops	open	NOT STARTED	L55 doc §5.2; L52 §5.3	the input endpoint's extractor group (ops, Xx, Ux, mk); lane L58 named as owner
+hcan	open	NOT STARTED	L55 doc §5.2; L52 §5.3	the input endpoint's extractor group (ops, Xx, Ux, mk); lane L58 named as owner
+hdzero	open	LEFT	L50 doc §4 (lane L51); MVP_STATUS	the input endpoint's cover: unused positions decode to zero or a listed check is doomed
+hzk	open	conditional on O.zk	gap audit of 2026-11-10 (calls it trivial once εzk is chosen)	pure arithmetic εzk ≤ target; it carries weight only together with O.zk, which supplies εzk
+O.parts	open	OPEN (O8, O9, O10)	RunShapeProtocol.lean:442 field comments; gap audit §1	completeness of the run: honest segments accepted, refusals only at counted sites, counts within 2^-40
+O.refuse	open	OPEN (O8, O9, O10)	RunShapeProtocol.lean:442 field comments; gap audit §1	completeness of the run: honest segments accepted, refusals only at counted sites, counts within 2^-40
+O.counts	open	OPEN (O8, O9, O10)	RunShapeProtocol.lean:442 field comments; gap audit §1	completeness of the run: honest segments accepted, refusals only at counted sites, counts within 2^-40
+O.zk	open	OPEN (O12), assumed	RunShapeProtocol.lean:442; gap audit GA-2	zero knowledge of the whole run as one receipt; block-level hiding lemmas exist (Hiding*.lean)
+hon	modelling	structure with proof fields	ProtocolClassify.lean:652 (HonestIn)	how the honest prover derives salts and paths from its coins; ties to audit row M3 (the Lean honest prover models the Rust prover)
+msg_place	modelling	section variable	RunStgAlgTopR.lean section header	the commitment's message planes carry the token planes at `place`; a property of the modelled encoding
+hpos	instance-data	section variable	RunStgAlgTopR.lean section header	the token-position map is injective
+hU	instance-data	field fact	hU : U^2 = 7 in K; hbij follows for the quadratic extension	true of F_p[u]/(u^2-7) over Goldilocks; to be discharged once at the concrete instance
+hbij	instance-data	field fact	hU : U^2 = 7 in K; hbij follows for the quadratic extension	true of F_p[u]/(u^2-7) over Goldilocks; to be discharged once at the concrete instance
+hs	instance-data	domain string fact	start message of the domain decodes as no link	a property of the registered domain bytes
+hLb	instance-data	Lb ≤ 26	Shieldstral has 26 layers	
+hIA	instance-data	geometry of the registered profile	RkPcsAt / RkPcsR13 at the stages and blocks; L55 proves the boundary analogue (cbBndPcs_r13)	each commitment's verifier has the R13 numbers
+hIH	instance-data	geometry of the registered profile	RkPcsAt / RkPcsR13 at the stages and blocks; L55 proves the boundary analogue (cbBndPcs_r13)	each commitment's verifier has the R13 numbers
+hOA	instance-data	geometry of the registered profile	RkPcsAt / RkPcsR13 at the stages and blocks; L55 proves the boundary analogue (cbBndPcs_r13)	each commitment's verifier has the R13 numbers
+hOH	instance-data	geometry of the registered profile	RkPcsAt / RkPcsR13 at the stages and blocks; L55 proves the boundary analogue (cbBndPcs_r13)	each commitment's verifier has the R13 numbers
+hBA	instance-data	geometry of the registered profile	RkPcsAt / RkPcsR13 at the stages and blocks; L55 proves the boundary analogue (cbBndPcs_r13)	each commitment's verifier has the R13 numbers
+hBH	instance-data	geometry of the registered profile	RkPcsAt / RkPcsR13 at the stages and blocks; L55 proves the boundary analogue (cbBndPcs_r13)	each commitment's verifier has the R13 numbers
+hNin	instance-data	ARGUED yes	L57 doc §4	(n + e)·d + 2 ≤ 512 per stage slot; largest at the app's profile is 74
+hNout	instance-data	ARGUED yes	L57 doc §4	(n + e)·d + 2 ≤ 512 per stage slot; largest at the app's profile is 74
+O.width	instance-data	O1, O2 to O7	RunShapeProtocol.lean:442 field comments; gap audit (4 public-data facts; O6 discharged from definitions)	validity of the public run data and the verifier's policy at the registered header; needs the concrete Shieldstral instance as a Lean value (GA-4)
+O.weights	instance-data	O1, O2 to O7	RunShapeProtocol.lean:442 field comments; gap audit (4 public-data facts; O6 discharged from definitions)	validity of the public run data and the verifier's policy at the registered header; needs the concrete Shieldstral instance as a Lean value (GA-4)
+O.inPub	instance-data	O1, O2 to O7	RunShapeProtocol.lean:442 field comments; gap audit (4 public-data facts; O6 discharged from definitions)	validity of the public run data and the verifier's policy at the registered header; needs the concrete Shieldstral instance as a Lean value (GA-4)
+O.outPub	instance-data	O1, O2 to O7	RunShapeProtocol.lean:442 field comments; gap audit (4 public-data facts; O6 discharged from definitions)	validity of the public run data and the verifier's policy at the registered header; needs the concrete Shieldstral instance as a Lean value (GA-4)
+O.blocks	instance-data	O1, O2 to O7	RunShapeProtocol.lean:442 field comments; gap audit (4 public-data facts; O6 discharged from definitions)	validity of the public run data and the verifier's policy at the registered header; needs the concrete Shieldstral instance as a Lean value (GA-4)
+O.commit	instance-data	O1, O2 to O7	RunShapeProtocol.lean:442 field comments; gap audit (4 public-data facts; O6 discharged from definitions)	validity of the public run data and the verifier's policy at the registered header; needs the concrete Shieldstral instance as a Lean value (GA-4)
+O.policy	instance-data	O1, O2 to O7	RunShapeProtocol.lean:442 field comments; gap audit (4 public-data facts; O6 discharged from definitions)	validity of the public run data and the verifier's policy at the registered header; needs the concrete Shieldstral instance as a Lean value (GA-4)
+O.shapes	discharged	PROVED at the app	shield_shapes_valid (RunShapeShield.lean), named in the field's own comment	
+h64	bookkeeping	ARGUED yes	L50 doc §4 (Lq ≥ 2^20 at the run)	bounds on the oracle's input length Lq
+hr	bookkeeping	ARGUED yes	L50 doc §4 (Lq ≥ 2^20 at the run)	bounds on the oracle's input length Lq
+hL	bookkeeping	ARGUED yes	L50 doc §4 (Lq ≥ 2^20 at the run)	bounds on the oracle's input length Lq
+hL64	bookkeeping	ARGUED yes	L50 doc §4 (Lq ≥ 2^20 at the run)	bounds on the oracle's input length Lq
+hL81	bookkeeping	ARGUED yes	L50 doc §4 (Lq ≥ 2^20 at the run)	bounds on the oracle's input length Lq
+hv	bookkeeping	by construction / CHOICE	L53 §5.1, L56 §4.1, L57 §4	the run's profile is valid, its parts are the model's parts, and the kinds data D is the chosen one
+hσ	bookkeeping	by construction / CHOICE	L53 §5.1, L56 §4.1, L57 §4	the run's profile is valid, its parts are the model's parts, and the kinds data D is the chosen one
+hgeo	bookkeeping	by construction / CHOICE	L53 §5.1, L56 §4.1, L57 §4	the run's profile is valid, its parts are the model's parts, and the kinds data D is the chosen one
+hDe	bookkeeping	by construction / CHOICE	L53 §5.1, L56 §4.1, L57 §4	the run's profile is valid, its parts are the model's parts, and the kinds data D is the chosen one
+hslB	bookkeeping	by construction / CHOICE	L53 §5.1, L56 §4.1, L57 §4	the run's profile is valid, its parts are the model's parts, and the kinds data D is the chosen one
+hb0	bookkeeping	by construction / CHOICE	L53 §5.1, L56 §4.1, L57 §4	the run's profile is valid, its parts are the model's parts, and the kinds data D is the chosen one
+hbL	bookkeeping	by construction / CHOICE	L53 §5.1, L56 §4.1, L57 §4	the run's profile is valid, its parts are the model's parts, and the kinds data D is the chosen one
+hPin	bookkeeping	by construction / CHOICE	L53 §5.1, L56 §4.1, L57 §4	the run's profile is valid, its parts are the model's parts, and the kinds data D is the chosen one
+hPout	bookkeeping	by construction / CHOICE	L53 §5.1, L56 §4.1, L57 §4	the run's profile is valid, its parts are the model's parts, and the kinds data D is the chosen one
+htI	bookkeeping	tags agree		
+htO	bookkeeping	tags agree		
+htB	bookkeeping	tags agree		
+hfIA	bookkeeping	8·rows ≤ Lq	L55 doc §5.1 for the boundary analogue	
+hfIH	bookkeeping	8·rows ≤ Lq	L55 doc §5.1 for the boundary analogue	
+hfOA	bookkeeping	8·rows ≤ Lq	L55 doc §5.1 for the boundary analogue	
+hfOH	bookkeeping	8·rows ≤ Lq	L55 doc §5.1 for the boundary analogue	
+hfBA	bookkeeping	8·rows ≤ Lq	L55 doc §5.1 for the boundary analogue	
+hfBH	bookkeeping	8·rows ≤ Lq	L55 doc §5.1 for the boundary analogue	
+hfIM	bookkeeping	8·rows ≤ Lq	L55 doc §5.1 for the boundary analogue	
+hfOM	bookkeeping	8·rows ≤ Lq	L55 doc §5.1 for the boundary analogue	
+hfBM	bookkeeping	8·rows ≤ Lq	L55 doc §5.1 for the boundary analogue	
+hlscIn	bookkeeping	constant across headers	L53 §5.1	the stage layout is a function of the profile
+hlscOut	bookkeeping	constant across headers	L53 §5.1	the stage layout is a function of the profile
+hmIn	bookkeeping	constant across headers	L53 §5.1	the stage layout is a function of the profile
+hkIn	bookkeeping	constant across headers	L53 §5.1	the stage layout is a function of the profile
+hkOut	bookkeeping	constant across headers	L53 §5.1	the stage layout is a function of the profile
+hIOI	bookkeeping	ARGUED yes	L57 doc §4	the IO claims' semantics reads the functional only
+hIOO	bookkeeping	ARGUED yes	L57 doc §4	the IO claims' semantics reads the functional only
+Rn	bookkeeping	data bundles with proof fields	gap audit GA-1 (RtInc.hcnt, RtOutc.hcnt)	the run's segment records carry count and geometry proofs; GA-1 found RtInc's count contract unmeetable at one point and it was repaired; the Lean inventory lists the fields
+Iin	bookkeeping	data bundles with proof fields	gap audit GA-1 (RtInc.hcnt, RtOutc.hcnt)	the run's segment records carry count and geometry proofs; GA-1 found RtInc's count contract unmeetable at one point and it was repaired; the Lean inventory lists the fields
+Oout	bookkeeping	data bundles with proof fields	gap audit GA-1 (RtInc.hcnt, RtOutc.hcnt)	the run's segment records carry count and geometry proofs; GA-1 found RtInc's count contract unmeetable at one point and it was repaired; the Lean inventory lists the fields
+bp	bookkeeping	data bundles with proof fields	gap audit GA-1 (RtInc.hcnt, RtOutc.hcnt)	the run's segment records carry count and geometry proofs; GA-1 found RtInc's count contract unmeetable at one point and it was repaired; the Lean inventory lists the fields

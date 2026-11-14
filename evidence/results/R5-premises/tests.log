@@ -1,0 +1,10 @@
+PASS  complete classification agrees (exit 0)
+PASS  a missing hypothesis is reported (exit 1)
+PASS  an extra hypothesis is reported (exit 1)
+PASS  an unknown category is reported (exit 1)
+PASS  a repeated key is reported (exit 1)
+PASS  static lister finds the fixture's 7 binders
+PASS  static lister refuses an unknown theorem (exit 1)
+PASS  Lean inventory of the fixture theorem equals the stored one
+PASS  Lean refuses an unknown declaration (exit 1, 'unknown' in the message)
+tests passed: 9, failed: 0

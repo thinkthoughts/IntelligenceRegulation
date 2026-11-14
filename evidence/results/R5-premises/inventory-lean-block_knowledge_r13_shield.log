@@ -1,0 +1,5 @@
+$ R5_OUT=evidence/results/R5-premises/inventory-lean-block_knowledge_r13_shield.json lake env lean <import ZK60Formal.BlockR13StmtDone; r5_inventory_core.lean; #premise_inventory ZK60.Exec.Block.Join.R13H.block_knowledge_r13_shield>   (cwd: formal/)
+2026-11-14T18:46:18Z
+R5 inventory of ZK60.Exec.Block.Join.R13H.block_knowledge_r13_shield written to evidence/results/R5-premises/inventory-lean-block_knowledge_r13_shield.json
+3eebd17e67f7be8665f069be83211da0c4daaf401660b74fd567626ddfc6831c  evidence/results/R5-premises/inventory-lean-block_knowledge_r13_shield.json
+2026-11-14T18:46:21Z
