@@ -1,5 +1,11 @@
 # Intelligence Regulation: private, provable AI inference
 
+> **Independent external review (this fork, this branch only).** This is the fork
+> `thinkthoughts/IntelligenceRegulation`, on the branch `formalize-now/intelligenceregulation-review`. An outside
+> technical review of the project, with reproduction logs, is in [evidence/README.md](evidence/README.md). It was
+> written without Victor Rielly's involvement and he has neither reviewed nor endorsed it. Everything below this
+> notice is Victor Rielly's README, unchanged from commit `eee3eb57`; the review's files are all under `evidence/`.
+
 We build zero-knowledge proofs that an approved AI model produced an answer **on private data, without revealing
 the data**. A regulator, auditor or user can check that the approved model ran and what it decided (for example a
 safety classifier's verdict) without seeing the prompt, the answer or anything computed in between.
