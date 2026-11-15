@@ -1,0 +1,6 @@
+nanoda version pin: 0da9f98
+Lean export pin: df81913
+worker stack: 268435456 bytes
+normal checker: exit 0, 36764 declarations, zero typechecker errors
+axiom-removal control: exit 1, Classical.choice refused
+pretty-printer diagnostic: Unable to print axioms

@@ -1,0 +1,25 @@
+# r7-nanoda: top-bnd
+2026-11-15T05:09:01Z
+module: ZK60Formal.RunBndTop
+declaration: ZK60.ProtocolClassify.RunShapeP.bnd_productionReadyL_epP_args
+library toolchain: leanprover/lean4:v4.34.1
+lean4export: df81913eee5519d5a88ae5b0fd701b5298cc29ab
+nanoda_lib: 0da9f98feadd3a0a2ef4b3dbcf52a298a6fef929
+source commit: 886387fde9599349cc2dbba14ab1acdb5031100f
+Build completed successfully (6 jobs).
+    Finished `release` profile [optimized] target(s) in 0.28s
+$ lake env lean4export ZK60Formal.RunBndTop -- ZK60.ProtocolClassify.RunShapeP.bnd_productionReadyL_epP_args > top-bnd.ndjson   (cwd: formal/)
+export: exit 0, 23 s, peak 3793 MB, 4783448 lines, 245 MB, sha256 2a2446ab10f74ca1d0f26e2acd9f6322060d1b88b880f98f0790e30eeb849c01
+{"meta":{"exporter":{"name":"lean4export","version":"3.1.0"},"format":{"version":"3.1.0"},"lean":{"githash":"5045d0056413266e57c625dcd7c365b10e377c52","version":"4.34.1"}}}
+the export names bnd_productionReadyL_epP_args: yes
+$ nanoda_bin <config: three permitted axioms, any other a hard error>
+
+thread 'thread_0' (2547942) has overflowed its stack
+fatal runtime error: stack overflow, aborting
+nanoda: exit -6, 36 s, peak 645 MB
+$ nanoda_bin <control: Classical.choice removed from the permitted axioms; a refusal is expected>
+Error: export file declares unpermitted axiom "Classical.choice"
+
+run with `-h` or `--help` for help
+control: exit 1   (a nonzero exit is the expected refusal when the theorem depends on Classical.choice; exit 0 means the export declares no such axiom)
+2026-11-15T05:10:01Z

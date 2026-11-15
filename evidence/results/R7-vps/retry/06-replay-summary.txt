@@ -1,0 +1,7 @@
+modules recorded: 1 of 1 listed
+by status: ok=1
+guards: max resident memory 14000 MB, timeout 3600 s per module; root module included: False
+largest peak memory (MB): ZK60Formal.ProtocolClassifyUEp=12239
+longest (s): ZK60Formal.ProtocolClassifyUEp=116
+checker: lake env leanchecker
+finished: 2026-11-15T03:20:08Z

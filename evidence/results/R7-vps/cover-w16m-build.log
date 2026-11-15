@@ -1,0 +1,9 @@
+ℹ [3472/3472] Built ZK60Formal.CoverW16MCheck (91s)
+info: ZK60Formal/CoverW16MCheck.lean:149:0: FRAME: 1
+  RECEIPT: 1
+  COUNT: 1
+  TERMS: 34
+  VALUE: 11
+  NEG-HOST-WEIGHTS: 6
+MFunCheck: 54 checks, 0 failed
+Build completed successfully (3472 jobs).

@@ -1,0 +1,7 @@
+modules recorded: 496 of 496 listed
+by status: memory-limit=1, not-compiled=29, ok=466
+guards: max resident memory 12000 MB, timeout 3600 s per module; root module included: False
+largest peak memory (MB): ZK60Formal.ProtocolClassifyUEp=12025, ZK60Formal.RunExtractClassify=10567, ZK60Formal.BlockR13ProgOk=5368, ZK60Formal.BlockR13ProgCnt=5366, ZK60Formal.BlockDefineW16Rung=4661
+longest (s): ZK60Formal.BlockR13ProgOk=369, ZK60Formal.ProtocolClassifyUEp=277, ZK60Formal.RunExtractClassify=97, ZK60Formal.BlockR13ProgCnt=47, ZK60Formal.AssembleClassify=45
+checker: lake env leanchecker
+finished: 2026-11-15T03:13:16Z

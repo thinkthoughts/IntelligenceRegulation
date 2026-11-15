@@ -1,0 +1,7 @@
+modules recorded: 29 of 29 listed
+by status: ok=29
+guards: max resident memory 14000 MB, timeout 3600 s per module; root module included: False
+largest peak memory (MB): ZK60Formal.BlockTabExportCheck=3983, ZK60Formal.BlockR13ProgCheck=3964, ZK60Formal.BlockR13ProgExportCheck=3964, ZK60Formal.BlockHelperExportCheck=3961, ZK60Formal.RunAbsCheck=3961
+longest (s): ZK60Formal.BlockAlgCheck=13, ZK60Formal.BlockR13HostExportCheck=13, ZK60Formal.CheckR13Block=13, ZK60Formal.CheckR13Open=13, ZK60Formal.ExecOpeningCheck=13
+checker: lake env leanchecker
+finished: 2026-11-15T04:26:57Z
