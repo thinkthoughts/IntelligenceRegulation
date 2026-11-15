@@ -16,6 +16,8 @@
 #      hard error;
 #   4. control: runs nanoda again on the same export with Classical.choice removed from the permitted list, and
 #      expects a refusal, which shows the axiom check is live.
+# Environment: R7_WORK (work folder), R7_STACK_BYTES (nanoda's stack_size_bytes per checking worker, default
+# 268435456 = 256 MiB; the top theorems overflowed nanoda's 32 MiB default and 64 MiB on the VPS).
 # It writes <out dir>/<tag>.log and <tag>.result.tsv (default out dir evidence/results/R7-nanoda) and changes no
 # file of the library. Home paths and the host name are replaced in what it writes.
 set -u
@@ -48,7 +50,9 @@ read -r erc esec emb < "$WORK/$TAG.m1"
 echo "export: exit $erc, $esec s, peak $emb MB, $(wc -l < "$E") lines, $(du -m "$E" | cut -f1) MB, sha256 $(sha256sum "$E" | cut -d' ' -f1)"
 head -c 220 "$E" | head -1; tail -3 "$WORK/$TAG.export.err"
 grep -q "\"${DECL##*.}\"" "$E" && echo "the export names ${DECL##*.}: yes" || echo "the export names ${DECL##*.}: NO"
-cfg() { printf '{"export_file_path": "%s", "permitted_axioms": %s, "unpermitted_axiom_hard_error": true, "nat_extension": true, "string_extension": true, "print_success_message": true}\n' "$E" "$1"; }
+STACK=${R7_STACK_BYTES:-268435456}   # per checking worker; nanoda's default (32 MiB) and 64 MiB overflowed on the top theorems (VR-007 §2.3)
+echo "nanoda worker stack: $STACK bytes"
+cfg() { printf '{"export_file_path": "%s", "permitted_axioms": %s, "unpermitted_axiom_hard_error": true, "nat_extension": true, "string_extension": true, "print_success_message": true, "stack_size_bytes": %s}\n' "$E" "$1" "$STACK"; }
 cfg '["propext", "Classical.choice", "Quot.sound"]' > "$WORK/$TAG.json"; cfg '["propext", "Quot.sound"]' > "$WORK/$TAG.neg.json"
 echo "\$ nanoda_bin <config: three permitted axioms, any other a hard error>"
 exec 3> "$WORK/$TAG.m2"; peak "$N" "$WORK/$TAG.json" > "$WORK/$TAG.nanoda.out" 2>&1; exec 3>&-

@@ -4,30 +4,44 @@
 > reviewer working with Claude (Anthropic). Victor Rielly, the author of IntelligenceRegulation, has had no part
 > in it and has neither reviewed nor endorsed it. Index: [../README.md](../README.md).
 
-2026-11-14 · thinkthoughts · reviewed commit `eee3eb5717dea88d0fc48dc00f6aef389d52af3a` · built on review
-commit `5a7c536b107123303fa2fb854bace9bedb4c7525`
+2026-11-14, final version 2026-11-15 · thinkthoughts · reviewed commit `eee3eb5717dea88d0fc48dc00f6aef389d52af3a`
+· built on review commit `5a7c536b107123303fa2fb854bace9bedb4c7525` · second-machine evidence from commit
+`51480d81d8ac99f1152b3544af18f7283c6bf8ab`
+
+> **Revision note.** The first version of this report (commit `886387f`) prepared the second-machine runs and marked
+> their rows "awaited". This final version reads the logs the fork owner committed in `51480d8` and replaces those
+> rows. Sections 2.2 to 2.6, 4, 5, 7 and 8 changed; the comparison of section 3 is unchanged. The first version stays
+> in the branch history.
 
 ## 1. Summary
 
-1. **An independent kernel accepts three of Victor's theorems.** nanoda, a Lean kernel written separately in Rust,
-   checks the block-level knowledge-soundness theorem `block_knowledge_r13_shield` with its 38,128 dependencies,
-   the F12 fix `mproduct_sound_shift` with 17,840, and `trivialArith_circuitIff`. A pinned exporter and checker
-   pair compatible with Lean 4.34.1 exists, so the earlier blocker is gone (section 2.3).
-2. **The run-level replays are ready for the VPS and await it.** A per-module replay script with memory and time
-   guards was inspected, trial-run and tested here. The commands for the per-module replay, nanoda on the four top
-   theorems and the out-of-memory diagnostic are in `results/R7-vps/README.md` (section 2).
-3. **The four top theorems prove the same conclusion under different hypothesis sets.** Each parallel theorem
+1. **Every module of Victor's Lean library passes Lean's kernel replay, one module at a time.** On the second
+   machine, `leanchecker` accepted all 496 modules: 466 on the first pass, one more on a retry with a higher memory
+   limit, and the 29 check modules once they were built (section 2.2).
+2. **An independent kernel accepts all four production-readiness top theorems.** nanoda, a Lean kernel written
+   separately in Rust, checks each top theorem with everything it depends on: 36,463 to 37,344 declarations per
+   theorem, most of them shared Mathlib declarations. It refuses each one when `Classical.choice` is withheld, so
+   all four depend on `propext`, `Classical.choice` and `Quot.sound` and on no other axiom. nanoda needed a
+   256 MiB stack per checking worker; its 32 MiB default overflowed (section 2.3). Here it also accepted the
+   block-level knowledge-soundness theorem and the F12 fix.
+3. **Two of Victor's Rust exporters regenerated committed Lean fixtures,** and a check module that had needed
+   fixtures from outside the public tree compiled with them and passed: 54 functional checks, 0 failed (section 2.6).
+4. **The four top theorems prove the same conclusion under different hypothesis sets.** Each parallel theorem
    discharges the same 15 endpoint hypotheses, exchanges one or two others for conditions on the verifier's
    parameters, and carries the older, coarser form of eight stage obligations. Counted as open obligations: 24 on
    the audited theorem and on the L55 theorem, 25 on the L52 and L56 theorems (section 3). Fewer hypotheses on a line
    are a different statement, and none of the four is stronger than another by count alone.
-4. **The L55 theorem's additions are classified.** It adds 33 hypotheses (VR-006 said 34, counting the data binder
+5. **The L55 theorem's additions are classified.** It adds 33 hypotheses (VR-006 said 34, counting the data binder
    `hw`): 20 bookkeeping, 5 public instance data, and 8 open, the 8 being the coarse stage obligations (section 3.2).
-5. **The author-facing summary is written** ([`../SUMMARY-FOR-VICTOR.md`](../SUMMARY-FOR-VICTOR.md)). It leads
+6. **The author-facing summary is updated** ([`../SUMMARY-FOR-VICTOR.md`](../SUMMARY-FOR-VICTOR.md)). It leads
    with Victor's objectives and results, and keeps the chronology and attribution reading in its own section.
 
-No claim here concerns production security. The repository's rule D63 keeps every profile out of production until
-its statements are proved, and the findings are consistent with that rule being in force.
+**What the kernel checks establish, and what they leave open.** Two independent kernels now confirm that each top
+theorem's proof is a valid proof of its statement, under the three standard axioms. Each statement is an
+implication: if its hypotheses hold, `ProductionReadyL` holds for a verifier given as parameters. The 31 open
+obligations of the audited theorem, and a concrete Shieldstral instance, are outside what any kernel check can
+supply. The repository's rule D63 keeps every profile out of production until its statements are proved, and these
+findings are consistent with that rule being in force.
 
 ## 2. Verification
 
@@ -60,10 +74,32 @@ Trial on this machine ([`../results/R7-local-trial/`](../results/R7-local-trial/
 
 ### 2.2 Per-module replay on the VPS
 
-Awaited. Instructions: [`../results/R7-vps/README.md`](../results/R7-vps/README.md), steps 0 to 2. Together with
-VR-004 (358 modules accepted here) and VR-006 (`ZK60Formal.RunStgAlgTopR` accepted on the VPS), the run covers the
-remaining 108 modules of the default target. The 29 check modules outside the default target are recorded
-`not-compiled` unless they are built first.
+Files: [`../results/R7-vps/`](../results/R7-vps/). Machine: the 4-core, 16 GB Linux server of VR-006, Lean 4.34.1.
+Checked by [`../scripts/r7_vps_check.py`](../scripts/r7_vps_check.py) (section 2.7).
+
+| Pass | Modules | Limits | Result | File |
+|---|---|---|---|---|
+| First | all 496 `.lean` files under `formal/ZK60Formal` | 12,000 MB, 3,600 s per module | 466 ok; 1 `memory-limit`; 29 `not-compiled` | `06-replay-per-module.tsv`, `06-replay-summary.txt` |
+| Retry | `ZK60Formal.ProtocolClassifyUEp` | 14,000 MB | ok, 116 s, peak 12,239 MB | `retry/` |
+| Check modules | the 29 modules outside the library's default target, after building them | 14,000 MB | 29 ok; largest peak 3,983 MB, longest 13 s | `check-replay/`, `check-modules.txt` |
+| **All** | **496** | | **496 ok** | |
+
+Reconciliation, module by module:
+
+- **The memory-limit module.** On the first pass the guard killed `ProtocolClassifyUEp` after 277 s at 12,025 MB,
+  just above its 12,000 MB limit (`06-replay-failures.log`). Under a 14,000 MB limit it finished with exit 0 at a
+  peak of 12,239 MB. The guard did what it was built to do; the module needs about 12 GB to replay.
+- **The 29 check modules.** These import modules that define `main` and are kept out of the library's root, so
+  `lake build` leaves them unbuilt and the first pass recorded them `not-compiled`. They are the same 29 that VR-004
+  counted outside the default target. Once built, all 29 passed. Of their builds, the log of
+  `ZK60Formal.CoverW16MCheck` is committed (section 2.6); the other 28 builds are recorded only by their passing
+  replay.
+- **The largest modules.** `RunExtractClassify`, which ran out of memory on the reviewer's 6 GiB machine in VR-004,
+  replays at a peak of 10,567 MB. The run-level module `RunStgAlgTopR` passes on this pass too, as it did singly in
+  VR-006. The median peak of the 466 first-pass modules is 3,813 MB, mostly the loading of the imported files.
+
+With VR-004 (358 modules accepted on the reviewer's machine), this is the second complete replay of the compiled
+modules that the reviewer's machine could reach, and the first of the whole library.
 
 ### 2.3 nanoda
 
@@ -93,26 +129,92 @@ run also prints "Unable to print axioms", a pretty-printer message; the type-che
 The export files are hundreds of megabytes and are kept outside the repository; their hashes are in the result
 files.
 
-What this establishes: for these three theorems, a kernel implemented separately from Lean's accepts every
-declaration they depend on, including Mathlib's, under the three standard axioms. The run-level theorems are
-awaited (`results/R7-vps/README.md`, step 3).
+What this establishes for these three: a kernel implemented separately from Lean's accepts every declaration
+they depend on, including Mathlib's, under the three standard axioms.
 
-The VR-006 axiom log covers the audited theorem, its `_view` variant, the L55 theorem and the R13 run theorem.
-The L52 and L56 top theorems are added to the VPS steps (step 3), so that all four top theorems have a logged
-axiom list.
+**The four top theorems, on the second machine** (`results/R7-vps/top-*.log`, `top-*-stack256*.log`):
+
+| Top theorem | Lane | Export (lines) | First run, nanoda's default stack | Run with a 256 MiB worker stack | Control |
+|---|---|---|---|---|---|
+| `stgAlg_productionReadyL_epP_exec_real` | L57 | 4,751,633 | stack overflow, exit -6 | 36,764 declarations, zero typechecker errors | `Classical.choice` refused |
+| `cb_productionReadyL_epP_codeF` | L55 | 4,814,746 | stack overflow, exit -6 | 36,535 declarations, zero typechecker errors | refused |
+| `eb_productionReadyL_epP_codeT` | L52 | 4,657,454 | stack overflow, exit -6 | 36,463 declarations, zero typechecker errors | refused |
+| `bnd_productionReadyL_epP_args` | L56 | 4,783,448 | stack overflow, exit -6 | 37,344 declarations, zero typechecker errors | refused |
+
+- **Stack size.** nanoda's configuration field `stack_size_bytes` sets the stack of each checking worker and
+  defaults to 32 MiB (nanoda_lib README; `src/util.rs`). The first runs overflowed it. A trial at 64 MiB on the top
+  theorem overflowed as well (`top-real-stack64.log`). At 268,435,456 bytes (256 MiB) all four passed. A stack
+  overflow is a resource limit of the checker process: nanoda aborts before giving a verdict. The successful runs
+  are the verdicts. `r7-nanoda.sh` now sets 256 MiB by default and logs the value (`R7_STACK_BYTES`).
+- **The declaration counts overlap.** Each count is the theorem plus its transitive dependencies, and most of them
+  (Mathlib, Lean core, the shared library modules) are common to all four. The counts measure export size; they are
+  no measure of how much each theorem proves.
+- **Axioms.** Every run permitted exactly `propext`, `Classical.choice` and `Quot.sound` and treated any other
+  axiom as a hard error, and every control was refused at `Classical.choice`. This settles, by a second route, the
+  axioms of the L52 and L56 top theorems, which the VR-006 `#print axioms` log did not cover.
+- **Diagnostics.** Each successful run reports zero typechecker errors and one pretty-printer diagnostic, "Unable to
+  print axioms". The pretty-printer formats the axiom list for display; the type-checking verdict is separate from
+  it.
+- **The export files** (about 240 MB each) stay outside the repository. Their SHA-256 values are in the result
+  files of the first runs. The 256 MiB logs hold nanoda's output only; `top-real-stack256-summary.txt` records the
+  pins and the stack setting, and the logs do not restate which export each run read.
 
 ### 2.4 The whole-library memory failure
 
-The VR-006 log of the whole-library replay is empty. Step 4 of the VPS instructions copies the kernel's own record
-of a memory kill, sanitized, or writes that none was found. Until that file exists, the failure stays the fork
-owner's report.
+The VR-006 log of the whole-library `leanchecker ZK60Formal` run is empty, and the second-machine commit adds no
+kernel record of the kill (step 4 of the instructions produced no committed file). The memory failure therefore
+stays the fork owner's report, with no log behind it. It matters less now: the per-module replay of section 2.2
+covers every module the whole-library run would have covered, within 12.3 GB per module.
 
 ### 2.5 Earlier evidence intact
 
-`r6_check.py` passes all eight checks, including the SHA-256 of all six VPS files and of the Lean inventory. No
-file under `results/R1-lean`, `R1-lean-vps`, `R2-rust`, `R5-premises` or `R6-reconciliation` was changed, and no
-earlier report was edited. VR-006 question 24 (host name and home path in the committed VPS logs) is still open;
-the files were left as committed so that their hashes stay valid.
+`r6_check.py` passes all eight checks, including the SHA-256 of all six VR-006 VPS files and of the Lean inventory.
+The 32 files of the new manifest `results/R7-vps/PUBLIC-SHA256SUMS` all verify (re-run by this review). No file
+under `results/R1-lean`, `R1-lean-vps`, `R2-rust`, `R5-premises`, `R6-reconciliation` or `R7-vps` was changed by
+this revision, and reports VR-003 to VR-006 are unchanged. The new logs contain no host name or home path. VR-006
+question 24 (host name and home path in the VR-006 logs) is still open.
+
+### 2.6 Rust exporters and the check module `CoverW16MCheck`
+
+Victor's Lean checks of a real W16R2 development receipt read two exports produced by his Rust prover: the L9
+corpus and fork frame, and the L10 corpus. The second machine reran both exporters from `eee3eb57`
+(`l9-export-public.log`, `l10-export-public.log`; each a one-test `cargo test --release` run of Hashline, 1 passed).
+
+| Export | Log reports | The public tree holds | Status |
+|---|---|---|---|
+| L9 corpus | 81,130 B, 23 slots | `results/zk60_lean_l9_20261107/corpus.txt`, 81,130 B, SHA-256 `bd6b6df6…` | same length (checked by this review); byte identity reported by the fork owner |
+| L9 fork frame | 14,258,216 B | absent (a large file kept out of the public tree) | length reported; no committed copy to compare |
+| L10 corpus | 28 records, 191,941,509 B | its SHA-256, `0eedc99a…`, and length, 191,941,509, in `results/zk60_lean_l10_20261107/corpus.sha256` | same length (checked); SHA-256 match reported by the fork owner |
+
+The committed logs record lengths. The identity and checksum comparisons were made on the second machine and are
+not in a committed log; a one-line `sha256sum` of the regenerated files, committed, would make them checkable
+(section 7). The generated files themselves were left out of the repository, as the manifest's note says.
+
+The L9 run also exercised the verifier against twelve tampered copies of the frame. The honest frame verified, and
+each tampered copy was refused with a specific reason: a byte short, a byte long, wrong magic, a different run's
+binding, a wrong fork index, a wrong start tag, a changed commitment root, non-canonical field words (two kinds),
+a wrong mask column index, a changed round sum, and a wrong end tag.
+
+`ZK60Formal.CoverW16MCheck` (Victor's lane L23) compares the functionals and weights of the Lean block verifier with
+the code's, on that same receipt; it needs both corpora and the frame. VR-004 left it unbuilt. With the regenerated
+fixtures it built (3,472 jobs, exit 0) and its evaluation printed `MFunCheck: 54 checks, 0 failed`
+(`cover-w16m-build.log`); its replay passed in the check-module pass. The log does not show which file paths the
+environment variables pointed to.
+
+### 2.7 Checks of the second-machine evidence
+
+[`../scripts/r7_vps_check.py`](../scripts/r7_vps_check.py), run on the committed evidence: 5 of 5 pass.
+
+| Check | What it guards |
+|---|---|
+| V1 manifest | the 32 files have their recorded SHA-256 |
+| V2 coverage | the first pass lists exactly the 496 `.lean` files of `formal/ZK60Formal` at `eee3eb57` |
+| V3 reconciled | each module ends `ok`; the retry and check-module passes are exactly the first pass's memory-limit and not-compiled modules |
+| V4 nanoda | each top theorem: a success line, a refused control, an export with exit 0 |
+| V5 verdicts-only | each successful run has exactly one pretty-printer diagnostic, "Unable to print axioms" |
+
+One positive and four adversarial tests (an edited log, a memory-limit module without retry, a control that
+accepts, a nanoda run with errors) are added to `scripts/r7-tests/run-tests.sh`; the suite now passes 17 of 17.
 
 ## 3. The four top theorems
 
@@ -196,8 +298,8 @@ The full per-name record, with the L52 and L56 additions (`hopX1` open; `hgXB` b
 | C7 lacks-partitioned | each lacked hypothesis is in exactly one bucket |
 | C8 discharge-sourced | each "discharged" key names its supplier |
 
-[`../scripts/r7-tests/run-tests.sh`](../scripts/r7-tests/run-tests.sh): 12 of 12 pass (`tests.log`): one positive
-test and ten adversarial edits to scratch copies, each caught (an unclassified addition, a phantom name, a
+[`../scripts/r7-tests/run-tests.sh`](../scripts/r7-tests/run-tests.sh): the 12 comparison tests pass, within the
+suite's 17 (`tests.log`): one positive test and ten adversarial edits to scratch copies, each caught (an unclassified addition, a phantom name, a
 hypothesis labelled as data and the reverse, an exchange recorded as a discharge, a stand-in absent from its line,
 a wrong line list, an open obligation dropped without stand-in, an open obligation relabelled discharged, a name
 in two buckets), plus the replay script's refusal to run outside the repository root.
@@ -216,8 +318,11 @@ VR-003 to VR-006 stay as published.
 |---|---|
 | VR-006 §6.1: hypotheses added by the L52, L55, L56 theorems: 16, 34, 19 | 15, 33, 18 hypotheses; the earlier figures counted the data binder `hw` |
 | VR-006 §6.1: those lines "lack" the eight refined stage hypotheses | they carry the same obligations in the earlier form; and eight further conditions (`hIOI` … `hPout`) belong to the refined form itself |
-| VR-006 §2: "a separate kernel implementation has yet to be run on any part of the library" | nanoda has now checked three theorems and their dependencies |
-| VR-005 §1, VR-006 §2: nanoda named as open | a compatible pair is pinned; run-level runs await the VPS |
+| VR-006 §2: "a separate kernel implementation has yet to be run on any part of the library" | nanoda accepts all four top theorems and three component and block theorems, with their dependencies |
+| VR-005 §1, VR-006 §2: nanoda named as open | done (section 2.3) |
+| VR-006 §2: per-module replay of the other run-level modules open | done: 496 of 496 (section 2.2) |
+| VR-004 §2.1: 138 modules unbuilt on the reviewer's machine | all built and replayed on the second machine |
+| VR-007, first version: nanoda on the top theorems "awaited" | done, with a 256 MiB worker stack |
 
 ## 5. Roadmap
 
@@ -225,10 +330,11 @@ VR-003's roadmap and its FlashProve comparison stand.
 
 | # | State after VR-007 |
 |---|---|
-| R1 | Second kernel established for component and block theorems. Remaining: per-module `leanchecker` and nanoda on the run-level theorems (VPS) |
-| R5 | Extended to all four top theorems; each difference classified and checked |
+| R1 | Done. Complete build; per-module `leanchecker` over all 496 modules; nanoda on all four top theorems and three component and block theorems; axioms of all four top theorems limited to the standard three |
+| R5 | Done for the four top theorems: inventory, normalized classification, comparison, each difference checked |
+| R2 | Done for the two core libraries; the L9 and L10 exporters added on the second machine |
 | R3, R4 | Held, as agreed, for the next research phase |
-| R2, R6 to R9 | Unchanged |
+| R6 to R9 | Unchanged |
 
 ## 6. Questions
 
@@ -241,9 +347,11 @@ Questions 1 to 24 of the earlier reports stand; the summary for Victor groups th
 
 ## 7. Recommended next checkpoint
 
-1. VPS: steps 0 to 5 of `results/R7-vps/README.md`.
-2. A short follow-up (VR-007b) that reads those logs and fills sections 2.2 to 2.4.
-3. Review of the author-facing summary by the fork owner, then a decision on contacting Victor.
+1. Review of the author-facing summary by the fork owner, then a decision on contacting Victor.
+2. Two small evidence additions, if wanted before contact: a committed `sha256sum` of the regenerated L9 and L10
+   files beside the committed checksums, and the build logs of the other 28 check modules.
+3. The research obligations, in Victor's hands or with his agreement: the 31 open keys (section 3; VR-006 §4.1),
+   the concrete Shieldstral instance, and the merged top theorem of finding L56-2.
 
 R3, R4 and any Hashline work wait for approval.
 
@@ -251,8 +359,12 @@ R3, R4 and any Hashline work wait for approval.
 
 - Additions are under `evidence/` only. No file of Victor's was changed; the fork's `main` is unchanged; no
   upstream issue, pull request or contact was made.
-- nanoda ran on the reviewer's machine on modules compiled there. The run-level modules could not be compiled here.
+- The second-machine runs were made by the fork owner; this review read and checked their committed logs and
+  hashes and repeated no experiment. Section 2.6's identity and checksum matches are the fork owner's report.
+- nanoda on the three component and block theorems ran on the reviewer's machine, on modules compiled there.
 - Section 3 rests on binder names and statement text read from source, with Lean's list as a cross-check for the
   L55 theorem. Status words in the classification are Victor's, from his lane documents.
-- External tool facts (nanoda's accepted format, the Arena's results) were read from those projects' public pages
-  and source at the commits named.
+- Kernel checks establish that proofs are valid proofs of their statements. They establish none of the statements'
+  hypotheses.
+- External tool facts (nanoda's accepted format and stack setting, the Arena's results) were read from those
+  projects' public pages and source at the commits named.

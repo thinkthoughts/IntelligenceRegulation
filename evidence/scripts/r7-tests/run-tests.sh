@@ -27,6 +27,15 @@ fresh; J "$T/ev/scripts/r7_exchange.json" "[e for e in d['entries'] if e['keys']
 fresh; J "$T/ev/scripts/r7_exchange.json" "del d['open_stand_ins']['hdinS']"; run "an open obligation dropped on a line without a stand-in is caught" 1 "open hdinS is absent on"
 fresh; sed -i 's/^hblk\topen/hblk\tdischarged/' "$T/ev/results/R6-reconciliation/classification-normalized.tsv"; run "an open obligation relabelled discharged is caught" 1 "hblk is classed discharged and r7_exchange.json records no supplier"
 fresh; J "$T/ev/scripts/r7_exchange.json" "d['audited_refinement_conditions']['keys'].append('hdinS')"; run "a hypothesis placed in two buckets is caught" 1 "hdinS on eb falls in 2 buckets"
+# VPS evidence checker (r7_vps_check.py): one positive run and four adversarial edits to a scratch copy
+vfresh() { T=$(mktemp -d); mkdir -p "$T/ev/results"; cp -r "$E/results/R7-vps" "$T/ev/results/"; }
+vrun() { python3 "$S/r7_vps_check.py" "$T/ev" "$REPO" > "$T/out.txt" 2>&1; local rc=$?
+  if [ $rc -eq "$2" ] && grep -q -- "$3" "$T/out.txt"; then echo "PASS  $1"; pass=$((pass+1)); else echo "FAIL  $1 (exit $rc)"; grep -E 'FAIL|RESULT' "$T/out.txt" | head -4 | sed 's/^/      /'; fail=$((fail+1)); fi; }
+vfresh; vrun "the committed VPS evidence passes all five checks" 0 "RESULT all checks pass"
+vfresh; echo x >> "$T/ev/results/R7-vps/06-replay-summary.txt"; vrun "an edited VPS log is caught by the manifest" 1 "FAIL V1 manifest"
+vfresh; sed -i '/ProtocolClassifyUEp/d' "$T/ev/results/R7-vps/retry/06-replay-per-module.tsv"; vrun "a memory-limit module with no retry is caught" 1 "ZK60Formal.ProtocolClassifyUEp ends memory-limit"
+vfresh; sed -i 's/unpermitted axiom "Classical.choice"/something else/' "$T/ev/results/R7-vps/top-cb-stack256.neg.log"; vrun "a control that did not refuse is caught" 1 "top-cb: control did not refuse"
+vfresh; sed -i 's/with no typechecker errors/with 3 typechecker errors/' "$T/ev/results/R7-vps/top-eb-stack256.log"; vrun "a nanoda run with errors is caught" 1 "top-eb: no success line"
 # replay script: argument handling only (its guards are exercised on a real module in VR-007 §2.1)
 T=$(mktemp -d); python3 "$S/r1_replay_modules.py" --out "$T" > "$T/o.txt" 2>&1; rc=$?
 { [ $rc -ne 0 ] && grep -q 'run from the repository root' "$T/o.txt"; } && { echo "PASS  the replay script refuses to run outside the repository root"; pass=$((pass+1)); } || { echo "FAIL  replay script outside the root (exit $rc)"; fail=$((fail+1)); }

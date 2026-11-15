@@ -9,5 +9,10 @@ PASS  a wrong absent-on list is caught
 PASS  an open obligation dropped on a line without a stand-in is caught
 PASS  an open obligation relabelled discharged is caught
 PASS  a hypothesis placed in two buckets is caught
+PASS  the committed VPS evidence passes all five checks
+PASS  an edited VPS log is caught by the manifest
+PASS  a memory-limit module with no retry is caught
+PASS  a control that did not refuse is caught
+PASS  a nanoda run with errors is caught
 PASS  the replay script refuses to run outside the repository root
-tests passed: 12, failed: 0
+tests passed: 17, failed: 0

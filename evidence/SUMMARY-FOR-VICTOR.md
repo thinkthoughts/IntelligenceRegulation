@@ -2,8 +2,8 @@
 
 > **Independent external review**, written for Victor Rielly by the owner of the fork
 > `thinkthoughts/IntelligenceRegulation` with Claude (Anthropic). Victor has not reviewed or endorsed it. Every
-> figure below is traced in the reports listed at the end. Draft of 2026-11-14, review commit after `5a7c536b`,
-> source commit `eee3eb57`.
+> figure below is traced in the reports listed at the end. Version of 2026-11-15, with the second machine's
+> evidence of review commit `51480d81`; source commit `eee3eb57`.
 
 ## Your project and what it has built
 
@@ -45,9 +45,10 @@ On two machines unrelated to yours (a 2-core cloud workspace and a 4-core, 16 GB
 | Result | Reproduced |
 |---|---|
 | The whole Lean library builds with Lean 4.34.1 | yes: 3,840 jobs, exit 0 |
-| The top theorem, its `_view` variant, the L55 top theorem and the R13 run theorem use only `propext`, `Classical.choice`, `Quot.sound` | yes, by `#print axioms`; the L52 and L56 top theorems are queued |
-| Lean's kernel, run again over the compiled files (`leanchecker`) | 359 modules accepted, including `RunStgAlgTopR`; the rest are queued |
-| A kernel implemented separately from Lean (nanoda, in Rust) | accepts `block_knowledge_r13_shield` with its 38,128 dependencies, and the F12 fix with 17,840; it refuses both when `Classical.choice` is withheld |
+| Lean's kernel, run again over the compiled files (`leanchecker`), one module at a time | all 496 modules accepted, including the 29 check modules; one module needs about 12 GB |
+| A kernel implemented separately from Lean (nanoda, in Rust) | accepts all four top theorems (L52, L55, L56, L57), each with the 36,463 to 37,344 declarations it depends on, and also `block_knowledge_r13_shield` and the F12 fix; each is refused once `Classical.choice` is withheld |
+| Axioms | all four top theorems depend on `propext`, `Classical.choice` and `Quot.sound` only |
+| Your Rust exporters for the L9 and L10 Lean fixtures | regenerate files of the committed lengths (identity, and the L10 checksum, on the fork owner's comparison); `CoverW16MCheck` then passes, 54 checks, 0 failed |
 | Rust tests on x86-64 Linux | `zkp-core` 83 pass; Hashline 978 pass, 5 fail for environment or fixture reasons, 4 of them pass once adjusted |
 | The F12 control | the pre-fix verifier accepts the forgery; the fixed one refuses it; old receipts are refused |
 | The P1 component demo | passes, with 6 of 6 rejection controls |
@@ -55,6 +56,9 @@ On two machines unrelated to yours (a 2-core cloud workspace and a 4-core, 16 GB
 All 15 Lean files you adapted from FlashProve match FlashProve at its pinned commit, as your NOTICE states.
 
 ## What remains conditional or unverified
+
+Two kernels confirm that the proofs are valid; neither can confirm a theorem's hypotheses. That line runs through
+everything below.
 
 - **The run-level theorem is a checked implication.** `stgAlg_productionReadyL_epP_exec_real` proves
   `ProductionReadyL` for a verifier given as parameters, from 196 binders. Reconciled with Lean's own list, 31 keys
@@ -71,8 +75,9 @@ All 15 Lean files you adapted from FlashProve match FlashProve at its pinned com
 
 ## Where outside contributors can help
 
-1. **Independent checking at scale**: the per-module kernel replay and nanoda on the run-level theorems (scripts
-   ready), and a CI workflow that rebuilds and re-checks the library on every commit.
+1. **Keeping the checking independent as the library grows**: a CI workflow that rebuilds the library and runs
+   the per-module replay and nanoda on each new top theorem. The scripts exist; nanoda needs a
+   `stack_size_bytes` of 256 MiB for your top theorems, and one module needs about 12 GB.
 2. **Specific open obligations**, chosen with you so lanes stay separate: for example IN-C's LogUp round-by-round
    bound, whose model is written (L57 §5.3).
 3. **The concrete Shieldstral instance**, and the merged top theorem of finding L56-2.

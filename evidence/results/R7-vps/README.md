@@ -3,7 +3,15 @@
 > **Independent external review.** Part of the review described in [../../README.md](../../README.md). Victor
 > Rielly has had no part in it.
 
-**Status on 2026-11-14: this folder holds instructions only.** The reviewer's own machine (2 cores, about 6 GiB per
+**Update, 2026-11-15 (commit `51480d81`): the results are here.** The fork owner ran steps 0 to 3 and committed the
+logs with a manifest, `PUBLIC-SHA256SUMS` (32 files). VR-007 §2.2 to §2.7 read them; `evidence/scripts/r7_vps_check.py`
+checks them. Two departures from the steps below, both recorded in the logs: nanoda needed `stack_size_bytes` of
+268,435,456 (256 MiB) per checking worker, where its 32 MiB default and 64 MiB overflowed (`r7-nanoda.sh` now sets
+256 MiB by default); and the 29 check modules were built and replayed in a pass of their own (`check-replay/`).
+Step 4, the out-of-memory diagnostic, produced no committed file. The text below is the earlier note, kept as
+written.
+
+**Status on 2026-11-14, before that commit: this folder holds instructions only.** The reviewer's own machine (2 cores, about 6 GiB per
 job) can compile and check the component and block modules, and VR-007 reports those results. The run-level
 modules need the VPS. Everything below runs there, writes only under `evidence/`, and changes no file of the
 library.
