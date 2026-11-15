@@ -1,0 +1,13 @@
+PASS  the committed classification passes all eight checks
+PASS  an added hypothesis left unclassified is caught
+PASS  a classified name that no theorem adds is caught
+PASS  a hypothesis mislabelled as data disagrees with Lean
+PASS  data mislabelled as a hypothesis disagrees with Lean
+PASS  an exchange recorded as a discharge is caught
+PASS  a stand-in that the line lacks is caught
+PASS  a wrong absent-on list is caught
+PASS  an open obligation dropped on a line without a stand-in is caught
+PASS  an open obligation relabelled discharged is caught
+PASS  a hypothesis placed in two buckets is caught
+PASS  the replay script refuses to run outside the repository root
+tests passed: 12, failed: 0

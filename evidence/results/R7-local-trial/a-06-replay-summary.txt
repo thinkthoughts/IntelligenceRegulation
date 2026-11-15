@@ -1,0 +1,7 @@
+modules recorded: 4 of 4 listed
+by status: not-compiled=2, ok=2
+guards: max resident memory 9000 MB, timeout 1800 s per module; root module included: False
+largest peak memory (MB): ZK60Formal.Statements=3455, ZK60Formal.SoundMProduct=3280, ZK60Formal.RunStgAlgTopR=0, ZK60Formal.NoSuchModule=0
+longest (s): ZK60Formal.Statements=399, ZK60Formal.SoundMProduct=7, ZK60Formal.RunStgAlgTopR=0, ZK60Formal.NoSuchModule=0
+checker: lake env leanchecker
+finished: 2026-11-15T00:30:02Z

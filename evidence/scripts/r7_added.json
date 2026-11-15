@@ -1,0 +1,286 @@
+{
+ "schema": "r7-added/1",
+ "comment": "Independent external review (VR-007). Classification of binders that a parallel top theorem has and the audited theorem lacks. Status words are quoted from Victor Rielly's lane documents under docs/zkmatrix-poc/.",
+ "names": {
+  "hsl_stg": {
+   "kind": "hypothesis",
+   "category": "open",
+   "status": "earlier, coarser form",
+   "evidence": "ZK60_LEAN_L53_RUN_STAGES_20261110.md §5; L57 doc §4",
+   "note": "the stage obligations before lanes L53 and L57 refined them; the audited theorem has hTrI, hTrO, hDI_stg, hDO_stg, hLI_stg, hLO_stg, hdinS, hdoutS and list conditions in their place"
+  },
+  "hR0_stg": {
+   "kind": "hypothesis",
+   "category": "open",
+   "status": "earlier, coarser form",
+   "evidence": "ZK60_LEAN_L53_RUN_STAGES_20261110.md §5; L57 doc §4",
+   "note": "the stage obligations before lanes L53 and L57 refined them; the audited theorem has hTrI, hTrO, hDI_stg, hDO_stg, hLI_stg, hLO_stg, hdinS, hdoutS and list conditions in their place"
+  },
+  "hR1_stg": {
+   "kind": "hypothesis",
+   "category": "open",
+   "status": "earlier, coarser form",
+   "evidence": "ZK60_LEAN_L53_RUN_STAGES_20261110.md §5; L57 doc §4",
+   "note": "the stage obligations before lanes L53 and L57 refined them; the audited theorem has hTrI, hTrO, hDI_stg, hDO_stg, hLI_stg, hLO_stg, hdinS, hdoutS and list conditions in their place"
+  },
+  "hH0_stg": {
+   "kind": "hypothesis",
+   "category": "open",
+   "status": "earlier, coarser form",
+   "evidence": "ZK60_LEAN_L53_RUN_STAGES_20261110.md §5; L57 doc §4",
+   "note": "the stage obligations before lanes L53 and L57 refined them; the audited theorem has hTrI, hTrO, hDI_stg, hDO_stg, hLI_stg, hLO_stg, hdinS, hdoutS and list conditions in their place"
+  },
+  "hH1_stg": {
+   "kind": "hypothesis",
+   "category": "open",
+   "status": "earlier, coarser form",
+   "evidence": "ZK60_LEAN_L53_RUN_STAGES_20261110.md §5; L57 doc §4",
+   "note": "the stage obligations before lanes L53 and L57 refined them; the audited theorem has hTrI, hTrO, hDI_stg, hDO_stg, hLI_stg, hLO_stg, hdinS, hdoutS and list conditions in their place"
+  },
+  "hLU_stg": {
+   "kind": "hypothesis",
+   "category": "open",
+   "status": "earlier, coarser form",
+   "evidence": "ZK60_LEAN_L53_RUN_STAGES_20261110.md §5; L57 doc §4",
+   "note": "the stage obligations before lanes L53 and L57 refined them; the audited theorem has hTrI, hTrO, hDI_stg, hDO_stg, hLI_stg, hLO_stg, hdinS, hdoutS and list conditions in their place"
+  },
+  "hdin": {
+   "kind": "hypothesis",
+   "category": "open",
+   "status": "earlier, coarser form",
+   "evidence": "ZK60_LEAN_L53_RUN_STAGES_20261110.md §5; L57 doc §4",
+   "note": "the stage obligations before lanes L53 and L57 refined them; the audited theorem has hTrI, hTrO, hDI_stg, hDO_stg, hLI_stg, hLO_stg, hdinS, hdoutS and list conditions in their place"
+  },
+  "hdout": {
+   "kind": "hypothesis",
+   "category": "open",
+   "status": "earlier, coarser form",
+   "evidence": "ZK60_LEAN_L53_RUN_STAGES_20261110.md §5; L57 doc §4",
+   "note": "the stage obligations before lanes L53 and L57 refined them; the audited theorem has hTrI, hTrO, hDI_stg, hDO_stg, hLI_stg, hLO_stg, hdinS, hdoutS and list conditions in their place"
+  },
+  "hw": {
+   "kind": "data",
+   "category": "data",
+   "status": "the code's header reader",
+   "evidence": "ZK60_LEAN_L52_ENDPOINT_B_20261110.md §5.1",
+   "note": "Hdr → ClsHdrW; a data binder whose name starts with h. VR-006 counted it among 34 hypotheses; Lean's list for the L55 theorem has 33 of them as propositions"
+  },
+  "hRn": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "YES by definition; CHECKED 29 of 29",
+   "evidence": "ZK60_LEAN_L52_ENDPOINT_B_20261110.md line 142",
+   "note": "the run's header is the code's header"
+  },
+  "hgX0": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "a CHOICE of base 0",
+   "evidence": "ZK60_LEAN_L52_ENDPOINT_B_20261110.md line 143",
+   "note": "part 0's closing geometry is the endpoint's"
+  },
+  "hnX0": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "a CHOICE of base 0",
+   "evidence": "ZK60_LEAN_L52_ENDPOINT_B_20261110.md line 143",
+   "note": "part 0's closing geometry is the endpoint's"
+  },
+  "hXep": {
+   "kind": "hypothesis",
+   "category": "instance-data",
+   "status": "geometry of the endpoint opening",
+   "evidence": "RkPcsAt U tag ogEp Iin.pX; ZK60_LEAN_L52_ENDPOINT_B_20261110.md §5.1",
+   "note": ""
+  },
+  "hfitX": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "8·rows ≤ Lq",
+   "evidence": "ZK60_LEAN_L52_ENDPOINT_B_20261110.md §5.1",
+   "note": ""
+  },
+  "hRr": {
+   "kind": "hypothesis",
+   "category": "instance-data",
+   "status": "Iin.pX.rows = Rr",
+   "evidence": "ZK60_LEAN_L52_ENDPOINT_B_20261110.md §5.1",
+   "note": ""
+  },
+  "hopX1": {
+   "kind": "hypothesis",
+   "category": "open",
+   "status": "NOT STARTED on the L52 and L56 lines; proved on the L55 line",
+   "evidence": "ZK60_LEAN_L52_ENDPOINT_B_20261110.md line 147; ZK60_LEAN_L55_RUN_CLOSE_20261110.md §1",
+   "note": "closing openings of parts 1 on; the L55 theorem lacks it and has the boundary conditions below in its place"
+  },
+  "Vi": {
+   "kind": "data",
+   "category": "data",
+   "status": "",
+   "evidence": "RunCloseBTopF.lean",
+   "note": "the constant IN-C verifier; each block's boundary opening record"
+  },
+  "pXk": {
+   "kind": "data",
+   "category": "data",
+   "status": "",
+   "evidence": "RunCloseBTopF.lean",
+   "note": "the constant IN-C verifier; each block's boundary opening record"
+  },
+  "hinc": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "YES: rfl at the real families",
+   "evidence": "ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1",
+   "note": "the stage verifier families are constant in the header"
+  },
+  "houtc": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "YES: rfl at the real families",
+   "evidence": "ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1",
+   "note": "the stage verifier families are constant in the header"
+  },
+  "hchk": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "YES with check := vdChk check0 (vdChk_le PROVED); that the accepted inputs are the code's is ARGUED",
+   "evidence": "ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1; RunVerdictW.lean:84; finding L55-1",
+   "note": "block 0's statement check passes only a verdict ≤ 1; a check that omits the refusal fails it"
+  },
+  "hLb1": {
+   "kind": "hypothesis",
+   "category": "instance-data",
+   "status": "YES: 26 blocks",
+   "evidence": "ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1",
+   "note": "0 < Lb"
+  },
+  "hXk": {
+   "kind": "hypothesis",
+   "category": "instance-data",
+   "status": "YES: cbBndPcs_r13 PROVED; geometry CHECKED",
+   "evidence": "ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1",
+   "note": "boundary openings have R13's numbers"
+  },
+  "hOX": {
+   "kind": "hypothesis",
+   "category": "instance-data",
+   "status": "YES: cbBndPcs_r13 PROVED; geometry CHECKED",
+   "evidence": "ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1",
+   "note": "boundary openings have R13's numbers"
+  },
+  "hfitXk": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "YES: 8·38 = 304 ≤ 2^20 (cbBndPcs_rows)",
+   "evidence": "ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1",
+   "note": ""
+  },
+  "hfitXo": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "YES: 8·38 = 304 ≤ 2^20 (cbBndPcs_rows)",
+   "evidence": "ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1",
+   "note": ""
+  },
+  "hwXk": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "YES, ARGUED: definitional at the builders",
+   "evidence": "ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1",
+   "note": "closing widths and index squeezes of each part"
+  },
+  "hmXk": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "YES, ARGUED: definitional at the builders",
+   "evidence": "ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1",
+   "note": "closing widths and index squeezes of each part"
+  },
+  "hwX0": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "YES, ARGUED: definitional at the builders",
+   "evidence": "ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1",
+   "note": "closing widths and index squeezes of each part"
+  },
+  "hmX0": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "YES, ARGUED: definitional at the builders",
+   "evidence": "ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1",
+   "note": "closing widths and index squeezes of each part"
+  },
+  "hwXo": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "YES, ARGUED: definitional at the builders",
+   "evidence": "ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1",
+   "note": "closing widths and index squeezes of each part"
+  },
+  "hgXk": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "a CHOICE of base",
+   "evidence": "ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1",
+   "note": "closing geometry of parts 1 on"
+  },
+  "hnXk": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "a CHOICE of base",
+   "evidence": "ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1",
+   "note": "closing geometry of parts 1 on"
+  },
+  "hgX1": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "a CHOICE of base",
+   "evidence": "ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1",
+   "note": "closing geometry of parts 1 on"
+  },
+  "hnX1": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "a CHOICE of base",
+   "evidence": "ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1",
+   "note": "closing geometry of parts 1 on"
+  },
+  "hgXo": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "a CHOICE of base",
+   "evidence": "ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1",
+   "note": "closing geometry of parts 1 on"
+  },
+  "hnXo": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "a CHOICE of base",
+   "evidence": "ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1",
+   "note": "closing geometry of parts 1 on"
+  },
+  "hPk": {
+   "kind": "hypothesis",
+   "category": "instance-data",
+   "status": "the block profiles are the Shieldstral run's",
+   "evidence": "ZK60_LEAN_L56_RUN_BOUNDARY_20261110.md §4.2",
+   "note": "ShieldRunAt Pk Rp.blks Lb"
+  },
+  "hgXB": {
+   "kind": "hypothesis",
+   "category": "bookkeeping",
+   "status": "root positions of the closing geometry",
+   "evidence": "ZK60_LEAN_L56_RUN_BOUNDARY_20261110.md §4.2",
+   "note": ""
+  },
+  "hsl_args": {
+   "kind": "hypothesis",
+   "category": "open",
+   "status": "re-form of hsl_blk",
+   "evidence": "ZK60_LEAN_L56_RUN_BOUNDARY_20261110.md §4.1, §4.2",
+   "note": "the block slots' evaluations at the widened boundary slots; stands where the audited theorem has hsl_blk"
+  }
+ }
+}

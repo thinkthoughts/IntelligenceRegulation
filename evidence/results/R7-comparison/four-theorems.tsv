@@ -1,0 +1,220 @@
+binder	audited_L57	eb_L52	cb_L55	bnd_L56	category	relation_or_status	source
+S	yes	yes	yes	yes	data		
+Hdr	yes	yes	yes	yes	data		
+Salt	yes	yes	yes	yes	data		
+Coins	yes	yes	yes	yes	data		
+K	yes	yes	yes	yes	data		
+Rr	yes	yes	yes	yes	data		
+dR	yes	yes	yes	yes	data		
+pos	yes	yes	yes	yes	data		
+hpos	yes	yes	yes	yes	instance-data		results/R6-reconciliation/classification-normalized.tsv
+place	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+msg	yes	yes	yes	yes	data		
+msg_place	yes	yes	yes	yes	modelling		results/R6-reconciliation/classification-normalized.tsv
+pad	yes	yes	yes	yes	data		
+salt	yes	yes	yes	yes	data		
+path	yes	yes	yes	yes	data		
+tagc	yes	yes	yes	yes	data		
+Rp	yes	yes	yes	yes	data		
+Lq	yes	yes	yes	yes	data		
+Lb	yes	yes	yes	yes	data		
+preA	yes	yes	yes	yes	data		
+preB	yes	yes	yes	yes	data		
+start	yes	yes	yes	yes	data		
+inc	yes	yes	yes	yes	data		
+incG	yes	yes	yes	yes	data		
+Pk	yes	yes	yes	yes	data		
+sgeom	yes	yes	yes	yes	data		
+check	yes	yes	yes	yes	data		
+paths	yes	yes	yes	yes	data		
+digest	yes	yes	yes	yes	data		
+bRows	yes	yes	yes	yes	data		
+bLogN	yes	yes	yes	yes	data		
+bndCheck	yes	yes	yes	yes	data		
+bndOpen	yes	yes	yes	yes	data		
+outc	yes	yes	yes	yes	data		
+outcG	yes	yes	yes	yes	data		
+P	yes	yes	yes	yes	data		
+h64	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hr	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hon	yes	yes	yes	yes	modelling		results/R6-reconciliation/classification-normalized.tsv
+U	yes	yes	yes	yes	data		
+hbij	yes	yes	yes	yes	instance-data		results/R6-reconciliation/classification-normalized.tsv
+key	yes	yes	yes	yes	data		
+domain	yes	yes	yes	yes	data		
+hs	yes	yes	yes	yes	instance-data		results/R6-reconciliation/classification-normalized.tsv
+hL	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hL64	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+Rn	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hv	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+D	yes	yes	yes	yes	data		
+hD	yes	yes	yes	yes	bookkeeping/instance-data/open		results/R6-reconciliation/classification-normalized.tsv
+ι	yes	yes	yes	yes	data		
+site	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+kOf	yes	yes	yes	yes	data		
+δOf	yes	yes	yes	yes	data		
+E	yes	yes	yes	yes	data		
+εzk	yes	yes	yes	yes	data		
+O	yes	yes	yes	yes	discharged/instance-data/open	instance-only	results/R6-reconciliation/classification-normalized.tsv
+F	yes		yes		data		
+Cl	yes				data		
+T	yes				discharged	discharged	results/R6-reconciliation/classification-normalized.tsv
+hTenc	yes				discharged	discharged	results/R6-reconciliation/classification-normalized.tsv
+hTaA	yes				discharged	discharged	results/R6-reconciliation/classification-normalized.tsv
+hTaB	yes				discharged	discharged	results/R6-reconciliation/classification-normalized.tsv
+Ux	yes				data		
+Xx	yes				bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hUc	yes				discharged	discharged	results/R6-reconciliation/classification-normalized.tsv
+hXc	yes				discharged	discharged	results/R6-reconciliation/classification-normalized.tsv
+pr	yes				data		
+hp1	yes				discharged	discharged	results/R6-reconciliation/classification-normalized.tsv
+hp2	yes				discharged	discharged	results/R6-reconciliation/classification-normalized.tsv
+hF	yes				discharged	discharged	results/R6-reconciliation/classification-normalized.tsv
+hw0	yes				discharged	discharged	results/R6-reconciliation/classification-normalized.tsv
+hβLR	yes				discharged	discharged	results/R6-reconciliation/classification-normalized.tsv
+hTe	yes				discharged	discharged	results/R6-reconciliation/classification-normalized.tsv
+hTQ	yes				discharged	discharged	results/R6-reconciliation/classification-normalized.tsv
+hβJ	yes				discharged	discharged	results/R6-reconciliation/classification-normalized.tsv
+tag	yes	yes	yes	yes	data		
+hU	yes	yes	yes	yes	instance-data		results/R6-reconciliation/classification-normalized.tsv
+cx0	yes	yes	yes	yes	data		
+pin	yes	yes	yes	yes	data		
+pout	yes	yes	yes	yes	data		
+Iin	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+Oout	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+bp	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+wXk	yes	yes	yes	yes	data		
+gXk	yes	yes	yes	yes	data		
+mXk	yes	yes	yes	yes	data		
+hσ	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hLb	yes	yes	yes		instance-data	exchanged	results/R6-reconciliation/classification-normalized.tsv
+hgeo	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hIA	yes	yes	yes	yes	instance-data		results/R6-reconciliation/classification-normalized.tsv
+hIH	yes	yes	yes	yes	instance-data		results/R6-reconciliation/classification-normalized.tsv
+hOA	yes	yes	yes	yes	instance-data		results/R6-reconciliation/classification-normalized.tsv
+hOH	yes	yes	yes	yes	instance-data		results/R6-reconciliation/classification-normalized.tsv
+hBA	yes	yes	yes	yes	instance-data		results/R6-reconciliation/classification-normalized.tsv
+hBH	yes	yes	yes	yes	instance-data		results/R6-reconciliation/classification-normalized.tsv
+htI	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+htO	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+htB	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hfIA	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hfIH	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hfOA	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hfOH	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hfBA	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hfBH	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hfIM	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hfOM	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hfBM	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+Win	yes	yes		yes	data		
+Wout	yes	yes		yes	data		
+lscIn	yes	yes	yes	yes	data		
+lscOut	yes	yes	yes	yes	data		
+mIn	yes	yes	yes	yes	data		
+kIn	yes	yes	yes	yes	data		
+kOut	yes	yes	yes	yes	data		
+hlscIn	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hlscOut	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hmIn	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hkIn	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hkOut	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+base	yes	yes	yes	yes	data		
+eL	yes	yes	yes	yes	data		
+hDe	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hW	yes	yes		yes	discharged	exchanged	results/R6-reconciliation/classification-normalized.tsv
+hopX	yes				discharged	exchanged	results/R6-reconciliation/classification-normalized.tsv
+hL81	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+Fsl	yes	yes	yes	yes	data		
+hslB	yes	yes	yes	yes	bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+ιL	yes	yes	yes	yes	data		
+πL	yes	yes	yes	yes	data		
+κL	yes	yes	yes	yes	data		
+AlkL	yes	yes	yes	yes	data		
+TL	yes	yes	yes	yes	data		
+mlkL	yes	yes	yes	yes	data		
+hsl_blk	yes	yes	yes		open		results/R6-reconciliation/classification-normalized.tsv
+P0in	yes				data		
+P0out	yes				data		
+csIOI	yes				data		
+csIOO	yes				data		
+hIOI	yes				bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hIOO	yes				bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hNin	yes				instance-data		results/R6-reconciliation/classification-normalized.tsv
+hNout	yes				instance-data		results/R6-reconciliation/classification-normalized.tsv
+ΦI	yes				data		
+ΦO	yes				data		
+dgI	yes				data		
+dgO	yes				data		
+eI	yes				data		
+eO	yes				data		
+ΛI	yes				data		
+ΛO	yes				data		
+hb0	yes				bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hbL	yes				bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hPin	yes				bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hPout	yes				bookkeeping		results/R6-reconciliation/classification-normalized.tsv
+hTrI	yes				open		results/R6-reconciliation/classification-normalized.tsv
+hTrO	yes				open		results/R6-reconciliation/classification-normalized.tsv
+hR0_blk	yes	yes	yes	yes	open		results/R6-reconciliation/classification-normalized.tsv
+hDI_stg	yes				open		results/R6-reconciliation/classification-normalized.tsv
+hDO_stg	yes				open		results/R6-reconciliation/classification-normalized.tsv
+hR1_blk	yes	yes	yes	yes	open		results/R6-reconciliation/classification-normalized.tsv
+hH0_blk	yes	yes	yes	yes	open		results/R6-reconciliation/classification-normalized.tsv
+hH1_blk	yes	yes	yes	yes	open		results/R6-reconciliation/classification-normalized.tsv
+hLU_blk	yes	yes	yes	yes	open		results/R6-reconciliation/classification-normalized.tsv
+hLI_stg	yes				open		results/R6-reconciliation/classification-normalized.tsv
+hLO_stg	yes				open		results/R6-reconciliation/classification-normalized.tsv
+hdinS	yes				open		results/R6-reconciliation/classification-normalized.tsv
+hblk	yes	yes	yes	yes	open		results/R6-reconciliation/classification-normalized.tsv
+hdoutS	yes				open		results/R6-reconciliation/classification-normalized.tsv
+mk	yes	yes	yes	yes	open		results/R6-reconciliation/classification-normalized.tsv
+ops	yes	yes	yes	yes	data		
+hE	yes	yes	yes	yes	open		results/R6-reconciliation/classification-normalized.tsv
+hops	yes	yes	yes	yes	open		results/R6-reconciliation/classification-normalized.tsv
+hcan	yes	yes	yes	yes	open		results/R6-reconciliation/classification-normalized.tsv
+hwin	yes				discharged	discharged	results/R6-reconciliation/classification-normalized.tsv
+hread	yes	yes	yes	yes	open		results/R6-reconciliation/classification-normalized.tsv
+hBal	yes				discharged	discharged	results/R6-reconciliation/classification-normalized.tsv
+hdzero	yes	yes	yes	yes	open		results/R6-reconciliation/classification-normalized.tsv
+hzk	yes	yes	yes	yes	open		results/R6-reconciliation/classification-normalized.tsv
+hw		yes	yes	yes	data	the code's header reader	ZK60_LEAN_L52_ENDPOINT_B_20261110.md §5.1
+hRn		yes	yes	yes	bookkeeping	YES by definition; CHECKED 29 of 29	ZK60_LEAN_L52_ENDPOINT_B_20261110.md line 142
+hopX1		yes		yes	open	NOT STARTED on the L52 and L56 lines; proved on the L55 line	ZK60_LEAN_L52_ENDPOINT_B_20261110.md line 147; ZK60_LEAN_L55_RUN_CLOSE_20261110.md §1
+hgX0		yes	yes	yes	bookkeeping	a CHOICE of base 0	ZK60_LEAN_L52_ENDPOINT_B_20261110.md line 143
+hnX0		yes	yes	yes	bookkeeping	a CHOICE of base 0	ZK60_LEAN_L52_ENDPOINT_B_20261110.md line 143
+hXep		yes	yes	yes	instance-data	geometry of the endpoint opening	RkPcsAt U tag ogEp Iin.pX; ZK60_LEAN_L52_ENDPOINT_B_20261110.md §5.1
+hfitX		yes	yes	yes	bookkeeping	8·rows ≤ Lq	ZK60_LEAN_L52_ENDPOINT_B_20261110.md §5.1
+hRr		yes	yes	yes	instance-data	Iin.pX.rows = Rr	ZK60_LEAN_L52_ENDPOINT_B_20261110.md §5.1
+hsl_stg		yes	yes	yes	open	earlier, coarser form	ZK60_LEAN_L53_RUN_STAGES_20261110.md §5; L57 doc §4
+hR0_stg		yes	yes	yes	open	earlier, coarser form	ZK60_LEAN_L53_RUN_STAGES_20261110.md §5; L57 doc §4
+hR1_stg		yes	yes	yes	open	earlier, coarser form	ZK60_LEAN_L53_RUN_STAGES_20261110.md §5; L57 doc §4
+hH0_stg		yes	yes	yes	open	earlier, coarser form	ZK60_LEAN_L53_RUN_STAGES_20261110.md §5; L57 doc §4
+hH1_stg		yes	yes	yes	open	earlier, coarser form	ZK60_LEAN_L53_RUN_STAGES_20261110.md §5; L57 doc §4
+hLU_stg		yes	yes	yes	open	earlier, coarser form	ZK60_LEAN_L53_RUN_STAGES_20261110.md §5; L57 doc §4
+hdin		yes	yes	yes	open	earlier, coarser form	ZK60_LEAN_L53_RUN_STAGES_20261110.md §5; L57 doc §4
+hdout		yes	yes	yes	open	earlier, coarser form	ZK60_LEAN_L53_RUN_STAGES_20261110.md §5; L57 doc §4
+Vi			yes		data		RunCloseBTopF.lean
+hinc			yes		bookkeeping	YES: rfl at the real families	ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1
+houtc			yes		bookkeeping	YES: rfl at the real families	ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1
+hchk			yes		bookkeeping	YES with check := vdChk check0 (vdChk_le PROVED); that the accepted inputs are the code's is ARGUED	ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1; RunVerdictW.lean:84; finding L55-1
+hLb1			yes		instance-data	YES: 26 blocks	ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1
+pXk			yes		data		RunCloseBTopF.lean
+hXk			yes		instance-data	YES: cbBndPcs_r13 PROVED; geometry CHECKED	ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1
+hwXk			yes		bookkeeping	YES, ARGUED: definitional at the builders	ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1
+hmXk			yes		bookkeeping	YES, ARGUED: definitional at the builders	ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1
+hfitXk			yes		bookkeeping	YES: 8·38 = 304 ≤ 2^20 (cbBndPcs_rows)	ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1
+hgXk			yes		bookkeeping	a CHOICE of base	ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1
+hnXk			yes		bookkeeping	a CHOICE of base	ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1
+hwX0			yes		bookkeeping	YES, ARGUED: definitional at the builders	ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1
+hmX0			yes		bookkeeping	YES, ARGUED: definitional at the builders	ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1
+hgX1			yes		bookkeeping	a CHOICE of base	ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1
+hnX1			yes		bookkeeping	a CHOICE of base	ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1
+hOX			yes		instance-data	YES: cbBndPcs_r13 PROVED; geometry CHECKED	ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1
+hwXo			yes		bookkeeping	YES, ARGUED: definitional at the builders	ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1
+hfitXo			yes		bookkeeping	YES: 8·38 = 304 ≤ 2^20 (cbBndPcs_rows)	ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1
+hgXo			yes		bookkeeping	a CHOICE of base	ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1
+hnXo			yes		bookkeeping	a CHOICE of base	ZK60_LEAN_L55_RUN_CLOSE_20261110.md §5.1
+hPk				yes	instance-data	the block profiles are the Shieldstral run's	ZK60_LEAN_L56_RUN_BOUNDARY_20261110.md §4.2
+hgXB				yes	bookkeeping	root positions of the closing geometry	ZK60_LEAN_L56_RUN_BOUNDARY_20261110.md §4.2
+hsl_args				yes	open	re-form of hsl_blk	ZK60_LEAN_L56_RUN_BOUNDARY_20261110.md §4.1, §4.2

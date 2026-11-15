@@ -1,0 +1,288 @@
+{
+ "schema": "r7-exchange/1",
+ "comment": "Independent external review (VR-007). For each hypothesis of the audited theorem that VR-006 classed as discharged: on which parallel theorems it is absent, what stands in its place there, and the relation. Reviewer's reading of the lane documents; the consistency check verifies the names only.",
+ "entries": [
+  {
+   "keys": [
+    "hTenc",
+    "hTaA",
+    "hTaB",
+    "hUc",
+    "hXc",
+    "hp1",
+    "hp2",
+    "hF",
+    "hw0",
+    "hβLR",
+    "hTe",
+    "hTQ",
+    "hβJ",
+    "T"
+   ],
+   "relation": "discharged",
+   "absent_on": [
+    "eb",
+    "cb",
+    "bnd"
+   ],
+   "in_its_place": [],
+   "supplied_by": "eb_productionReadyL_epP_codeT (RunEpBTopT.lean), lane L52",
+   "note": "T, Ux, Xx and pr are auxiliary objects that the conclusion never mentions; the three theorems fix them (T := ebT, pr := gP) and prove these facts. No hypothesis takes their place."
+  },
+  {
+   "keys": [
+    "hwin"
+   ],
+   "relation": "discharged",
+   "absent_on": [
+    "eb",
+    "cb",
+    "bnd"
+   ],
+   "in_its_place": [],
+   "supplied_by": "ep_hwin_top (RunEndptWin.lean); its hypotheses h64, hr, hL64, hv are shared with the audited theorem, and hTaA, hTaB are proved on the same line",
+   "note": ""
+  },
+  {
+   "keys": [
+    "hBal"
+   ],
+   "relation": "discharged",
+   "absent_on": [
+    "eb",
+    "cb",
+    "bnd"
+   ],
+   "in_its_place": [],
+   "supplied_by": "eb_xB_alive (RunEpBTest.lean), hypothesis hab",
+   "note": "L52 notes it must read the same extractor as hread once that exists"
+  },
+  {
+   "keys": [
+    "hopX"
+   ],
+   "relation": "exchanged",
+   "absent_on": [
+    "eb",
+    "cb",
+    "bnd"
+   ],
+   "in_its_place": {
+    "eb": [
+     "hRn",
+     "hgX0",
+     "hnX0",
+     "hXep",
+     "hfitX",
+     "hRr",
+     "hopX1"
+    ],
+    "bnd": [
+     "hRn",
+     "hgX0",
+     "hnX0",
+     "hXep",
+     "hfitX",
+     "hRr",
+     "hopX1"
+    ],
+    "cb": [
+     "hRn",
+     "hgX0",
+     "hnX0",
+     "hXep",
+     "hfitX",
+     "hRr",
+     "hXk",
+     "hOX",
+     "hfitXk",
+     "hfitXo",
+     "hwXk",
+     "hmXk",
+     "hwX0",
+     "hmX0",
+     "hwXo",
+     "hgXk",
+     "hnXk",
+     "hgX1",
+     "hnX1",
+     "hgXo",
+     "hnXo"
+    ]
+   },
+   "supplied_by": "part 0: eb_hopX0 (RunEpBInc.lean), which also takes the open hE; parts 1 on: lane L55",
+   "note": "a statement about every adversary is exchanged for conditions on the verifier's parameters; on the L52 and L56 lines parts 1 on remain as the open hopX1"
+  },
+  {
+   "keys": [
+    "hW"
+   ],
+   "relation": "exchanged",
+   "absent_on": [
+    "cb"
+   ],
+   "in_its_place": {
+    "cb": [
+     "hchk",
+     "hinc",
+     "houtc",
+     "hLb1"
+    ]
+   },
+   "supplied_by": "cb_productionReadyL_epP_codeF (RunCloseBTopF.lean); RunVerdictW.lean",
+   "note": "the verdict link is exchanged for a condition on the statement check (finding L55-1) and two conditions on the stage families"
+  },
+  {
+   "keys": [
+    "O.shapes"
+   ],
+   "relation": "instance-only",
+   "absent_on": [],
+   "in_its_place": [],
+   "supplied_by": "shield_shapes_valid (RunShapeShield.lean), a closed statement about shieldExport",
+   "note": "O is a hypothesis of all four theorems; this field is met once the parameter S is the Shieldstral export"
+  },
+  {
+   "keys": [
+    "hLb"
+   ],
+   "relation": "exchanged",
+   "absent_on": [
+    "bnd"
+   ],
+   "in_its_place": {
+    "bnd": [
+     "hPk"
+    ]
+   },
+   "supplied_by": "bnd_productionReadyL_epP_args (RunBndTop.lean), lane L56",
+   "note": "Lb ≤ 26 follows there from hPk, which says the block profiles are the Shieldstral run's (ShieldRunAt Pk Rp.blks Lb); an instance fact exchanged for another instance fact"
+  }
+ ],
+ "open_stand_ins": {
+  "hsl_blk": {
+   "bnd": [
+    "hsl_args"
+   ]
+  },
+  "hTrI": {
+   "eb": [
+    "hsl_stg"
+   ],
+   "cb": [
+    "hsl_stg"
+   ],
+   "bnd": [
+    "hsl_stg"
+   ]
+  },
+  "hTrO": {
+   "eb": [
+    "hsl_stg"
+   ],
+   "cb": [
+    "hsl_stg"
+   ],
+   "bnd": [
+    "hsl_stg"
+   ]
+  },
+  "hDI_stg": {
+   "eb": [
+    "hR0_stg",
+    "hR1_stg",
+    "hH0_stg",
+    "hH1_stg"
+   ],
+   "cb": [
+    "hR0_stg",
+    "hR1_stg",
+    "hH0_stg",
+    "hH1_stg"
+   ],
+   "bnd": [
+    "hR0_stg",
+    "hR1_stg",
+    "hH0_stg",
+    "hH1_stg"
+   ]
+  },
+  "hDO_stg": {
+   "eb": [
+    "hR0_stg",
+    "hR1_stg",
+    "hH0_stg",
+    "hH1_stg"
+   ],
+   "cb": [
+    "hR0_stg",
+    "hR1_stg",
+    "hH0_stg",
+    "hH1_stg"
+   ],
+   "bnd": [
+    "hR0_stg",
+    "hR1_stg",
+    "hH0_stg",
+    "hH1_stg"
+   ]
+  },
+  "hLI_stg": {
+   "eb": [
+    "hLU_stg"
+   ],
+   "cb": [
+    "hLU_stg"
+   ],
+   "bnd": [
+    "hLU_stg"
+   ]
+  },
+  "hLO_stg": {
+   "eb": [
+    "hLU_stg"
+   ],
+   "cb": [
+    "hLU_stg"
+   ],
+   "bnd": [
+    "hLU_stg"
+   ]
+  },
+  "hdinS": {
+   "eb": [
+    "hdin"
+   ],
+   "cb": [
+    "hdin"
+   ],
+   "bnd": [
+    "hdin"
+   ]
+  },
+  "hdoutS": {
+   "eb": [
+    "hdout"
+   ],
+   "cb": [
+    "hdout"
+   ],
+   "bnd": [
+    "hdout"
+   ]
+  }
+ },
+ "audited_refinement_conditions": {
+  "keys": [
+   "hIOI",
+   "hIOO",
+   "hNin",
+   "hNout",
+   "hb0",
+   "hbL",
+   "hPin",
+   "hPout"
+  ],
+  "note": "conditions that the audited theorem's finer stage hypotheses (lanes L53, L57) bring with them; the three other theorems carry the coarser stage hypotheses and so need none of these. Classified bookkeeping or instance data in classification-normalized.tsv."
+ }
+}

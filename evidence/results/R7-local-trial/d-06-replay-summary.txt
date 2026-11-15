@@ -1,0 +1,7 @@
+modules recorded: 1 of 1 listed
+by status: failed=1
+guards: max resident memory 9000 MB, timeout 1800 s per module; root module included: False
+largest peak memory (MB): ZK60Formal.SoundMProduct=0
+longest (s): ZK60Formal.SoundMProduct=1
+checker: false
+finished: 2026-11-15T00:30:01Z

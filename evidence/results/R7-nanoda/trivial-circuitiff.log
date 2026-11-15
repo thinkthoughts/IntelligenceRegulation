@@ -1,0 +1,25 @@
+# r7-nanoda: trivial-circuitiff
+2026-11-15T00:40:39Z
+module: ZK60Formal.Statements
+declaration: ZK60.trivialArith_circuitIff
+library toolchain: leanprover/lean4:v4.34.1
+lean4export: df81913eee5519d5a88ae5b0fd701b5298cc29ab
+nanoda_lib: 0da9f98feadd3a0a2ef4b3dbcf52a298a6fef929
+source commit: eee3eb5717dea88d0fc48dc00f6aef389d52af3a
+Build completed successfully (6 jobs).
+    Finished `release` profile [optimized] target(s) in 23.79s
+$ lake env lean4export ZK60Formal.Statements -- ZK60.trivialArith_circuitIff > trivial-circuitiff.ndjson   (cwd: formal/)
+export: exit 0, 3 s, peak 3069 MB, 664 lines, 1 MB, sha256 e074242e137dec8ec8ca68d1c6b82cfa83babad94fac850c8014a9817ecf7ea4
+{"meta":{"exporter":{"name":"lean4export","version":"3.1.0"},"format":{"version":"3.1.0"},"lean":{"githash":"5045d0056413266e57c625dcd7c365b10e377c52","version":"4.34.1"}}}
+the export names trivialArith_circuitIff: yes
+$ nanoda_bin <config: three permitted axioms, any other a hard error>
+Checked 36 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+nanoda: exit 0, 0 s, peak 12 MB
+$ nanoda_bin <control: Classical.choice removed from the permitted axioms; a refusal is expected>
+Checked 36 declarations with no typechecker errors, 1 pretty printer errors: [
+    "Unable to print axioms",
+]
+control: exit 0
+2026-11-15T00:41:15Z

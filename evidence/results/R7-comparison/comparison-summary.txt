@@ -1,0 +1,47 @@
+# Four production-readiness top theorems, compared (independent external review, VR-007)
+
+eb_productionReadyL_epP_codeT (L52): binders 145
+  lacks 32 hypotheses of the audited theorem: discharged 15, exchanged 1, open, another form of it stands here 8, conditions of the audited theorem's finer stage forms 8
+    discharged: hTenc hTaA hTaB hUc hXc hp1 hp2 hF hw0 hβLR hTe hTQ hβJ hwin hBal
+    exchanged: hopX
+    open, another form of it stands here: hTrI hTrO hDI_stg hDO_stg hLI_stg hLO_stg hdinS hdoutS
+    finer-form conditions: hIOI hIOO hNin hNout hb0 hbL hPin hPout
+  open hypotheses on this line: 25 (the audited theorem: 24)
+  adds 15 hypotheses: bookkeeping 4; instance-data 2; open 9
+    bookkeeping: hRn hgX0 hnX0 hfitX
+    instance-data: hXep hRr
+    open: hopX1 hsl_stg hR0_stg hR1_stg hH0_stg hH1_stg hLU_stg hdin hdout
+
+cb_productionReadyL_epP_codeF (L55): binders 163
+  lacks 33 hypotheses of the audited theorem: discharged 15, exchanged 2, open, another form of it stands here 8, conditions of the audited theorem's finer stage forms 8
+    discharged: hTenc hTaA hTaB hUc hXc hp1 hp2 hF hw0 hβLR hTe hTQ hβJ hwin hBal
+    exchanged: hW hopX
+    open, another form of it stands here: hTrI hTrO hDI_stg hDO_stg hLI_stg hLO_stg hdinS hdoutS
+    finer-form conditions: hIOI hIOO hNin hNout hb0 hbL hPin hPout
+  open hypotheses on this line: 24 (the audited theorem: 24)
+  adds 33 hypotheses: bookkeeping 20; instance-data 5; open 8
+    bookkeeping: hRn hinc houtc hchk hwXk hmXk hfitXk hgXk hnXk hwX0 hmX0 hgX1 hnX1 hwXo hfitXo hgXo hnXo hgX0 hnX0 hfitX
+    instance-data: hLb1 hXk hOX hXep hRr
+    open: hsl_stg hR0_stg hR1_stg hH0_stg hH1_stg hLU_stg hdin hdout
+
+bnd_productionReadyL_epP_args (L56): binders 146
+  lacks 34 hypotheses of the audited theorem: discharged 15, exchanged 2, open, another form of it stands here 9, conditions of the audited theorem's finer stage forms 8
+    discharged: hTenc hTaA hTaB hUc hXc hp1 hp2 hF hw0 hβLR hTe hTQ hβJ hwin hBal
+    exchanged: hLb hopX
+    open, another form of it stands here: hsl_blk hTrI hTrO hDI_stg hDO_stg hLI_stg hLO_stg hdinS hdoutS
+    finer-form conditions: hIOI hIOO hNin hNout hb0 hbL hPin hPout
+  open hypotheses on this line: 25 (the audited theorem: 24)
+  adds 18 hypotheses: bookkeeping 5; instance-data 3; open 10
+    bookkeeping: hRn hgX0 hnX0 hfitX hgXB
+    instance-data: hXep hRr hPk
+    open: hopX1 hsl_args hsl_stg hR0_stg hR1_stg hH0_stg hH1_stg hLU_stg hdin hdout
+
+PASS C1 same-conclusion: one conclusion, ProductionReadyL at radius 768
+PASS C2 lean-agrees: 87 propositional binders of the L55 theorem
+PASS C3 added-covered: 40 binders added by the parallel theorems
+PASS C4 exchange-true: 20 keys in 7 entries
+PASS C5 open-accounted: 24 open binders on 3 lines
+PASS C6 relation-sound
+PASS C8 discharge-sourced: 19 discharged keys, each with its supplier
+PASS C7 lacks-partitioned: each lacked hypothesis is discharged, exchanged, an open obligation in another form, or a finer-form condition
+RESULT all checks pass

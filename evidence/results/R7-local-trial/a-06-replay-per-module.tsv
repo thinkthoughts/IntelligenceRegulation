@@ -1,0 +1,5 @@
+module	status	exit	seconds	peak_rss_mb
+ZK60Formal.Statements	ok	0	399	3455
+ZK60Formal.SoundMProduct	ok	0	7	3280
+ZK60Formal.RunStgAlgTopR	not-compiled		0	0
+ZK60Formal.NoSuchModule	not-compiled		0	0

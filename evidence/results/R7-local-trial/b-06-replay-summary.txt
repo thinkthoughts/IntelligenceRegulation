@@ -1,0 +1,7 @@
+modules recorded: 1 of 1 listed
+by status: memory-limit=1
+guards: max resident memory 200 MB, timeout 1800 s per module; root module included: False
+largest peak memory (MB): ZK60Formal.SoundMProduct=914
+longest (s): ZK60Formal.SoundMProduct=1
+checker: lake env leanchecker
+finished: 2026-11-15T00:29:59Z
